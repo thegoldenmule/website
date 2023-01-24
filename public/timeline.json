@@ -1,0 +1,321 @@
+{
+  "events": [
+    {
+      "name": "HoloLens 2 Multiplayer",
+      "type": "ar",
+      "date": "2019",
+      "description": "We created a multiplayer spellcasting demo in just 4 hours using Enkluplayer (an AR ecosystem I wrote-- see the Software section).",
+      "url": "https://www.thegoldenmule.com/videos/duel.mp4",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/duel.gif"
+    },
+    {
+      "name": "100 HoloLens Multiplayer @ E3",
+      "type": "ar",
+      "date": "2019",
+      "description": "We created the world's first 100 HoloLens multiplayer experience at E3. Over 7500 attendees were able to put on a HoloLens and explore magical powers in the Unreal Garden.",
+      "imageUrl": "https://www.thegoldenmule.com/thumbnails/player-small.gif",
+      "url": "https://www.youtube.com/watch?v=j1usTNschXg"
+    },
+    {
+      "name": "Azure Kinect + Enklu",
+      "type": "ar",
+      "date": "October 2019",
+      "description": "We were among the first to adapt the Azure Kinect to live entertainment by adding Azure Kinect support to Enkluplayer. This ran as an interactive installation at Universal Studios in LA.",
+      "url": "https://www.thegoldenmule.com/videos/azure-kinect-dev.mp4",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/azure-kinect-preview.gif"
+    },
+    {
+      "name": "Kinect + Enklu + E3",
+      "type": "ar",
+      "date": "June 2019",
+      "description": "At E3, we used our Kinect integration to give people wings.",
+      "url": "https://www.thegoldenmule.com/videos/e3-wings-mp4.mp4",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/e3-wings.gif"
+    },
+    {
+      "name": "Mamba",
+      "type": "iot",
+      "date": "May 2019",
+      "description": "Mamba is a .NET Core application that connects Kinect stream data to the Enklu multiplayer servers. In this way, we can attach assets to joints on HoloLens.",
+      "url": "https://github.com/enklu/mamba",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/mamba-small.gif"
+    },
+    {
+      "name": "Chelydra",
+      "type": "iot",
+      "date": "March 2019",
+      "description": "Chelydra is a .NET Core controller that connects a DSLR camera to Enklu multiplayer services. HoloLens players can trigger pictures to be taken via AR controls.",
+      "url": "https://github.com/enklu/chelydra",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/snap.jpg"
+    },
+    {
+      "name": "Core-AVR",
+      "date": "August 2017",
+      "description": "Libraries for working with 32-bit Atmel AVR microcontrollers.",
+      "url": "https://github.com/Open-farm/openfarm-core-avr",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/openfarm-core-avr-thumb.png"
+    },
+    {
+      "name": "Telemetrino",
+      "date": "September 2013",
+      "description": "On strapping an Arduino + accelerometer to an RC car.",
+      "url": "https://thegoldenmule.com/blog/2013/09/of-wisdom-teeth-and-acceleration/",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/accelerationTelemetry.png"
+    },
+    {
+      "name": "boX",
+      "type": "graphics",
+      "date": "August 2013",
+      "description": "That's not an 'x' at all! It's a chi! A 2D WebGL graphics engine, twice as pretentious as LateX.",
+      "url": "https://github.com/thegoldenmule/boX",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/boXAnimation.gif"
+    },{
+      "name" : "On Geosphere Construction",
+      "type": "graphics",
+      "date": "January 2013",
+      "description": "The geometrical construction of a sphere based on the subdivision of an icosahedron. This method creates a sphere where each triangle is the same size.",
+      "url": "https://thegoldenmule.com/blog/2013/01/geosphere-revisited/",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/geosphere.png"
+    },
+    {
+      "name" : "Realtime Clouds on the GPU",
+      "type": "graphics",
+      "date": "January 2013",
+      "description": "A two part study into noise functions and how they might be used to create purely GPU-based moving clouds.",
+      "url": "https://thegoldenmule.com/blog/2013/01/real-time-clouds-pt-1-a-study-of-noise-functions/",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/clouds.png"
+    },
+    {
+      "name" : "Spherical Terrain Generation",
+      "type": "graphics",
+      "date": "January 2013",
+      "description": "Everyone has created flat procedural terrain-- but what methods can be used for generating spherical terrain? This two part post builds on geospheres and explores one method of geometry creation and one method for an accompanying Earthlike shader.",
+      "url": "https://thegoldenmule.com/blog/2013/01/spherical-terrain-generation/",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/world.png"
+    },
+    {
+      "name" : "Kristmas Klein Bagel",
+      "type": "graphics",
+      "date": "December 2013",
+      "description": "A short exploration of generating a 3d immersion of a 4d Klein bottle.",
+      "url": "https://github.com/thegoldenmule/Topology",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/Klein.png"
+    },
+    {
+      "name": "Playing With Cinder",
+      "type": "graphics",
+      "date": "January 2015",
+      "description": "My first project using Cinder. It's very simple, linking luma from a video capture source to various properties of a bunch of circles (in the biz we call them particles).",
+      "url": "https://github.com/thegoldenmule/CameraOutline",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/cinder.png"
+    },
+    {
+      "name": "Separating Axes Theorem",
+      "type": "physics",
+      "date": "December 2013",
+      "description": "A very basic implementation of the separating axes theorem for collision detection. This was created for illustrative purposes, and has, let's say, a few bugs.",
+      "url": "https://thegoldenmule.com/blog/2013/12/supercolliders-in-unity/",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/collision.png"
+    },
+    {
+      "name": "Fabric Sim",
+      "type": "physics",
+      "date": "August 2013",
+      "description": "A simple fabric simulation. Uses a spring system with point masses and Verlet integration. The original used my own graphics engine, but this uses ThreeJS.",
+      "url": "https://www.thegoldenmule.com/labs/three-physics/",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/FabricAnimation.gif"
+    },
+    {
+      "name": "Itsy",
+      "type": "physics",
+      "date": "May 2014",
+      "description": "A cute name for an otherwise uncaring software-rendered particle system.",
+      "url": "https://github.com/thegoldenmule/Itsy",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/Itsy.png"
+    },
+    {
+      "name": "Scorched Earth Style Terrain",
+      "type": "physics",
+      "date": "August 2011",
+      "description": "For those of you wanting to generate interesting 2D terrains, similar to the Mother of All Games: Scorched Earth. These don't use silly fractals or perlin-- those are too boring!",
+      "url": "https://thegoldenmule.com/blog/2011/08/terramorphic-genesis-algorithms-or-terrain-generation/",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/TGA.png"
+    },
+    {
+      "name": "Einstein",
+      "type": "physics",
+      "date": "August 2011",
+      "description": "A relativity engine-- essentially any object in the scene can be the Observer, and every object has a clock. Both time and space are transformed by speed relative to the current Observer.",
+      "url": "https://thegoldenmule.com/blog/2011/08/internet-einstein-einstein-internet/",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/ss.png"
+    },
+    {
+      "name": "Enkluplayer",
+      "type": "software",
+      "date": "2017 - 2020",
+      "description": "Enkluplayer was a collaborative, cross-platform multiplayer AR runtime that is unfortunately now closed-source. Live behavior and UI scripting across devices. Drag and drop asset import. Enkluplayer lets users collaboratively design and publish multiplayer- by-default AR experiences.",
+      "url": "https://github.com/enklu/enkluplayer",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/player-small.gif"
+    },
+    {
+      "name": "NaturalLogger",
+      "type": "software",
+      "date": "September 2017",
+      "description": "A Unity library for sending logs to Natural-Log.",
+      "url": "https://github.com/thegoldenmule/naturallog-examples",
+      "imageUrl": "https://raw.githubusercontent.com/thegoldenmule/naturallog/master/assets/icons/png/128x128.png"
+    },
+    {
+      "name": "Jint-Unity",
+      "type": "software",
+      "date": "April 2017",
+      "description": "A Javascript interpreter for Unity.",
+      "url": "https://github.com/thegoldenmule/jint",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/test.gif"
+    },
+    {
+      "name": "Dependency Injection in Unity3d",
+      "type": "software",
+      "date": "December 2013",
+      "description": "A couple classes for using Ninject as a dependency injection solution in Unity3d.",
+      "url": "https://thegoldenmule.com/blog/2013/12/ninject-and-unity/",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/ninject.png"
+    },
+    {
+      "name": "Ffabricator",
+      "type": "software",
+      "date": "September 2021",
+      "description": "A simple Akka + ASP.NET server that creates HLS streams from WebM or MP4 videos.",
+      "url": "https://github.com/thegoldenmule/ffabricator",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/ffabricator.png"
+    },
+    {
+      "name": "Natural-Log",
+      "type": "software",
+      "date": "September 2017",
+      "description": "A socket server and slick client, wrapped in a cross platform binary using Electron.io.",
+      "url": "https://github.com/thegoldenmule/naturallog",
+      "imageUrl": "https://raw.githubusercontent.com/thegoldenmule/naturallog/master/assets/screenshot.png"
+    },
+    {
+      "name": "Nk-Js",
+      "type": "software",
+      "date": "Feb-June 2021",
+      "description": "Nk-js is an end-to-end encrypted js library for use with nk-server: the no-knowledge store.",
+      "url": "https://github.com/thegoldenmule/nk/tree/develop/nk-js",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/nk.gif"
+    },
+    {
+      "name": "Enklu Cloud",
+      "type": "software",
+      "date": "2017-2020",
+      "description": "Enklu Cloud is the leading platform for authoring and sharing immersive multiplayer AR experiences. Our tools focus on iteration: real-time multi-user web and on-device HoloLens editors. Live behavior and UI coding across devices. Drag and drop asset processing, decimation, compression, and serving. Our tech lets users collaboratively design and publish multiplayer- by-default experiences.",
+      "url": "https://cloud.enklu.com",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/cloud.gif"
+    },
+    {
+      "name": "Nano Watch",
+      "type": "software",
+      "date": "January 2021",
+      "description": "Nano watch is a simple web app that watches nanopool mining rigs and pushes browser notifications when the monitored rigs dip below a target hashrate.",
+      "url": "https://github.com/thegoldenmule/nano-watch",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/nano-watch.png"
+    },
+    {
+      "name": "Quicktype",
+      "type": "software",
+      "date": "2019",
+      "description": "Major contributor to go and csharp generators and original creator or prop-types generator.",
+      "url": "https://github.com/quicktype/quicktype/graphs/contributors",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/quicktype.png"
+    },
+    {
+      "name": "Webtrono.me",
+      "type": "software",
+      "date": "??? ",
+      "description": "A web based metronome. Other web metronomes just suck (this one kinda does too).",
+      "url": "September 2014",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/webtronome.png"
+    },
+    {
+      "name": "SOS",
+      "type": "software",
+      "date": "August 2011",
+      "description": "An XML log target for SOS Max that works across AS3 and JS.",
+      "url": "https://github.com/thegoldenmule/HaXe-SOSTrace",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/SOS.png"
+    },
+    {
+      "name": "Nk-Server",
+      "type": "exploration",
+      "date": "Feb 2021",
+      "description": "An end-to-end encrypted, no-knowledge key/value storage server.",
+      "url": "https://github.com/thegoldenmule/nk/tree/develop/nk-server",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/nk.gif"
+    },
+    {
+      "name": "Conversational AI World Building",
+      "type": "exploration",
+      "date": "2019",
+      "description": "I created a prototype for a conversational world-building application using Azure's LUIS and Enklu (an AR platform I built). The computer asks what you see and builds the scene as you describe it.",
+      "url": "https://www.thegoldenmule.com/videos/story.mp4",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/story.gif"
+    },
+    {
+      "name": "Story",
+      "type": "exploration",
+      "date": "March 2015",
+      "description": "Story is a research project that leverages the Python NLT and machine learning techniques for gaming. It's a reverse text adventure. The goal is to use natural language input to describe an environment to a computer, which then makes choices about how to use the environment to accomplish the described goal.",
+      "url": "https://github.com/thegoldenmule/story",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/vsdLA.png"
+    },
+    {
+      "name": "Stegasaurus",
+      "type": "exploration",
+      "date": "July 2017",
+      "description": "Hide data in pictures (steganography), which are then stored in plain sight: on Facebook. Stegasaurus encrypts data with a one time pad, which is then stored... in other pictures.",
+      "url": "https://github.com/thegoldenmule/stegosaurus",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/steg.jpg"
+    },
+    {
+      "name": "Scorched3D",
+      "type": "games",
+      "date": "September 2011",
+      "description": "Now in 2D! An ancient, Scorched Earth style, software rendered, hot-seat multiplayer extravaganza.",
+      "url": "https://thegoldenmule.com/labs/Scorch3d/",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/ScorchedAnimation.gif"
+    },
+    {
+      "name": "All Mine",
+      "type": "games",
+      "date": "October 2013",
+      "description": "A simple game built with Cocos2d that expands on Minesweeper. Energy, biodiesel, unit types and actions-- lots of fun stuff!",
+      "url": "https://bitbucket.org/benthehutt/all-mine/src/",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/cocos.png"
+    },
+    {
+      "name": "Unity Plugin",
+      "type": "misc",
+      "date": "February 2018",
+      "description": "Gradle plugin for running Unity from a gradle task.",
+      "url": "https://github.com/enklu/commons-gradle-unity",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/gradle-unity.png"
+    },
+    {
+      "name": "Email Backup",
+      "type": "misc",
+      "date": "December 2014",
+      "description": "A set of tools for backing up email. Yes, it sounds boring, but it was fun and I needed something simple.",
+      "url": "https://github.com/thegoldenmule/email-backup",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/ebackupUsage.png"
+    },
+    {
+      "name": "Porter Stemmer",
+      "type": "misc",
+      "date": "September 2011",
+      "description": "An ancient and naive implementation of Porter's stemming algorithm. Essentially, it takes words and decomposes them down to their root.",
+      "url": "https://github.com/thegoldenmule/PStem",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/stem.png"
+    }
+  ]
+}
