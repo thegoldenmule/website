@@ -5,8 +5,8 @@
       "title": "Big Run Studios",
       "subtitle": "Chief Technical Officer",
       "type": "games",
-      "date": "2020 - Present",
-      "description": "I run Big Run's engineering: stem to stern! We've built great games, great teams, and great tech.",
+      "date": "2020-Present",
+      "description": "I run Big Run's engineering team, stem to stern! And I run a tight ship, mind ye-- we build great games, great teams, and great tech.",
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/br-logo.png"
     },
@@ -15,9 +15,9 @@
       "title": "Saint Louis University",
       "subtitle": "Adjunct Instructor",
       "type": "teaching",
-      "date": "2022 - Present",
-      "description": "I was invited to teach in SLU's CS Masters program -- and I cordially accepted. I have learned that oration is a skill I could improve... and that I really like to hear myself talk.",
-      "url": "https://www.linkedin.com/in/benjaminmicahj/",
+      "date": "2022-Present",
+      "description": "I was invited to teach in SLU's CS Masters program -- and I cordially accepted. I have learned that oration is a skill I could improve... and that I really like to hear myself talk. My course material is on GitHub.",
+      "url": "https://github.com/thegoldenmule/csci-5030/",
       "imageUrl": "https://www.slu.edu/ico/apple-touch-icon.png"
     },    
     {
@@ -71,6 +71,15 @@
       "imageUrl": "https://miro.medium.com/max/720/0*uj51YZ0qr_A5wFeQ.webp"
     },
     {
+      "category": "contributions",
+      "title": "Polygon Edge",
+      "type": "software",
+      "date": "March 2022",
+      "description": "I fixed some cross origin issues in Polygon Edge: the EVM-compatible blockchain tech.",
+      "url": "https://github.com/0xPolygon/polygon-edge/pull/414",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/polygon-logo.svg"
+    },
+    {
       "category": "publications",
       "title": "GitHub Copilot and major world religions",
       "type": "writing",
@@ -102,7 +111,18 @@
     },
     {
       "category": "products",
+      "title": "Word Star",
+      "subtitle": "Big Run Studios",
+      "type": "games",
+      "date": "2022",
+      "description": "A skill-based, multiplayer word game.",
+      "url": "https://bigrunstudios.com/games/word-star/",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/word-star.png"
+    },
+    {
+      "category": "products",
       "title": "Webtrono.me",
+      "subtitle": "Web-based SaaS Product",
       "type": "software",
       "date": "2022",
       "description": "Web-based metronomes are terrible, but not this one! A configurable, sample-accurate metronome in the browser. Create your routine and track your progress with your new practice buddy.",
@@ -161,11 +181,22 @@
     {
       "category": "products",
       "title": "Nk-Js",
+      "subtitle": "Web based SaaS Product",
       "type": "software",
       "date": "Feb-June 2021",
       "description": "Nk-js is an end-to-end encrypted js library for use with nk-server: the no-knowledge store.",
       "url": "https://github.com/thegoldenmule/nk/tree/develop/nk-js",
       "imageUrl": "https://thegoldenmule.com/thumbnails/nk.gif"
+    },
+    {
+      "category": "products",
+      "title": "Big Cooking",
+      "subtitle": "Big Run Studios",
+      "type": "games",
+      "date": "2021",
+      "description": "A skill-based, multiplayer cooking game.",
+      "url": "https://bigrunstudios.com/games/big-cooking-2/",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/big-cooking.png"
     },
     {
       "category": "publications",
@@ -179,6 +210,7 @@
     {
       "category": "products",
       "title": "Nk-Server",
+      "subtitle": "BaaS Product",
       "type": "exploration",
       "date": "Feb 2021",
       "description": "No peeking. An end-to-end encrypted, no-knowledge key/value storage server.",
@@ -187,12 +219,43 @@
     },
     {
       "category": "products",
+      "title": "Farm Sweeper",
+      "subtitle": "Big Run Studios",
+      "type": "games",
+      "date": "2019",
+      "description": "A skill-based twist to the game of multiplayer minesweeper.",
+      "url": "https://bigrunstudios.com/games/farm-sweeper/",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/farmsweeper.png"
+    },
+    {
+      "category": "products",
       "title": "Nano Watch",
+      "subtitle": "Web-based SaaS Product",
       "type": "software",
       "date": "January 2021",
       "description": "Nano watch is a simple web app that watches nanopool mining rigs and pushes browser notifications when the monitored rigs dip below a target hashrate.",
       "url": "https://github.com/thegoldenmule/nano-watch",
       "imageUrl": "https://thegoldenmule.com/thumbnails/nano-watch.png"
+    },
+    {
+      "category": "products",
+      "title": "Big Run Solitaire",
+      "subtitle": "Big Run Studios",
+      "type": "games",
+      "date": "2020",
+      "description": "A skill-based twist to the game of multiplayer solitaire.",
+      "url": "https://bigrunstudios.com/games/big-run-solitaire/",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/solitaire.png"
+    },
+    {
+      "category": "products",
+      "title": "Blackout Bingo",
+      "subtitle": "Big Run Studios",
+      "type": "games",
+      "date": "2020",
+      "description": "A skill-based twist to the game of multiplayer bingo.",
+      "url": "https://bigrunstudios.com/games/blackout-bingo-2/",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/blackout-bingo.png"
     },
     {
       "category": "publications",
@@ -209,7 +272,7 @@
       "title": "Enklu",
       "subtitle": "Chief Technology Officer",
       "type": "games",
-      "date": "2017 - 2020",
+      "date": "2017-2020",
       "description": "'CTO' at Enklu meant 'guy that writes everything'-- and this was fun. After a stint doing 99% management, I dove into 99% coding again, writing the full stack for the HoloLens collaborative platform that outperforms Microsoft's own.",
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/enklu-logo.svg"
@@ -218,15 +281,17 @@
     {
       "category": "products",
       "title": "Enkluplayer",
+      "subtitle": "Synchronous Multiplayer Client SDK",
       "type": "software",
-      "date": "2017 - 2020",
-      "description": "Enkluplayer was a collaborative, cross-platform multiplayer AR runtime that is unfortunately now closed-source. Live behavior and UI scripting across devices. Drag and drop asset import. Enkluplayer lets users collaboratively design and publish multiplayer-by-default AR experiences.",
+      "date": "2017-2020",
+      "description": "Enkluplayer is a collaborative, cross-platform multiplayer AR runtime that is unfortunately now closed-source. Live behavior and UI scripting across devices. Drag and drop asset import. Enkluplayer lets users collaboratively design and publish multiplayer-by-default AR experiences.",
       "url": "https://github.com/enklu/enkluplayer",
       "imageUrl": "https://thegoldenmule.com/thumbnails/player-small.gif"
     },
     {
       "category": "products",
       "title": "Enklu Cloud",
+      "subtitle": "Web-based SaaS Product",
       "type": "software",
       "date": "2017-2020",
       "description": "Enklu Cloud is the leading platform for collaborative authoring and sharing of immersive multiplayer AR experiences.",
@@ -254,6 +319,7 @@
     {
       "category": "products",
       "title": "Magic Mirror",
+      "subtitle": "Location Based Entertainment Product",
       "type": "ar",
       "date": "October 2019",
       "description": "We were the first to adapt the Azure Kinect to live entertainment by adding Azure Kinect support to Enkluplayer. This ran as an interactive installation at Universal Studios in LA where lightning shot from your fingertips.",
@@ -307,13 +373,22 @@
       "imageUrl": "https://miro.medium.com/max/720/1*95u9XPdy0jCIbvG4z9OsNw.webp"
     },
     {
-      "category": "products",
+      "category": "contributions",
       "title": "Quicktype Maintainer",
       "type": "software",
       "date": "2019",
-      "description": "Major contributor to go and csharp generators and original creator or prop-types generator.",
-      "url": "https://github.com/quicktype/quicktype/graphs/contributors",
+      "description": "After major contributions to go, csharp, and prop-types generators, I was asked to be a maintainer.",
+      "url": "https://github.com/quicktype/quicktype/pulls?q=is%3Apr+author%3Athegoldenmule+is%3Aclosed",
       "imageUrl": "https://thegoldenmule.com/thumbnails/quicktype.png"
+    },
+    {
+      "category": "contributions",
+      "title": "UWP Support for Antlr",
+      "type": "misc",
+      "date": "March 2018",
+      "description": "I used ANTLR to make a DSL for the Enkluplayer UI system. The only problem: it didn't run on HoloLens. This PR fixed the ANTLR project for UWP.",
+      "url": "https://github.com/antlr/antlr4/pull/2267",
+      "imageUrl": "https://www.antlr.org/images/antlr-logo.png"
     },
     {
       "category": "code",
@@ -325,14 +400,21 @@
       "imageUrl": "https://thegoldenmule.com/thumbnails/gradle-unity.png"
     },
     {
-      "category": "career",
-      "title": "NCSOFT",
-      "subtitle": "Studio Technical Director",
+      "category": "products",
+      "title": "Criminal Empire",
       "type": "games",
-      "date": "2016 - 2017",
-      "description": "After awhile, they gave me a couple more game teams: forty or so strong. I ran all studio engineering for NCSOFT's Iron Tiger studio.",
-      "url": "https://www.linkedin.com/in/benjaminmicahj/",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/nc-logo.svg"
+      "date": "2017",
+      "description": "Build an empire.",
+      "url": "https://play.google.com/store/apps/details?id=com.goldslugz.criminal.empire&hl=en_US&gl=US",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/criminal.png"
+    },
+    {
+      "category": "products",
+      "title": "Canceled Title",
+      "subtitle": "NCSOFT",
+      "type": "games",
+      "date": "2017",
+      "description": "Wish I could say more!"
     },
     {
       "category": "code",
@@ -394,7 +476,7 @@
       "title": "NCSOFT",
       "subtitle": "Lead Engineer",
       "type": "games",
-      "date": "2015 - 2016",
+      "date": "2015-2016",
       "description": "Here I ran the client and server teams for an unreleased AAA MMO in Unity.",
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/nc-logo.svg"
@@ -404,7 +486,7 @@
       "title": "Kixeye",
       "subtitle": "Staff Engineer",
       "type": "games",
-      "date": "2012 - 2015",
+      "date": "2012-2015",
       "description": "The Mos Eisley of game development studios. Here I worked on Flash, Unity, and web games at scale, while doing my best not to get run over.",
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/Kixeye.webp"
@@ -444,6 +526,15 @@
       "description": "A cute name for an otherwise uncaring software-rendered particle system.",
       "url": "https://github.com/thegoldenmule/Itsy",
       "imageUrl": "https://thegoldenmule.com/thumbnails/Itsy.png"
+    },
+    {
+      "category": "products",
+      "title": "War Commander: Rogue Assault",
+      "subtitle": "Kixeye",
+      "type": "games",
+      "date": "2014",
+      "description": "Build bases and units... on mobile. Find targets. Kill 'em all.",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/rogue-assault.jpg"
     },
     {
       "category": "code",
@@ -536,11 +627,46 @@
       "imageUrl": "https://thegoldenmule.com/thumbnails/world.png"
     },
     {
+      "category": "products",
+      "title": "Canceled Title",
+      "subtitle": "Kixeye",
+      "type": "games",
+      "date": "2013",
+      "description": "Wish I could say more!"
+    },
+    {
+      "category": "products",
+      "title": "Kixeye.com",
+      "subtitle": "Kixeye",
+      "type": "games",
+      "date": "2013",
+      "description": "I worked on shared systems that games used across Kixeye.com, like chat and mail.",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/kixeye-website.png"
+    },
+    {
+      "category": "products",
+      "title": "War Commander",
+      "subtitle": "Kixeye",
+      "type": "games",
+      "date": "2013",
+      "description": "Build bases and units. Find targets. Kill 'em all.",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/war-commander.jpg"
+    },
+    {
+      "category": "products",
+      "title": "Battle Pirates",
+      "subtitle": "Kixeye",
+      "type": "games",
+      "date": "2012",
+      "description": "Build bases and ships. Find targets. Kill 'em all.",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/battle-pirates.jpg"
+    },
+    {
       "category": "career",
       "title": "Electrotank",
       "subtitle": "Jr > Sr > Lead Engineer",
       "type": "games",
-      "date": "2009 - 2012",
+      "date": "2009-2012",
       "description": "My first fulltime job out of college was working for this MMO technology provider. We build the tech and the games on top of them for the biggest Flash MMOs on the planet.",
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/et-logo.jpg"
@@ -590,12 +716,36 @@
       "url": "https://github.com/thegoldenmule/HaXe-SOSTrace",
       "imageUrl": "https://thegoldenmule.com/thumbnails/SOS.png"
     },
-    
+    {
+      "category": "products",
+      "title": "Canceled Title",
+      "subtitle": "Electrotank",
+      "type": "games",
+      "date": "2011",
+      "description": "Wish I could say more!"
+    },
+    {
+      "category": "products",
+      "title": "Imagine Town",
+      "subtitle": "Ubisoft",
+      "type": "games",
+      "date": "2010",
+      "description": "An MMO for tweens we made in partnership with Ubisoft.",
+      "url": "https://www.youtube.com/watch?v=1QpbQhP67VE",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/imagine.png"
+    },
+    {
+      "category": "products",
+      "title": "Contract Work",
+      "type": "games",
+      "date": "Before 2010",
+      "description": "A smorgasbord of projects for clients including Texas Instruments, Sun Microsystems, and How Machines Work."
+    },
     {
       "category": "career",
       "title": "ITS Student Worker, Truman State University",
       "type": "games",
-      "date": "2005 - 2009",
+      "date": "2005-2009",
       "description": "At Truman, I worked on network engineering and IT: mostly in Perl, VB, and C. It was here that I first learned how awful printer software could be.",
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/truman-logo.svg"
@@ -605,7 +755,7 @@
       "title": "Pixelwelders",
       "subtitle": "Flash Contractor",
       "type": "games",
-      "date": "2007 - 2009",
+      "date": "2007-2009",
       "description": "I paid my way through college with part-time Flash work on games and websites for the company, Pixelwelders.",
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/pixelwelders.jpg"
@@ -615,7 +765,7 @@
       "title": "How Machines Work",
       "subtitle": "Flash Contractor",
       "type": "games",
-      "date": "2006 - 2007",
+      "date": "2006-2007",
       "description": "My first job in the industry! I worked part time for this small flash development shop. I was brought after I sold them the rights to a rigid-body physics engine I wrote my senior year of high school.",
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/machine.png"
