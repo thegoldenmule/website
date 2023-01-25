@@ -3,24 +3,43 @@ import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timel
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-vertical-timeline-component/style.min.css';
-import { Controller } from 'react-bootstrap-icons';
+import { Code, Controller, GlobeAmericas, HeadsetVr, PaletteFill, PuzzleFill, Robot, Search } from 'react-bootstrap-icons';
 import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
 
-const ElementFactory = ({ type, date, title, description, imageUrl, }) => {
+const typeToIcon = {
+  'ar': () => <HeadsetVr />,
+  'iot': () => <Robot />,
+  'graphics': () => <PaletteFill />,
+  'physics': () => <GlobeAmericas />,
+  'software': () => <Code />,
+  'exploration': () => <Search />,
+  'games': () => <Controller />,
+  'misc': () => <PuzzleFill />
+};
+
+const ElementFactory = ({ type, date, title, description, url, imageUrl, }) => {
   return (
     <VerticalTimelineElement
-      contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-      contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-      iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-      icon={<Controller />}
+      contentStyle={{ border: '1px solid #ccc', color: '#000', fontFamily: '"Antic Didone"', fontWeight: 500 }}
+      contentArrowStyle={{ borderRight: '9px solid #ccc' }}
+      dateClassName="date"
+      iconStyle={{ background: '#daa520', color: '#fff' }}
+      icon={typeToIcon[type]()}
       date={date}
     >
       <h3>{title}</h3>
-      <p>{description}</p>
-      <img src={imageUrl} />
+      <div className="d-flex align-items-center">
+        <div className='pe-4'>
+          <img className='rounded' src={imageUrl} width={150} />
+        </div>
+        <div className="d-flex flex-column justify-content-between">
+          <p className='m-0'>{description}</p>
+          <a target="_blank" href={url}>Read More</a>
+        </div>
+      </div>
     </VerticalTimelineElement>
-  )
-}
+  );
+};
 
 const Timelines = () => {
   const { data: { events = [] } = {} } = useQuery(
