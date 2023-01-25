@@ -3,11 +3,12 @@ import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timel
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-vertical-timeline-component/style.min.css';
+
 import { Code, Controller, Film, GlobeAmericas, HeadsetVr, Joystick, MegaphoneFill, PaletteFill, PenFill, PuzzleFill, Robot, Search } from 'react-bootstrap-icons';
 import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
 import { useState } from 'react';
 import DropdownItem from 'react-bootstrap/esm/DropdownItem';
-import { DropdownButton } from 'react-bootstrap';
+import { Col, Container, DropdownButton, Nav, Navbar, Row } from 'react-bootstrap';
 
 const typeToIcon = {
   'ar': () => <HeadsetVr />,
@@ -118,13 +119,35 @@ const queryClient = new QueryClient();
 function App() {
   const [value, setValue] = useState('All');
 
+  const buttons = ['All', 'Code', 'Publications', 'Career', 'Products', 'Contributions'].map((category, i) => (
+    <h4
+      key={i}
+      className="header-link"
+      style={value === category ? { color: '#000' } : { color: '#ccc' }}
+      onClick={() => setValue(category)}
+    >
+      {category}
+    </h4>
+  ));
+
   return (
     <div className="App">
       <QueryClientProvider client={queryClient}>
-        <div className="fullscreen">
-          <TimelineFilter value={value} setValue={setValue} />
+        <Container>
+          <Row>
+            <Col className="d-flex ">
+              <img className="m-auto" src="https://thegoldenmule.com/logo.png" width={150} />
+            </Col>
+          </Row>
+          <Row>
+            <Col className="d-flex">
+              <div className="m-auto d-flex">
+                {buttons}
+              </div>
+            </Col>
+          </Row>
           <Timelines filter={value} />
-        </div>
+        </Container>
       </QueryClientProvider>
     </div>
   );

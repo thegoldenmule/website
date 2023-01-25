@@ -25,5 +25,15 @@ a {
 .dropdown-toggle {
   background-color: #daa520 !important;
   border-color: #daa520 !important;
+}
 
+.header-link {
+  user-select: none;
+  cursor: pointer;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.header-link:hover {
+  color: #000 !important;
 }

@@ -400,21 +400,22 @@
       "imageUrl": "https://thegoldenmule.com/thumbnails/gradle-unity.png"
     },
     {
-      "category": "products",
-      "title": "Criminal Empire",
-      "type": "games",
-      "date": "2017",
-      "description": "Build an empire.",
-      "url": "https://play.google.com/store/apps/details?id=com.goldslugz.criminal.empire&hl=en_US&gl=US",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/criminal.png"
+      "category": "code",
+      "title": "Unity Plugin",
+      "type": "misc",
+      "date": "February 2018",
+      "description": "Gradle plugin for running Unity from a gradle task.",
+      "url": "https://github.com/enklu/commons-gradle-unity",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/gradle-unity.png"
     },
+    
     {
-      "category": "products",
-      "title": "Canceled Title",
-      "subtitle": "NCSOFT",
-      "type": "games",
-      "date": "2017",
-      "description": "Wish I could say more!"
+      "category": "contributions",
+      "title": "Unity Messaging Library",
+      "type": "software",
+      "date": "September 2017",
+      "description": "Open source libraries, used at Enklu and beyond, for safe, single threaded message dispatch.",
+      "url": "https://github.com/enklu/commons-unity-messaging"
     },
     {
       "category": "code",
@@ -435,6 +436,30 @@
       "imageUrl": "https://raw.githubusercontent.com/thegoldenmule/naturallog/master/assets/screenshot.png"
     },
     {
+      "category": "contributions",
+      "title": "StrangeIOC-UWP",
+      "type": "software",
+      "date": "August 2017",
+      "description": "Open source fork of StrangeIOC library, compatible with UWP.",
+      "url": "https://github.com/enklu/StrangeIOC-UWP"
+    },
+    {
+      "category": "contributions",
+      "title": "Unity Debug Rendering Library",
+      "type": "software",
+      "date": "August 2017",
+      "description": "Open source library, used at Enklu and beyond, for rendering primitives for debuging Unity applications.",
+      "url": "https://github.com/enklu/commons-unity-debugrendering"
+    },
+    {
+      "category": "contributions",
+      "title": "Unity HTTP Library",
+      "type": "software",
+      "date": "August 2017",
+      "description": "Open source libraries, used at Enklu and beyond, for making HTTP requests.",
+      "url": "https://github.com/enklu/commons-unity-http"
+    },
+    {
       "category": "code",
       "title": "Core-AVR",
       "type": "iot",
@@ -451,6 +476,31 @@
       "description": "Hide data in pictures (steganography), which are then stored in plain sight: on Facebook. Stegasaurus encrypts data with a one time pad, which is then stored... in other pictures.",
       "url": "https://github.com/thegoldenmule/stegosaurus",
       "imageUrl": "https://thegoldenmule.com/thumbnails/steg.jpg"
+    },
+    {
+      "category": "contributions",
+      "title": "Unity Logging Library",
+      "type": "software",
+      "date": "June 2017",
+      "description": "Open source libraries, used at Enklu and beyond, for easy to use logging in Unity.",
+      "url": "https://github.com/enklu/commons-unity-logging"
+    },
+    {
+      "category": "products",
+      "title": "Criminal Empire",
+      "type": "games",
+      "date": "2017",
+      "description": "Build an empire.",
+      "url": "https://play.google.com/store/apps/details?id=com.goldslugz.criminal.empire&hl=en_US&gl=US",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/criminal.png"
+    },
+    {
+      "category": "products",
+      "title": "Canceled Title",
+      "subtitle": "NCSOFT",
+      "type": "games",
+      "date": "2017",
+      "description": "Wish I could say more!"
     },
     {
       "category": "publications",
