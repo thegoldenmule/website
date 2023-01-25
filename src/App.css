@@ -18,8 +18,7 @@
 
 a {
   color: #daa520 !important;
-  text-decoration: none;
-  font-weight: bold;
+  text-decoration: none !important;
 }
 
 .dropdown-toggle {
