@@ -124,9 +124,9 @@
       "type": "writing",
       "date": "December 2022",
       "subtitle": "Published in Coinmonks.",
-      "description": ".",
+      "description": "NFTs may be mathematically attractive but daggum if they aren't complicated. So complicated that most of them are horribly broken.",
       "url": "https://medium.com/coinmonks/nft-collectors-are-geniuses-3edbc427c48c",
-      "imageUrl": ""
+      "imageUrl": "https://miro.medium.com/max/720/1*ovBG4SiY_uoFNRZ_NhoqIA.webp"
     },
     {
       "category": "publications",
@@ -134,9 +134,9 @@
       "type": "writing",
       "date": "July 2022",
       "subtitle": "Published in Geek Culture.",
-      "description": ".",
+      "description": "My love for literature and math leads me down a strange path... Follow along in WONDER on a numerical exploration of classic authors.",
       "url": "https://medium.com/geekculture/in-which-i-probably-invented-a-whole-new-branch-of-mathematics-and-computer-science-fbfa6e224631",
-      "imageUrl": ""
+      "imageUrl": "https://miro.medium.com/max/720/0*zJq9-2Qbvvi--dR9.webp"
     },
     {
       "category": "publications",
@@ -144,9 +144,9 @@
       "type": "writing",
       "date": "July 2022",
       "subtitle": "Published in CodeX.",
-      "description": ".",
+      "description": "Storytelling is a lost art in software engineering. What happens when you pit massive brains against one another?",
       "url": "https://medium.com/codex/doug-mcilroy-vs-donald-knuth-dbafec5d6b24",
-      "imageUrl": ""
+      "imageUrl": "https://miro.medium.com/max/720/1*AoHzgWzzBdrVLpd9e_P4IQ.webp"
     },
     {
       "category": "publications",
@@ -154,9 +154,9 @@
       "type": "writing",
       "date": "June 2022",
       "subtitle": "Published in CodeX.",
-      "description": ".",
+      "description": "Are we coding for space shuttles here? Why are we so afraid of failure?",
       "url": "https://medium.com/codex/programming-where-failure-is-not-an-option-d42dfa938b42",
-      "imageUrl": ""
+      "imageUrl": "https://miro.medium.com/max/720/0*Hpa_ocOdiYzRZVyb.webp"
     },
     {
       "category": "publications",
@@ -164,9 +164,9 @@
       "type": "writing",
       "date": "March 2022",
       "subtitle": "Published in CodeX.",
-      "description": ".",
+      "description": "Now that I'm officially a highly professional academic, I realize I have no clue what I should be doing.",
       "url": "https://medium.com/codex/what-is-the-point-of-higher-education-in-computer-science-b8a29b63ebdc",
-      "imageUrl": ""
+      "imageUrl": "https://miro.medium.com/max/720/0*uj51YZ0qr_A5wFeQ.webp"
     },
     {
       "category": "publications",
@@ -174,9 +174,9 @@
       "type": "writing",
       "date": "February 2022",
       "subtitle": "Published in Geek Culture.",
-      "description": ".",
+      "description": "My little AI co-programmer is quickly becoming an indispensible tool. Let's talk about metaphysics-- wait what?",
       "url": "https://medium.com/geekculture/github-copilot-vs-major-world-religions-44829926e055",
-      "imageUrl": ""
+      "imageUrl": "https://miro.medium.com/max/640/0*FMaBgXwuQmK7KEcg.webp"
     },
     {
       "category": "publications",
@@ -184,9 +184,9 @@
       "type": "writing",
       "date": "February 2022",
       "subtitle": "Published in Geek Culture.",
-      "description": ".",
+      "description": "Why Agile methodology matters, and how I'm teaching it to CS masters students. If only someone had shown me these things when I was a whipper-snapper!",
       "url": "https://medium.com/geekculture/shaping-young-minds-with-agile-thinking-33b63ccd3c12",
-      "imageUrl": ""
+      "imageUrl": "https://miro.medium.com/max/720/0*c9YjL7ReG6E2NgT_.webp"
     },
     {
       "category": "publications",
@@ -194,9 +194,9 @@
       "type": "writing",
       "date": "January 2022",
       "subtitle": "Published in CodeX.",
-      "description": ".",
+      "description": "It's a tough question, but it's one we should be asking ourselves: how many bugs should our product have before we show it to someone?",
       "url": "https://medium.com/codex/how-many-bugs-should-your-product-have-fd7edd1c61d",
-      "imageUrl": ""
+      "imageUrl": "https://miro.medium.com/max/720/1*7qXL7JrTggt2Akx7gRXMYg.webp"
     },
     {
       "category": "publications",
@@ -204,9 +204,9 @@
       "type": "writing",
       "date": "December 2021",
       "subtitle": "Published in CodeX.",
-      "description": ".",
+      "description": "The term 'Startup CTO' can mean just about anything, depending on the startup-- but there is one thing they all have in common: wrestling with the unknown.",
       "url": "https://medium.com/codex/what-you-cant-know-about-being-a-startup-cto-80138aceb68f",
-      "imageUrl": ""
+      "imageUrl": "https://miro.medium.com/max/720/1*3wxO_yDf9w7_I8NcJYmn9A.webp"
     },
     {
       "category": "publications",
@@ -214,9 +214,9 @@
       "type": "writing",
       "date": "October 2021",
       "subtitle": "Published in CodeX.",
-      "description": ".",
+      "description": "The future is here and the only choice we have is how to respond: do we reject it, or do we embrace it?",
       "url": "https://medium.com/codex/embrace-ai-pair-programming-or-perish-359a4c1a58c8",
-      "imageUrl": ""
+      "imageUrl": "https://miro.medium.com/max/720/1*g5Bb1Cgq1QWkNyZkFJPXoA.webp"
     },
     {
       "category": "publications",
@@ -224,9 +224,9 @@
       "type": "writing",
       "date": "October 2021",
       "subtitle": "Published in CodeX.",
-      "description": ".",
+      "description": "A practical methodology for building software that I completely made up in a vacuum and is completely original.",
       "url": "https://medium.com/codex/the-binary-search-methodology-3cd21fc66531",
-      "imageUrl": ""
+      "imageUrl": "https://miro.medium.com/max/720/1*2MTujmy2vodReeVNFdx8TQ.webp"
     },
     {
       "category": "publications",
@@ -234,9 +234,9 @@
       "type": "writing",
       "date": "October 2021",
       "subtitle": "Published in Coinmonks.",
-      "description": ".",
+      "description": "What can I say, I'm a sucker for elegant math. Proof of Stake is not the picture of elegance its older brother is.",
       "url": "https://medium.com/coinmonks/why-proof-of-work-is-elegant-and-proof-of-stake-is-not-4988cdc8805f",
-      "imageUrl": ""
+      "imageUrl": "https://miro.medium.com/max/720/1*hhFG5jniMBT_5A4lvkaSNg.webp"
     },
     {
       "category": "publications",
@@ -244,9 +244,9 @@
       "type": "writing",
       "date": "February 2019",
       "subtitle": "Published in CodeX.",
-      "description": ".",
+      "description": "Something from Pascal the programmer: please take the time to write less code. Thank you.",
       "url": "https://medium.com/codex/take-the-time-to-write-less-code-1bf0ab385a38",
-      "imageUrl": ""
+      "imageUrl": "https://miro.medium.com/max/720/1*95u9XPdy0jCIbvG4z9OsNw.webp"
     },
 
 
