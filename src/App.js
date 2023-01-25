@@ -35,7 +35,7 @@ const ElementFactory = ({ type, date, title, subtitle, description, url, imageUr
       date={date}
     >
       <h3>{title}</h3>
-      {subtitle && <h4>{subtitle}</h4>}
+      {subtitle && <h5>{subtitle}</h5>}
       <div className="d-flex align-items-center">
         <div className='pe-4'>
           <img className='rounded' src={imageUrl} width={150} />
@@ -52,10 +52,11 @@ const ElementFactory = ({ type, date, title, subtitle, description, url, imageUr
 const TimelineFilter = ({ value, setValue }) => (
   <div className="d-flex justify-content-center pt-4">
     <DropdownButton title={value} className="dropdown-center">
+    <DropdownItem onClick={() => setValue('All')}>All</DropdownItem>
       <DropdownItem onClick={() => setValue('Code')}>Code</DropdownItem>
       <DropdownItem onClick={() => setValue('Publications')}>Publications</DropdownItem>
       <DropdownItem onClick={() => setValue('Career')}>Career</DropdownItem>
-      <DropdownItem onClick={() => setValue('Media')}>Media</DropdownItem>
+      <DropdownItem onClick={() => setValue('Products')}>Products</DropdownItem>
     </DropdownButton>
   </div>
 );
@@ -67,7 +68,7 @@ const Timelines = ({ filter, }) => {
     { refetchOnWindowFocus: false },
   );
 
-  const elements = events.filter(({ category }) => category === filter.toLowerCase()).map((item, index) => (
+  const elements = events.filter(({ category }) => filter === "All" || category === filter.toLowerCase()).map((item, index) => (
     <ElementFactory
       key={index}
       {...item}
@@ -89,7 +90,7 @@ const Timelines = ({ filter, }) => {
 const queryClient = new QueryClient();
 
 function App() {
-  const [value, setValue] = useState('Code');
+  const [value, setValue] = useState('All');
 
   return (
     <div className="App">
