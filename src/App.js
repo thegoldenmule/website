@@ -4,11 +4,10 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-vertical-timeline-component/style.min.css';
 
-import { Code, Controller, Film, GlobeAmericas, HeadsetVr, Joystick, MegaphoneFill, PaletteFill, Pencil, PencilFill, PenFill, PuzzleFill, Robot, Search } from 'react-bootstrap-icons';
+import { Code, Controller, Film, GlobeAmericas, HeadsetVr, Joystick, MegaphoneFill, PaletteFill, PencilFill, PenFill, PuzzleFill, Robot, Search } from 'react-bootstrap-icons';
 import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
 import { useState } from 'react';
-import DropdownItem from 'react-bootstrap/esm/DropdownItem';
-import { Col, Container, DropdownButton, Nav, Navbar, Row } from 'react-bootstrap';
+import { Col, Container, OverlayTrigger, Row, Tooltip } from 'react-bootstrap';
 
 const typeToIcon = {
   'ar': () => <HeadsetVr />,
@@ -76,19 +75,6 @@ const ElementFactory = ({ category, type, date, title, subtitle, description, ur
   );
 };
 
-const TimelineFilter = ({ value, setValue }) => (
-  <div className="d-flex justify-content-center pt-4">
-    <DropdownButton title={value} className="dropdown-center">
-    <DropdownItem onClick={() => setValue('All')}>All</DropdownItem>
-      <DropdownItem onClick={() => setValue('Code')}>Code</DropdownItem>
-      <DropdownItem onClick={() => setValue('Publications')}>Publications</DropdownItem>
-      <DropdownItem onClick={() => setValue('Career')}>Career</DropdownItem>
-      <DropdownItem onClick={() => setValue('Products')}>Products</DropdownItem>
-      <DropdownItem onClick={() => setValue('Contributions')}>Contributions</DropdownItem>
-    </DropdownButton>
-  </div>
-);
-
 const Timelines = ({ filter, }) => {
   const { data: { events = [] } = {} } = useQuery(
     'timeline',
@@ -140,10 +126,28 @@ const ExternalLinks = () => (
   </Col>
 );
 
+const renderTechTooltip = (props) => (
+  <Tooltip id="button-tooltip" {...props}>
+    <div className="text-start">
+      <ul>
+        <li>Langs: C#, C, C++, Objective C, Java, Python, JavaScript (ES6+), Go</li>
+        <li>Graphics: CG, GLSL, AGAL</li>
+        <li>Build: Make, Gradle, Maven, Ant, Jenkins</li>
+        <li>Game: Unity, THREE.js, Cinder, Processing, Cocos2d, Flash</li>
+        <li>Server: Akka.NET, DotNetty, WebAPI, Nakama, Express.js, Sails.js, Socket.io</li>
+        <li>Data: AWS Kinesis, Snowflake, Tableau</li>
+        <li>Cloud: AWS, GCP, Azure, Docker</li>
+        <li>Crypto: Solidity, IPFS, Polygon Edge, Remix, Hardhat</li>
+      </ul>
+    </div>
+  </Tooltip>
+)
+
 const queryClient = new QueryClient();
 
 function App() {
   const [value, setValue] = useState('All');
+  const [showHelp, setShowHelp] = useState(false);
 
   const buttons = ['All', 'Code', 'Publications', 'Career', 'Products', 'Contributions'].map((category, i) => (
     <h4
@@ -158,11 +162,23 @@ function App() {
 
   return (
     <div className="App">
+      <p
+        className="github-fork-ribbon"
+        data-ribbon={showHelp ? "Back to portfolio" : "Looking for my help?"}
+        style={{ cursor: 'pointer', userSelect: 'none', }}
+        onClick={() => setShowHelp(!showHelp)}
+      />
+
       <QueryClientProvider client={queryClient}>
         <Container>
-        <Row className="pt-4">
+          <Row className="pt-4">
             <Col className="d-flex">
-            <img className="mx-auto" src="https://thegoldenmule.com/thumbnails/logo_square.png" width={150} height={150} />
+            <img
+              className="mx-auto" src="https://thegoldenmule.com/thumbnails/logo_square.png"
+              width={150} height={150}
+              style={{ cursor: 'pointer', userSelect: 'none', }}
+              onClick={() => setShowHelp(false)}
+            />
             </Col>
           </Row>
           <Row>
@@ -174,17 +190,58 @@ function App() {
               <img className="d-none d-md-block m-auto" style={{ width: '400px' }} src="https://thegoldenmule.com/thumbnails/card.jpg" />
             </Col>
           </Row>
-          <Row>
-            <Col className="d-flex m-auto">
-              <div className="m-auto d-none d-md-flex">
-                {buttons}
-              </div>
-              <div className="m-auto d-block d-md-none">
-                {buttons}
-              </div>
-            </Col>
-          </Row>
-          <Timelines filter={value} />
+
+          {
+            showHelp && (
+              <Row>
+                <div>
+                  <p><span className="lead fw-bold">TLDR</span>&nbsp;I have <i>extensive</i> tech and team skillsets, and have helped a variety of companies and individuals achieve their goals.</p>
+                </div>
+                <div>
+                  <p>This is the tech I know:</p>
+                  <ul>
+                    <li><span className="fw-bold">Language</span>: C#, C, C++, Objective C, Java, Python, JavaScript (ES6+), Go</li>
+                    <li><span className="fw-bold">Graphics</span>: CG, GLSL, AGAL</li>
+                    <li><span className="fw-bold">Build</span>: Make, Gradle, Maven, Ant, Jenkins</li>
+                    <li><span className="fw-bold">Game</span>: Unity, THREE.js, Cinder, Processing, Cocos2d, Flash</li>
+                    <li><span className="fw-bold">Server</span>: Akka.NET, DotNetty, WebAPI, Nakama, Express.js, Sails.js, Socket.io</li>
+                    <li><span className="fw-bold">Data</span>: AWS Kinesis, Snowflake, Tableau</li>
+                    <li><span className="fw-bold">Cloud</span>: AWS, GCP, Azure, Docker</li>
+                    <li><span className="fw-bold">Crypto</span>: Solidity, IPFS, Polygon Edge</li>
+                  </ul>
+                </div>
+                <div>
+                  <p>These are the types of engagements I'm available for:</p>
+                </div>
+                <div className="d-flex flex-column px-4 pb-4">
+                  <p className="lead fst-italic">Fractional (Part-Time) CTO</p>
+                  <p>A full-time CTO only makes sense with scale. For seed or pre-seed stage startups I offer technical vision, process, and hiring help.</p>
+
+                  <p className="lead fst-italic">Advisor</p>
+                  <p>For companies or individuals looking for regular direction and insight through the full product and company development lifecycle, I am available on a regular cadence.</p>
+
+                  <p className="lead fst-italic">Consulting</p>
+                  <p>Do you have a targeted problem you're trying to solve? A simple call might suffice to unblock a team, or focused deliverable for larger projects.</p>
+                </div>
+              </Row>
+            )
+          }
+
+          { !showHelp && (
+            <>
+              <Row>
+                <Col className="d-flex m-auto">
+                  <div className="m-auto d-none d-md-flex">
+                    {buttons}
+                  </div>
+                  <div className="m-auto d-block d-md-none">
+                    {buttons}
+                  </div>
+                </Col>
+              </Row>
+              <Timelines filter={value} />
+            </>
+          )}
         </Container>
       </QueryClientProvider>
     </div>

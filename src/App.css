@@ -1,4 +1,4 @@
-.fullscreen {
+.App {
   position: fixed;
   top: 0;
   left: 0;
@@ -6,6 +6,7 @@
   height: 100%;
   z-index: -1;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .date {
@@ -35,4 +36,10 @@ a {
 
 .header-link:hover {
   color: #000 !important;
+}
+
+.help-link {
+  position: absolute;
+  right: 0px;
+  top: 0px;
 }
