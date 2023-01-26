@@ -44,7 +44,7 @@ const contentStyleFor = ({ type, category }) => {
   return { outline: '1px solid #ccc', color: '#000', fontFamily: '"Antic Didone"', fontWeight: 500 };
 };
 
-const ElementFactory = ({ category, type, date, title, subtitle, description, url, imageUrl, }) => {
+const ElementFactory = ({ category, type, date, title, subtitle, description, url, imageUrl, tech, }) => {
   return (
     <VerticalTimelineElement
       className={`type-${type} category-${category}`}
@@ -71,6 +71,13 @@ const ElementFactory = ({ category, type, date, title, subtitle, description, ur
           { url && <a className="fw-bold" target="_blank" href={url}>Read More</a> }
         </div>
       </div>
+      { tech && tech.length > 0 && (
+        <div className="d-flex flex-wrap pt-4" style={{ width: '100%' }}>
+          {tech.map((item, index) => (
+            <span key={index} className="fst-italic text-secondary">#{item}&nbsp;</span>
+          ))}
+        </div>
+      )}
     </VerticalTimelineElement>
   );
 };
@@ -198,7 +205,7 @@ function App() {
                   <p><span className="lead fw-bold">TLDR</span>&nbsp;I have <i>extensive</i> tech and team skillsets, and have helped a variety of companies and individuals achieve their goals.</p>
                 </div>
                 <div>
-                  <p>This is the tech I know:</p>
+                  <p>This is the tech I have worked with (you can find examples of each on my <span className="fw-bold" style={{ color: '#daa520', cursor: 'pointer', userSelect: 'none' }} onClick={() => setShowHelp(false)}>portfolio</span>):</p>
                   <ul>
                     <li><span className="fw-bold">Language</span>: C#, C, C++, Objective C, Java, Python, JavaScript (ES6+), Go</li>
                     <li><span className="fw-bold">Graphics</span>: CG, GLSL, AGAL</li>
@@ -216,7 +223,7 @@ function App() {
                 </div>
                 <div className="d-flex flex-column px-4 pb-4">
                   <p className="lead fst-italic">Fractional (Part-Time) CTO</p>
-                  <p>A full-time CTO only makes sense with scale. For seed or pre-seed stage startups I offer technical vision, process, and hiring help.</p>
+                  <p>A full-time CTO only makes sense with scale. For seed or pre-seed stage startups I offer technology vision, structure for process, and interview process help.</p>
 
                   <p className="lead fst-italic">Advisor</p>
                   <p>For companies or individuals looking for regular direction and insight through the full product and company development lifecycle, I am available on a regular cadence.</p>
