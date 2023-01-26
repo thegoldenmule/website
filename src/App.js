@@ -204,6 +204,7 @@ function App() {
                     <li><span className="fw-bold">Graphics</span>: CG, GLSL, AGAL</li>
                     <li><span className="fw-bold">Build</span>: Make, Gradle, Maven, Ant, Jenkins</li>
                     <li><span className="fw-bold">Game</span>: Unity, THREE.js, Cinder, Processing, Cocos2d, Flash</li>
+                    <li><span className="fw-bold">Web</span>: React, Redux, Bootstrap, ReactRouter, Web Crypto, Socket.io</li>
                     <li><span className="fw-bold">Server</span>: Akka.NET, DotNetty, WebAPI, Nakama, Express.js, Sails.js, Socket.io</li>
                     <li><span className="fw-bold">Data</span>: AWS Kinesis, Snowflake, Tableau</li>
                     <li><span className="fw-bold">Cloud</span>: AWS, GCP, Azure, Docker</li>
