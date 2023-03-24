@@ -2,21 +2,43 @@
   "events": [
     {
       "category": "career",
+      "title": "N3twork Studios",
+      "subtitle": "VP, Engineering",
+      "type": "games",
+      "date": "2023-Present",
+      "description": "I lead N3twork's engineering discipline.",
+      "url": "https://www.linkedin.com/in/benjaminmicahj/",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/network-logo.jpg",
+      "tech": ["java", "cs", "js", "unity", "nodejs", "react", "redux", "bootstrap", "jenkins", "aws", "docker", "kinesis", "tableau", "solidity", "ipfs", "polygon", "forte"]
+    },
+    {
+      "category": "publications",
+      "title": "Effectively Working in Teams: Baltic German Style",
+      "type": "writing",
+      "date": "March 2023",
+      "subtitle": "Published in Geek Culture.",
+      "description": "How can we understand each other? Thoughts from sociology, biocybernetics, and of course, mathematics.",
+      "url": "https://medium.com/geekculture/software-development-dynamics-baltic-german-style-43a526a13444",
+      "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/0*wqkes4CAigOKmIfX.jpg",
+      "tech": []
+    },
+    {
+      "category": "career",
       "title": "Big Run Studios",
       "subtitle": "Chief Technical Officer",
       "type": "games",
-      "date": "2020-Present",
+      "date": "2020-2023",
       "description": "I run Big Run's engineering team, stem to stern! And I run a tight ship, mind ye-- we build great games, great teams, and great tech.",
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/br-logo.png",
-      "tech": ["go", "cs", "js", "nakama", "sailsjs", "nodejs", "react", "redux", "bootstrap", "akka", "jenkins", "aws", "docker", "kinesis", "snowflake", "tableau", "solidity", "ipfs", "polygon"]
+      "tech": ["go", "cs", "js", "unity", "nakama", "sailsjs", "nodejs", "react", "redux", "bootstrap", "akka", "jenkins", "aws", "docker", "kinesis", "snowflake", "tableau", "solidity", "ipfs", "polygon"]
     },
     {
       "category": "career",
       "title": "Saint Louis University",
       "subtitle": "Adjunct Instructor",
       "type": "teaching",
-      "date": "2022-Present",
+      "date": "2022-2023",
       "description": "I was invited to teach in SLU's CS Masters program -- and I cordially accepted. I have learned that oration is a skill I could improve... and that I really like to hear myself talk. My course material is on GitHub.",
       "url": "https://github.com/thegoldenmule/csci-5030/",
       "imageUrl": "https://www.slu.edu/ico/apple-touch-icon.png",
@@ -32,6 +54,15 @@
       "url": "https://medium.com/coinmonks/nft-collectors-are-geniuses-3edbc427c48c",
       "imageUrl": "https://miro.medium.com/max/720/1*ovBG4SiY_uoFNRZ_NhoqIA.webp",
       "tech": ["solidity"]
+    },
+    {
+      "category": "products",
+      "title": "Canceled Web3 Title",
+      "subtitle": "Big Run Studios",
+      "type": "games",
+      "date": "2022",
+      "description": "We built out a transparent, custodial wallet system on top of the Polygon Network. For this project I wrote ERC20 and ERC1155 contracts, IPFS integration (with heavy caching!), and all sorts of other nifty features to introduce the crypto and social gaming communities. I even made a Go code contribution to the Polygon Edge project (see entry below).",
+      "tech": ["solidity", "go", "nodejs", "unity"]
     },
     {
       "category": "publications",
