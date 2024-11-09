@@ -1,9 +1,5 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
-import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
-import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
-import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
 
 const scene = new THREE.Scene();
 const camera = new THREE.OrthographicCamera(
@@ -105,41 +101,6 @@ document.body.appendChild(overlay);
 const gridHelper = new THREE.GridHelper(100, 100, 0x00ff00, 0x00ff00);
 scene.add(gridHelper);
 
-const composer = new EffectComposer(renderer);
-composer.addPass(new RenderPass(scene, camera));
-
-const bloomPass = new UnrealBloomPass(new THREE.Vector2(window.innerWidth, window.innerHeight), 1.5, 0.4, 0.85);
-composer.addPass(bloomPass);
-
-const mouseDistortionShader = {
-  uniforms: {
-    'tDiffuse': { value: null },
-    'mouse': { value: new THREE.Vector2(0.5, 0.5) }
-  },
-  vertexShader: `
-    varying vec2 vUv;
-    void main() {
-      vUv = uv;
-      gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-    }
-  `,
-  fragmentShader: `
-    uniform sampler2D tDiffuse;
-    uniform vec2 mouse;
-    varying vec2 vUv;
-    void main() {
-      vec2 uv = vUv;
-      vec2 dist = uv - mouse;
-      float distLength = length(dist);
-      uv += dist * (0.01 / distLength);
-      gl_FragColor = texture2D(tDiffuse, uv);
-    }
-  `
-};
-
-const mouseDistortionPass = new ShaderPass(mouseDistortionShader);
-composer.addPass(mouseDistortionPass);
-
 function animate() {
   requestAnimationFrame(animate);
 
@@ -204,18 +165,16 @@ function animate() {
 
   if (ship.position.x > window.innerWidth / 2) {
     ship.position.x = -window.innerWidth / 2;
-  } else if (ship.position.x < -window.innerWidth / 2) {
+  } else if (ship.position.x < window.innerWidth / 2) {
     ship.position.x = window.innerWidth / 2;
   }
   if (ship.position.y > window.innerHeight / 2) {
     ship.position.y = -window.innerHeight / 2;
-  } else if (ship.position.y < -window.innerHeight / 2) {
+  } else if (ship.position.y < window.innerHeight / 2) {
     ship.position.y = window.innerHeight / 2;
   }
 
-  mouseDistortionPass.uniforms.mouse.value.set(mouse.x * 0.5 + 0.5, mouse.y * 0.5 + 0.5);
-
-  composer.render();
+  renderer.render(scene, camera);
 }
 
 animate();
