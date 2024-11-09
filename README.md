@@ -1,6 +1,3 @@
-###
+### Quickstart
 
-`npm run start` to start dev server.
-
-`npm run build` to build.
-
+This is a static webpage. Use `npx serve public/` to serve.

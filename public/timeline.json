@@ -34,17 +34,6 @@
       "tech": ["ts"]
     },
     {
-      "category": "code",
-      "title": "Nakama Go Server",
-      "subtitle": "A large contribution to a great OSS project.",
-      "type": "software",
-      "date": "August 2024",
-      "description": "After years of requesting it, I finally just added it myself: an API for adding public RPCs.",
-      "url": "https://github.com/heroiclabs/nakama/pull/1252",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/nakama.png",
-      "tech": ["go"]
-    },
-    {
       "category": "publications",
       "title": "A Counterpoint to Account Abstraction",
       "type": "writing",
@@ -53,7 +42,7 @@
       "description": "Account Abstraction, or Smart Wallets, are the newest fad. Everyone and their grandmother is making wallets. So why have we chosen to skip them for now?",
       "url": "https://medium.com/spyre-io/a-counterpoint-to-account-abstraction-df71d1f179d9",
       "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*zSHIlzSPQP-b-HkD2B_mPg.jpeg",
-      "tech": []
+      "tech": ["web3"]
     },
     {
       "category": "publications",
