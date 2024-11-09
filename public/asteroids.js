@@ -26,23 +26,26 @@ fetch('timeline.json')
   .then(response => response.json())
   .then(data => {
     data.events.forEach(event => {
-      const asteroidGeometry = new THREE.Geometry();
+      const asteroidGeometry = new THREE.BufferGeometry();
+      const vertices = [];
       for (let i = 0; i < 12; i++) {
-        asteroidGeometry.vertices.push(new THREE.Vector3(
+        vertices.push(
           (Math.random() - 0.5) * 2,
           (Math.random() - 0.5) * 2,
           (Math.random() - 0.5) * 2
-        ));
+        );
       }
+      asteroidGeometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+      const indices = [];
       for (let i = 0; i < 20; i++) {
         const a = Math.floor(Math.random() * 12);
         const b = Math.floor(Math.random() * 12);
         const c = Math.floor(Math.random() * 12);
         if (a !== b && b !== c && c !== a) {
-          asteroidGeometry.faces.push(new THREE.Face3(a, b, c));
+          indices.push(a, b, c);
         }
       }
-      asteroidGeometry.computeFaceNormals();
+      asteroidGeometry.setIndex(indices);
       asteroidGeometry.computeVertexNormals();
 
       const asteroidMaterial = new THREE.MeshBasicMaterial({
