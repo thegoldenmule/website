@@ -156,7 +156,7 @@ function App() {
   const [value, setValue] = useState('All');
   const [showHelp, setShowHelp] = useState(false);
 
-  const buttons = ['All', 'Code', 'Publications', 'Career', 'Products', 'Contributions'].map((category, i) => (
+  const buttons = ['All', 'Code', 'Publications', 'Career', 'Products'].map((category, i) => (
     <h4
       key={i}
       className="header-link"

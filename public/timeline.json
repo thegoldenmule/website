@@ -1,12 +1,155 @@
 {
   "events": [
     {
+      "category": "products",
+      "title": "Hangman Clash",
+      "subtitle": "A Goldenmule Media first.",
+      "type": "games",
+      "date": "Sept 2024",
+      "description": "A bespoke twist to the familiar. Realtime, blockchain-enabled, skill-based multiplayer game.",
+      "url": "https://hangmanclash.com",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/hangman.png",
+      "tech": ["js", "ts", "go", "viem", "nakama", "pixijs", "react", "tailwind"]
+    },
+    {
+      "category": "publications",
+      "title": "Thirdweb Accelerator Recipient",
+      "subtitle": "Partnering with Thirdweb for our first game.",
+      "type": "games",
+      "date": "August 2024",
+      "description": "Accepted into the Thirdweb Startup Program to bring our first game to market. This is a program for select startups to deep-dive their products built on top of Thirdweb's excellent products.",
+      "url": "https://x.com/spyreio/status/1828510057270477168",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/thirdweb.png",
+      "tech": ["js", "ts", "go", "viem", "nakama", "pixijs", "react", "tailwind"]
+    },
+    {
+      "category": "products",
+      "title": "Powerhouse Partner",
+      "subtitle": "Building tools for DAOs.",
+      "type": "software",
+      "date": "2024",
+      "description": "I've got a jacket and everything. Officially a Powerhouse parner, building out core technology for the MakerDAO Sustainable Ecosystem Scaling Core Unit.",
+      "url": "https://powerhouse.inc",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/powerhouse.jpg",
+      "tech": ["ts"]
+    },
+    {
+      "category": "code",
+      "title": "Nakama Go Server",
+      "subtitle": "A large contribution to a great OSS project.",
+      "type": "software",
+      "date": "August 2024",
+      "description": "After years of requesting it, I finally just added it myself: an API for adding public RPCs.",
+      "url": "https://github.com/heroiclabs/nakama/pull/1252",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/nakama.png",
+      "tech": ["go"]
+    },
+    {
+      "category": "publications",
+      "title": "A Counterpoint to Account Abstraction",
+      "type": "writing",
+      "date": "July 2024",
+      "subtitle": "In which I take on Web3's newest fad.",
+      "description": "Account Abstraction, or Smart Wallets, are the newest fad. Everyone and their grandmother is making wallets. So why have we chosen to skip them for now?",
+      "url": "https://medium.com/spyre-io/a-counterpoint-to-account-abstraction-df71d1f179d9",
+      "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*zSHIlzSPQP-b-HkD2B_mPg.jpeg",
+      "tech": []
+    },
+    {
+      "category": "publications",
+      "title": "Physics Engines Explained: Part II",
+      "type": "writing",
+      "date": "July 2024",
+      "subtitle": "You thought the last article was deep.",
+      "description": "Now the question: what makes physics engines break? In this article, I dive DEEP into linear algebra in complex space to find explicit conditions for failure. Believe me, it's cool!",
+      "url": "https://thegoldenmule.medium.com/physics-engine-deep-dive-part-ii-cb8d1fda1f9b",
+      "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*GDEI8bHKk6Yfq4hxdu_SFg.jpeg",
+      "tech": []
+    },
+    {
+      "category": "publications",
+      "title": "Physics Engines Explained: Part I",
+      "type": "writing",
+      "date": "July 2024",
+      "subtitle": "Get ready for some math.",
+      "description": "An unusual departure for my writing: hard math. We dive into the theory of rigid body systems and begin an exploration into what makes physics engines tick.",
+      "url": "https://thegoldenmule.medium.com/physics-engines-explained-part-i-25c595ddc5b2",
+      "imageUrl": "https://miro.medium.com/v2/resize:fit:730/format:webp/0*IspZqqnDZvZmWWsY.png",
+      "tech": []
+    },
+    {
+      "category": "code",
+      "title": "Nakama-js",
+      "subtitle": "A small but mighty OSS contribution.",
+      "type": "software",
+      "date": "July 2024",
+      "description": "An incredibly complicated fix deep inside of Nakama's JS library. Okay it was a one-liner but it was a hard to find one-liner.",
+      "url": "https://github.com/heroiclabs/nakama-js/pull/196",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/nakama.png",
+      "tech": ["ts"]
+    },
+    {
+      "category": "publications",
+      "title": "A Complete-ish 3D Engine in 1200 Lines",
+      "type": "writing",
+      "date": "July 2024",
+      "subtitle": "They said it coudn't be done.",
+      "description": "Did I mention I teach in the CS Masters program at Saint Louis University? For my computer graphics course, we pair-programmed an entire 3D engine from scratch.",
+      "url": "https://thegoldenmule.medium.com/a-complete-ish-3d-engine-in-1200-lines-b5babf4b72ed",
+      "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*KidhxH5QHiplzlXv6SOU6g.jpeg",
+      "tech": []
+    },
+    {
+      "category": "code",
+      "title": "Chain-chomp",
+      "subtitle": "Custom cryto-protocol server.",
+      "type": "software",
+      "date": "May 2024",
+      "description": "Chain-chomp is an HTTP server for interacting with Spyre and USDC smart contracts, providing a gasless end-user experience.",
+      "url": "https://github.com/spyre-io/chain-chomp/",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/chomp.png",
+      "tech": ["js", "viem", "sailsjs"]
+    },
+    {
+      "category": "products",
+      "title": "Arbitrum Grants Portal",
+      "subtitle": "Goldenmule Contract",
+      "type": "software",
+      "date": "Mar 2024 - Apr 2024",
+      "description": "Tech advisor for Powerhouse's decentralized toolkit. Additionally, built tools and user flows on Powerhouse tech for tracking progress of Arbitrum grant recipients, in conjunction with Stable Labs.",
+      "url": "https://www.powerhouse.inc/",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/arb.png",
+      "tech": ["react", "software", "web", "mobile", "web3"]
+    },
+    {
+      "category": "products",
+      "title": "Bindery Books",
+      "subtitle": "Goldenmule Contract",
+      "type": "software",
+      "date": "Oct 2024 - Feb 2024",
+      "description": "Short term contract for Bindery Books doing GCP DevOps, containerization, and full-stack web work.",
+      "url": "https://binderybooks.com/",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/bindery.png",
+      "tech": ["nextjs", "software", "web", "mobile", "docker", "gcp"]
+    },
+    {
+      "category": "career",
+      "title": "Goldenmule Media",
+      "subtitle": "Founder",
+      "type": "games",
+      "date": "2023-Present",
+      "description": "Software development studio, working on internal and external projects. Email me if you want to work together!",
+      "url": "https://www.linkedin.com/in/benjaminmicahj/",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/logo_square.png",
+      "tech": ["games", "web3", "web", "mobile", "software"]
+    },
+    {
       "category": "career",
       "title": "N3twork Studios",
       "subtitle": "VP, Engineering",
       "type": "games",
-      "date": "2023-Present",
-      "description": "I lead N3twork's engineering discipline.",
+      "date": "Mar 2023-Dec 2023",
+      "description": "I led N3twork's engineering, IT, and QA disciplines.",
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/network-logo.jpg",
       "tech": ["java", "cs", "js", "unity", "nodejs", "react", "redux", "bootstrap", "jenkins", "aws", "docker", "kinesis", "tableau", "solidity", "ipfs", "polygon", "forte"]
@@ -38,8 +181,8 @@
       "title": "Saint Louis University",
       "subtitle": "Adjunct Instructor",
       "type": "teaching",
-      "date": "2022-2023",
-      "description": "I was invited to teach in SLU's CS Masters program -- and I cordially accepted. I have learned that oration is a skill I could improve... and that I really like to hear myself talk. My course material is on GitHub.",
+      "date": "2022-Present",
+      "description": "I teach classes for the SLU CS Master's program. So far, Computer Graphics (CSCI 4820) and Principles of Software Engineering (CSCI-5030). My course material is (mostly) on GitHub.",
       "url": "https://github.com/thegoldenmule/csci-5030/",
       "imageUrl": "https://www.slu.edu/ico/apple-touch-icon.png",
       "tech": []
@@ -109,7 +252,7 @@
       "tech": []
     },
     {
-      "category": "contributions",
+      "category": "code",
       "title": "Polygon Edge",
       "type": "software",
       "date": "March 2022",
@@ -440,7 +583,7 @@
       "imageUrl": "https://miro.medium.com/max/720/1*95u9XPdy0jCIbvG4z9OsNw.webp"
     },
     {
-      "category": "contributions",
+      "category": "code",
       "title": "Quicktype Maintainer",
       "type": "software",
       "date": "2019",
@@ -450,7 +593,7 @@
       "tech": ["typescript"]
     },
     {
-      "category": "contributions",
+      "category": "code",
       "title": "UWP Support for Antlr",
       "type": "misc",
       "date": "March 2018",
@@ -471,7 +614,7 @@
     },
     
     {
-      "category": "contributions",
+      "category": "code",
       "title": "Unity Messaging Library",
       "type": "software",
       "date": "September 2017",
@@ -500,7 +643,7 @@
       "tech": ["js", "socketio"]
     },
     {
-      "category": "contributions",
+      "category": "code",
       "title": "StrangeIOC-UWP",
       "type": "software",
       "date": "August 2017",
@@ -509,7 +652,7 @@
       "tech": ["cs"]
     },
     {
-      "category": "contributions",
+      "category": "code",
       "title": "Unity Debug Rendering Library",
       "type": "software",
       "date": "August 2017",
@@ -518,7 +661,7 @@
       "tech": ["cs"]
     },
     {
-      "category": "contributions",
+      "category": "code",
       "title": "Unity HTTP Library",
       "type": "software",
       "date": "August 2017",
@@ -547,7 +690,7 @@
       "tech": ["python"]
     },
     {
-      "category": "contributions",
+      "category": "code",
       "title": "Unity Logging Library",
       "type": "software",
       "date": "June 2017",
@@ -597,10 +740,10 @@
     {
       "category": "career",
       "title": "NCSOFT",
-      "subtitle": "Lead Engineer",
+      "subtitle": "Studio Technical Director",
       "type": "games",
-      "date": "2015-2016",
-      "description": "Here I ran the client and server teams for an unreleased AAA MMO in Unity.",
+      "date": "2015-2017",
+      "description": "I ran engineering for two AAA game teams, a core tech group, and a tools engineering team.",
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/nc-logo.svg",
       "tech": ["cs", "unity", "cg", "js", "akka", "webapi", "dotnet", "aws"]
@@ -921,7 +1064,7 @@
       "subtitle": "Flash Contractor",
       "type": "games",
       "date": "2006-2007",
-      "description": "My first job in the industry! I worked part time for this small flash development shop. I was brought after I sold them the rights to a rigid-body physics engine I wrote my senior year of high school.",
+      "description": "My first job in the industry! I worked part time for this small flash development shop. I was brought in after I sold them the rights to a rigid-body physics engine I wrote my senior year of high school.",
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/machine.png",
       "tech": ["flash"]
