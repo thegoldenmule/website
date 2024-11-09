@@ -6,7 +6,14 @@ import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
 
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const camera = new THREE.OrthographicCamera(
+  window.innerWidth / -2,
+  window.innerWidth / 2,
+  window.innerHeight / 2,
+  window.innerHeight / -2,
+  0.1,
+  1000
+);
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
@@ -18,7 +25,8 @@ const shipMaterial = new THREE.MeshBasicMaterial({ color: 0xffff00 });
 const ship = new THREE.Mesh(shipGeometry, shipMaterial);
 scene.add(ship);
 
-camera.position.z = 5;
+camera.position.set(0, 0, 100);
+camera.lookAt(0, 0, 0);
 
 const asteroids = [];
 
@@ -181,7 +189,29 @@ function animate() {
     asteroid.rotation.x += asteroid.rotationVelocity.x;
     asteroid.rotation.y += asteroid.rotationVelocity.y;
     asteroid.rotation.z += asteroid.rotationVelocity.z;
+
+    if (asteroid.position.x > window.innerWidth / 2) {
+      asteroid.position.x = -window.innerWidth / 2;
+    } else if (asteroid.position.x < -window.innerWidth / 2) {
+      asteroid.position.x = window.innerWidth / 2;
+    }
+    if (asteroid.position.y > window.innerHeight / 2) {
+      asteroid.position.y = -window.innerHeight / 2;
+    } else if (asteroid.position.y < -window.innerHeight / 2) {
+      asteroid.position.y = window.innerHeight / 2;
+    }
   });
+
+  if (ship.position.x > window.innerWidth / 2) {
+    ship.position.x = -window.innerWidth / 2;
+  } else if (ship.position.x < -window.innerWidth / 2) {
+    ship.position.x = window.innerWidth / 2;
+  }
+  if (ship.position.y > window.innerHeight / 2) {
+    ship.position.y = -window.innerHeight / 2;
+  } else if (ship.position.y < -window.innerHeight / 2) {
+    ship.position.y = window.innerHeight / 2;
+  }
 
   mouseDistortionPass.uniforms.mouse.value.set(mouse.x * 0.5 + 0.5, mouse.y * 0.5 + 0.5);
 
