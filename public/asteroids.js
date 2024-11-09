@@ -131,7 +131,7 @@ const mouseDistortionShader = {
       vec2 uv = vUv;
       vec2 dist = uv - mouse;
       float distLength = length(dist);
-      uv += dist * (0.1 / distLength);
+      uv += dist * (0.01 / distLength);
       gl_FragColor = texture2D(tDiffuse, uv);
     }
   `
