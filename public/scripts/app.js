@@ -1,7 +1,15 @@
-import { Application, Container, Graphics, Text } from "./pixi.mjs";
+import {
+  Application,
+  Assets,
+  Container,
+  Graphics,
+  Sprite,
+  Text,
+} from "./pixi.mjs";
 
 const backgroundColor = "#222222";
 
+let popout = null;
 let selectedAsteroid = null;
 
 const selectAsteroid = (asteroid) => {
@@ -14,6 +22,7 @@ const selectAsteroid = (asteroid) => {
   selectedAsteroid.titleText.previousFill =
     selectedAsteroid.titleText.style.fill;
   selectedAsteroid.titleText.style.fill = 0xffffff;
+  popout.populate(selectedAsteroid);
 };
 
 const createShip = () => {
@@ -142,6 +151,65 @@ const addParallaxBackgrounds = (app, ship) => {
   return layers;
 };
 
+const createPopout = () => {
+  const popout = new Container();
+
+  // add the subtitle
+  const subtitleText = new Text({
+    text: "",
+    style: {
+      fill: 0xffffff,
+      fontSize: 8,
+    },
+  });
+  subtitleText.x = -subtitleText.width / 2;
+  subtitleText.y = 0;
+  popout.addChild(subtitleText);
+
+  // add the date
+  const dateText = new Text({
+    text: "",
+    style: {
+      fill: 0xffffff,
+      fontSize: 8,
+    },
+  });
+  dateText.x = subtitleText.x;
+  dateText.y = 10;
+  popout.addChild(dateText);
+
+  // add the description
+  const descriptionText = new Text({
+    text: "",
+    style: {
+      fill: 0xffffff,
+      fontSize: 8,
+    },
+  });
+  descriptionText.x = subtitleText.x;
+  descriptionText.y = 20;
+  popout.addChild(descriptionText);
+
+  // load the image
+  const imageContainer = new Container();
+  imageContainer.x = subtitleText.x;
+  imageContainer.y = 30;
+  popout.addChild(imageContainer);
+
+  popout.populate = (asteroid) => {
+    const { subtitle, date, description, imageUrl } = asteroid.event;
+    const { sprite } = asteroid;
+
+    subtitleText.text = subtitle;
+    dateText.text = date;
+    descriptionText.text = description;
+    imageContainer.removeChildren();
+    imageContainer.addChild(sprite);
+  };
+
+  return popout;
+};
+
 (async () => {
   const app = new Application();
   await app.init({
@@ -180,6 +248,10 @@ const addParallaxBackgrounds = (app, ship) => {
   // add parallax background
   const layers = addParallaxBackgrounds(app, ship);
 
+  // add popout
+  popout = createPopout();
+  app.stage.addChild(popout);
+
   // ship always on top
   app.stage.addChild(shipLayer);
 
@@ -199,7 +271,6 @@ const addParallaxBackgrounds = (app, ship) => {
       imageUrl,
       tech,
     } = event;
-
     // todo: pull x, y, size from the event
     const x = Math.random() * app.screen.width * 1.5;
     const y = Math.random() * app.screen.height * 1.5;
@@ -246,12 +317,23 @@ const addParallaxBackgrounds = (app, ship) => {
     titleText.y = y + size + 5;
     asteroid.addChild(titleText);
 
+    // load image
+    const spriteContainer = new Container();
+    Assets.load(imageUrl).then((tex) => {
+      const aspectRatio = tex.width / tex.height;
+
+      const sprite = new Sprite(tex);
+      sprite.width = 100;
+      sprite.height = 100 / aspectRatio;
+      spriteContainer.addChild(sprite);
+    });
+
     // mouseover
     asteroid.interactive = true;
     asteroid.buttonMode = true;
     asteroid.titleText = titleText;
+    asteroid.event = event;
+    asteroid.sprite = spriteContainer;
     asteroid.on("mouseover", () => selectAsteroid(asteroid));
   });
-
-  // when the ship gets near the asteroid, show the title
 })();
