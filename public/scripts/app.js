@@ -1,4 +1,11 @@
-import { Application, Container, Graphics, Text } from "./pixi.mjs";
+import {
+  Application,
+  Assets,
+  Container,
+  Graphics,
+  Sprite,
+  Text,
+} from "./pixi.mjs";
 
 const backgroundColor = "#222222";
 
@@ -9,6 +16,10 @@ let popout = null;
 let selectedAsteroid = null;
 
 const selectAsteroid = (asteroid) => {
+  if (selectedAsteroid === asteroid) {
+    return;
+  }
+
   if (selectedAsteroid) {
     selectedAsteroid.titleText.style.fill =
       selectedAsteroid.titleText.previousFill;
@@ -305,15 +316,18 @@ const createPopout = () => {
 
     // load image
     const spriteContainer = new Container();
-    /*Assets.load(imageUrl).then((tex) => {
-      console.log(tex);
-      const aspectRatio = tex.width / tex.height;
+    Assets.load(imageUrl)
+      .then((tex) => {
+        const aspectRatio = tex.width / tex.height;
 
-      const sprite = new Sprite(tex);
-      sprite.width = 100;
-      sprite.height = 100 / aspectRatio;
-      spriteContainer.addChild(sprite);
-    });*/
+        const sprite = new Sprite(tex);
+        sprite.width = 100;
+        sprite.height = 100 / aspectRatio;
+        spriteContainer.addChild(sprite);
+      })
+      .catch((err) => {
+        //
+      });
 
     // mouseover
     asteroid.interactive = true;
@@ -322,5 +336,7 @@ const createPopout = () => {
     asteroid.event = event;
     asteroid.sprite = spriteContainer;
     asteroid.on("mouseover", () => selectAsteroid(asteroid));
+    asteroid.on("touchmove", () => selectAsteroid(asteroid));
+    asteroid.on("touchstart", () => selectAsteroid(asteroid));
   });
 })();
