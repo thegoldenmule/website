@@ -23,12 +23,16 @@ const selectAsteroid = (asteroid) => {
   if (selectedAsteroid) {
     selectedAsteroid.titleText.style.fill =
       selectedAsteroid.titleText.previousFill;
+    selectedAsteroid.titleText.alpha = selectedAsteroid.titleText.previousAlpha;
   }
 
   selectedAsteroid = asteroid;
   selectedAsteroid.titleText.previousFill =
     selectedAsteroid.titleText.style.fill;
+  selectedAsteroid.titleText.previousAlpha = selectedAsteroid.titleText.alpha;
+
   selectedAsteroid.titleText.style.fill = 0xffffff;
+  selectedAsteroid.titleText.alpha = 1;
   popout.populate(selectedAsteroid);
 };
 
@@ -158,7 +162,7 @@ const createParallaxBackgrounds = () => {
 
     const layer = generateBackground(app, color);
     layer.color = color;
-    layer.opacity = 1 - i / 5;
+    layer.opacity = (i + 2) / 7;
     background.addChild(layer);
 
     app.ticker.add(() => {
@@ -231,6 +235,15 @@ const createPopout = () => {
   app.stage.addChild(popout);
 };
 
+const categoryToAsteroidColor = (category) => {
+  switch (category) {
+    case "career":
+      return "#d0961a";
+  }
+
+  return "#ffffff";
+};
+
 (async () => {
   app = new Application();
 
@@ -281,8 +294,9 @@ const createPopout = () => {
     }
     const layer = layers[layerIndex];
 
+    const color = categoryToAsteroidColor(category);
     const asteroid = new Graphics()
-      .setStrokeStyle({ color: layer.color, width: 1 })
+      .setStrokeStyle({ color, width: 1, alpha: layer.opacity })
       .setFillStyle({ color: backgroundColor })
       .moveTo(x, y);
 
@@ -310,10 +324,11 @@ const createPopout = () => {
     const titleText = new Text({
       text: title,
       style: {
-        fill: layer.color,
+        fill: color,
         fontSize: 12,
       },
     });
+    titleText.alpha = layer.opacity;
     titleText.x = x - titleText.width / 2;
     titleText.y = y + size + 5;
     asteroid.addChild(titleText);
