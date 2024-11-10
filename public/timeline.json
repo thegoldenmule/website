@@ -9,7 +9,9 @@
       "description": "A bespoke twist to the familiar. Realtime, blockchain-enabled, skill-based multiplayer game.",
       "url": "https://hangmanclash.com",
       "imageUrl": "https://thegoldenmule.com/thumbnails/hangman.png",
-      "tech": ["js", "ts", "go", "viem", "nakama", "pixijs", "react", "tailwind"]
+      "tech": ["js", "ts", "go", "viem", "nakama", "pixijs", "react", "tailwind"],
+      "size": 38,
+      "layer": 0
     },
     {
       "category": "publications",
@@ -130,7 +132,9 @@
       "description": "Software development studio, working on internal and external projects. Email me if you want to work together!",
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/logo_square.png",
-      "tech": ["games", "web3", "web", "mobile", "software"]
+      "tech": ["games", "web3", "web", "mobile", "software"],
+      "size": 25,
+      "layer": 0
     },
     {
       "category": "career",
@@ -141,7 +145,9 @@
       "description": "I led N3twork's engineering, IT, and QA disciplines.",
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/network-logo.jpg",
-      "tech": ["java", "cs", "js", "unity", "nodejs", "react", "redux", "bootstrap", "jenkins", "aws", "docker", "kinesis", "tableau", "solidity", "ipfs", "polygon", "forte"]
+      "tech": ["java", "cs", "js", "unity", "nodejs", "react", "redux", "bootstrap", "jenkins", "aws", "docker", "kinesis", "tableau", "solidity", "ipfs", "polygon", "forte"],
+      "size": 35,
+      "layer": 0
     },
     {
       "category": "publications",
@@ -163,7 +169,9 @@
       "description": "I run Big Run's engineering team, stem to stern! And I run a tight ship, mind ye-- we build great games, great teams, and great tech.",
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/br-logo.png",
-      "tech": ["go", "cs", "js", "unity", "nakama", "sailsjs", "nodejs", "react", "redux", "bootstrap", "akka", "jenkins", "aws", "docker", "kinesis", "snowflake", "tableau", "solidity", "ipfs", "polygon"]
+      "tech": ["go", "cs", "js", "unity", "nakama", "sailsjs", "nodejs", "react", "redux", "bootstrap", "akka", "jenkins", "aws", "docker", "kinesis", "snowflake", "tableau", "solidity", "ipfs", "polygon"],
+      "size": 32,
+      "layer": 0
     },
     {
       "category": "career",
@@ -174,7 +182,9 @@
       "description": "I teach classes for the SLU CS Master's program. So far, Computer Graphics (CSCI 4820) and Principles of Software Engineering (CSCI-5030). My course material is (mostly) on GitHub.",
       "url": "https://github.com/thegoldenmule/csci-5030/",
       "imageUrl": "https://www.slu.edu/ico/apple-touch-icon.png",
-      "tech": []
+      "tech": [],
+      "size": 31,
+      "layer": 0
     },    
     {
       "category": "publications",
@@ -465,7 +475,9 @@
       "description": "'CTO' at Enklu meant 'guy that writes everything'-- and this was fun. After a stint doing 99% management, I dove into 99% coding again, writing the full stack for the HoloLens collaborative platform that outperforms Microsoft's own.",
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/enklu-logo.svg",
-      "tech": ["cs", "js", "groovy", "cg", "webgl", "socketio", "dotnetty", "azure", "sailsjs", "nodejs", "react", "redux", "bootstrap", "akka", "jenkins", "aws", "docker"]
+      "tech": ["cs", "js", "groovy", "cg", "webgl", "socketio", "dotnetty", "azure", "sailsjs", "nodejs", "react", "redux", "bootstrap", "akka", "jenkins", "aws", "docker"],
+      "size": 34,
+      "layer": 0
     },
     
     {
@@ -735,7 +747,9 @@
       "description": "I ran engineering for two AAA game teams, a core tech group, and a tools engineering team.",
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/nc-logo.svg",
-      "tech": ["cs", "unity", "cg", "js", "akka", "webapi", "dotnet", "aws"]
+      "tech": ["cs", "unity", "cg", "js", "akka", "webapi", "dotnet", "aws"],
+      "size": 28,
+      "layer": 0
     },
     {
       "category": "career",
@@ -746,7 +760,9 @@
       "description": "The Mos Eisley of game development studios. Here I worked on Flash, Unity, and web games at scale, while doing my best not to get run over.",
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/Kixeye.webp",
-      "tech": ["flash", "cs", "unity", "cg", "agal", "js"]
+      "tech": ["flash", "cs", "unity", "cg", "agal", "js"],
+      "size": 25,
+      "layer": 0
     },
     {
       "category": "code",
@@ -946,7 +962,9 @@
       "description": "My first fulltime job out of college was working for this MMO technology provider. We build the tech and the games on top of them for the biggest Flash MMOs on the planet.",
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/et-logo.jpg",
-      "tech": ["flash", "java"]
+      "tech": ["flash", "java"],
+      "size": 25,
+      "layer": 1
     },
     {
       "category": "code",
@@ -1034,7 +1052,9 @@
       "description": "At Truman, I worked on network engineering and IT: mostly in Perl, VB, and C. It was here that I first learned how awful printer software could be.",
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/truman-logo.svg",
-      "tech": ["perl", "js", "vb"]
+      "tech": ["perl", "js", "vb"],
+      "size": 17,
+      "layer": 1
     },
     {
       "category": "career",
@@ -1045,7 +1065,9 @@
       "description": "I paid my way through college with part-time Flash work on games and websites for the company, Pixelwelders.",
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/pixelwelders.jpg",
-      "tech": ["flash"]
+      "tech": ["flash"],
+      "size": 17,
+      "layer": 1
     },
     {
       "category": "career",
@@ -1056,7 +1078,9 @@
       "description": "My first job in the industry! I worked part time for this small flash development shop. I was brought in after I sold them the rights to a rigid-body physics engine I wrote my senior year of high school.",
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/machine.png",
-      "tech": ["flash"]
+      "tech": ["flash"],
+      "size": 17,
+      "layer": 1
     }
   ]
 }

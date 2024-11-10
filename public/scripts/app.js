@@ -267,15 +267,19 @@ const createPopout = () => {
       url,
       imageUrl,
       tech,
+      size = Math.random() * 10 + 5,
     } = event;
     // todo: pull x, y, size from the event
     const x = Math.random() * app.screen.width * 1.5;
     const y = Math.random() * app.screen.height * 1.5;
-    const size = Math.random() * 10 + 5;
     const points = Math.floor(Math.random() * 5) + 5;
 
     // pick a random layer to add the asteroid to
-    const layer = layers[Math.floor(Math.random() * layers.length)];
+    let layerIndex = Math.floor(Math.random() * layers.length);
+    if (event.hasOwnProperty("layer")) {
+      layerIndex = layers.length - event.layer - 1;
+    }
+    const layer = layers[layerIndex];
 
     const asteroid = new Graphics()
       .setStrokeStyle({ color: layer.color, width: 1 })
