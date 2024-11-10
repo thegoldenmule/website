@@ -1,14 +1,10 @@
-import {
-  Application,
-  Assets,
-  Container,
-  Graphics,
-  Sprite,
-  Text,
-} from "./pixi.mjs";
+import { Application, Container, Graphics, Text } from "./pixi.mjs";
 
 const backgroundColor = "#222222";
 
+let app = null;
+let ship = null;
+let layers = null;
 let popout = null;
 let selectedAsteroid = null;
 
@@ -30,7 +26,8 @@ const createShip = () => {
   const size = 10;
   const halfSize = size / 2;
   const color = 0xffffff;
-  const ship = new Graphics()
+
+  ship = new Graphics()
     .setStrokeStyle({ color, width: 1 })
     .setFillStyle({ color })
     .moveTo(size + halfSize, 0)
@@ -41,10 +38,22 @@ const createShip = () => {
     .stroke()
     .fill();
 
-  return ship;
+  ship.x = app.screen.width / 2;
+  ship.y = app.screen.height / 2;
+
+  app.stage.addChild(ship);
 };
 
-const addShipMovement = (app, ship, targetPosition) => {
+const addShipMovement = () => {
+  app.stage.eventMode = "dynamic";
+  const targetPosition = { x: 0, y: 0 };
+  const updateTargetPosition = (e) => {
+    targetPosition.x = e.data.global.x;
+    targetPosition.y = e.data.global.y;
+  };
+  app.stage.on("globalmousemove", updateTargetPosition);
+  app.stage.on("globaltouchmove", updateTargetPosition);
+
   const velocity = { x: 0, y: 0 };
   const acceleration = 0.1;
   const friction = 0.9;
@@ -72,7 +81,7 @@ const addShipMovement = (app, ship, targetPosition) => {
   });
 };
 
-const addShipMotionTrails = (app, ship) => {
+const createShipMotionTrails = () => {
   const shipPositions = [];
   const trailLength = 70;
   const trailColor = 0xffffff;
@@ -123,8 +132,9 @@ const generateBackground = (app, color) => {
   return container;
 };
 
-const addParallaxBackgrounds = (app, ship) => {
-  const layers = [];
+const createParallaxBackgrounds = () => {
+  layers = [];
+
   const background = new Graphics();
   app.stage.addChild(background);
 
@@ -152,7 +162,7 @@ const addParallaxBackgrounds = (app, ship) => {
 };
 
 const createPopout = () => {
-  const popout = new Container();
+  popout = new Container();
 
   // add the subtitle
   const subtitleText = new Text({
@@ -200,18 +210,19 @@ const createPopout = () => {
     const { subtitle, date, description, imageUrl } = asteroid.event;
     const { sprite } = asteroid;
 
-    subtitleText.text = subtitle;
-    dateText.text = date;
-    descriptionText.text = description;
+    subtitleText.text = subtitle || "";
+    dateText.text = date || "";
+    descriptionText.text = description || "";
     imageContainer.removeChildren();
     imageContainer.addChild(sprite);
   };
 
-  return popout;
+  app.stage.addChild(popout);
 };
 
 (async () => {
-  const app = new Application();
+  app = new Application();
+
   await app.init({
     background: backgroundColor,
     resizeTo: window,
@@ -223,37 +234,12 @@ const createPopout = () => {
   });
   document.body.appendChild(app.canvas);
 
-  const ship = createShip();
-  ship.x = app.screen.width / 2;
-  ship.y = app.screen.height / 2;
-  const shipLayer = new Container();
-  shipLayer.addChild(ship);
+  createParallaxBackgrounds();
+  createShip();
+  createShipMotionTrails();
+  createPopout();
 
-  // follow the mouse
-  app.stage.eventMode = "dynamic";
-  const targetPosition = { x: 0, y: 0 };
-  const updateTargetPosition = (e) => {
-    targetPosition.x = e.data.global.x;
-    targetPosition.y = e.data.global.y;
-  };
-  app.stage.on("globalmousemove", updateTargetPosition);
-  app.stage.on("globaltouchmove", updateTargetPosition);
-
-  // ship movement
-  addShipMovement(app, ship, targetPosition);
-
-  // add ship motion trails
-  addShipMotionTrails(app, ship);
-
-  // add parallax background
-  const layers = addParallaxBackgrounds(app, ship);
-
-  // add popout
-  popout = createPopout();
-  app.stage.addChild(popout);
-
-  // ship always on top
-  app.stage.addChild(shipLayer);
+  addShipMovement();
 
   const res = await fetch("/timeline.json");
   const { events } = await res.json();
@@ -319,14 +305,15 @@ const createPopout = () => {
 
     // load image
     const spriteContainer = new Container();
-    Assets.load(imageUrl).then((tex) => {
+    /*Assets.load(imageUrl).then((tex) => {
+      console.log(tex);
       const aspectRatio = tex.width / tex.height;
 
       const sprite = new Sprite(tex);
       sprite.width = 100;
       sprite.height = 100 / aspectRatio;
       spriteContainer.addChild(sprite);
-    });
+    });*/
 
     // mouseover
     asteroid.interactive = true;
