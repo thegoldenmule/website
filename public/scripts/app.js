@@ -1,6 +1,20 @@
-import { Application, Container, Graphics } from "./pixi.mjs";
+import { Application, Container, Graphics, Text } from "./pixi.mjs";
 
 const backgroundColor = "#222222";
+
+let selectedAsteroid = null;
+
+const selectAsteroid = (asteroid) => {
+  if (selectedAsteroid) {
+    selectedAsteroid.titleText.style.fill =
+      selectedAsteroid.titleText.previousFill;
+  }
+
+  selectedAsteroid = asteroid;
+  selectedAsteroid.titleText.previousFill =
+    selectedAsteroid.titleText.style.fill;
+  selectedAsteroid.titleText.style.fill = 0xffffff;
+};
 
 const createShip = () => {
   // tiangle ship, like asteroids
@@ -51,7 +65,8 @@ const addShipMovement = (app, ship, targetPosition) => {
 
 const addShipMotionTrails = (app, ship) => {
   const shipPositions = [];
-  const trailLength = 100;
+  const trailLength = 70;
+  const trailColor = 0xffffff;
 
   const trail = new Graphics();
   ship.parent.addChild(trail);
@@ -66,14 +81,18 @@ const addShipMotionTrails = (app, ship) => {
     trail
       .clear()
       .moveTo(ship.x, ship.y)
-      .setStrokeStyle({ color: 0xffffff, width: 1, alpha: 1 });
+      .setStrokeStyle({ color: trailColor, width: 1, alpha: 1 });
 
     for (let i = shipPositions.length - 1; i >= 0; i--) {
       const position = shipPositions[i];
       trail
         .lineTo(position.x, position.y)
         .stroke()
-        .setStrokeStyle({ color: 0xffffff, width: 1, alpha: i / trailLength });
+        .setStrokeStyle({
+          color: trailColor,
+          width: 1,
+          alpha: i / trailLength,
+        });
     }
 
     trail.stroke();
@@ -109,6 +128,7 @@ const addParallaxBackgrounds = (app, ship) => {
 
     const layer = generateBackground(app, color);
     layer.color = color;
+    layer.opacity = 1 - i / 5;
     background.addChild(layer);
 
     app.ticker.add(() => {
@@ -168,6 +188,19 @@ const addParallaxBackgrounds = (app, ship) => {
 
   // for each event, create a random, irregular polygon asteroid
   events.forEach((event) => {
+    const {
+      category,
+      title,
+      subtitle,
+      type,
+      date,
+      description,
+      url,
+      imageUrl,
+      tech,
+    } = event;
+
+    // todo: pull x, y, size from the event
     const x = Math.random() * app.screen.width * 1.5;
     const y = Math.random() * app.screen.height * 1.5;
     const size = Math.random() * 10 + 5;
@@ -200,5 +233,25 @@ const addParallaxBackgrounds = (app, ship) => {
 
     asteroid.closePath().stroke().fill();
     layer.addChild(asteroid);
+
+    // add the title
+    const titleText = new Text({
+      text: title,
+      style: {
+        fill: layer.color,
+        fontSize: 12,
+      },
+    });
+    titleText.x = x - titleText.width / 2;
+    titleText.y = y + size + 5;
+    asteroid.addChild(titleText);
+
+    // mouseover
+    asteroid.interactive = true;
+    asteroid.buttonMode = true;
+    asteroid.titleText = titleText;
+    asteroid.on("mouseover", () => selectAsteroid(asteroid));
   });
+
+  // when the ship gets near the asteroid, show the title
 })();
