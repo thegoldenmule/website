@@ -2,6 +2,524 @@
   "events": [
     {
       "category": "career",
+      "title": "Miscellaneous Writing",
+      "subtitle": "",
+      "type": "",
+      "date": "",
+      "description": "By no means an exhaustive list of my writing -- but some of the Greatest Hits.",
+      "url": "https://thegoldenmule.medium.com",
+      "tech": ["games", "web3", "web", "mobile", "software"],
+      "size": 45,
+      "children": [
+        {
+          "category": "publications",
+          "title": "GitHub Copilot and major world religions",
+          "type": "writing",
+          "date": "February 2022",
+          "subtitle": "Published in Geek Culture.",
+          "description": "My little AI co-programmer is quickly becoming an indispensible tool. Let's talk about metaphysics-- wait what?",
+          "url": "https://medium.com/geekculture/github-copilot-vs-major-world-religions-44829926e055",
+          "imageUrl": "https://miro.medium.com/max/640/0*FMaBgXwuQmK7KEcg.webp",
+          "tech": []
+        },
+        {
+          "category": "publications",
+          "title": "Shaping Young Minds with Agile Thinking",
+          "type": "writing",
+          "date": "February 2022",
+          "subtitle": "Published in Geek Culture.",
+          "description": "Why Agile methodology matters, and how I'm teaching it to CS masters students. If only someone had shown me these things when I was a whipper-snapper!",
+          "url": "https://medium.com/geekculture/shaping-young-minds-with-agile-thinking-33b63ccd3c12",
+          "imageUrl": "https://miro.medium.com/max/720/0*c9YjL7ReG6E2NgT_.webp",
+          "tech": []
+        },
+        {
+          "category": "publications",
+          "title": "How many bugs should your product have?",
+          "type": "writing",
+          "date": "January 2022",
+          "subtitle": "Published in CodeX.",
+          "description": "It's a tough question, but it's one we should be asking ourselves: how many bugs should our product have before we show it to someone?",
+          "url": "https://medium.com/codex/how-many-bugs-should-your-product-have-fd7edd1c61d",
+          "imageUrl": "https://miro.medium.com/max/720/1*7qXL7JrTggt2Akx7gRXMYg.webp",
+          "tech": []
+        },
+
+        {
+          "category": "publications",
+          "title": "What you can't know about being a startup CTO",
+          "type": "writing",
+          "date": "December 2021",
+          "subtitle": "Published in CodeX.",
+          "description": "The term 'Startup CTO' can mean just about anything, depending on the startup-- but there is one thing they all have in common: wrestling with the unknown.",
+          "url": "https://medium.com/codex/what-you-cant-know-about-being-a-startup-cto-80138aceb68f",
+          "imageUrl": "https://miro.medium.com/max/720/1*3wxO_yDf9w7_I8NcJYmn9A.webp",
+          "tech": []
+        },
+        {
+          "category": "publications",
+          "title": "Embrace AI pair programming or perish",
+          "type": "writing",
+          "date": "October 2021",
+          "subtitle": "Published in CodeX.",
+          "description": "The future is here and the only choice we have is how to respond: do we reject it, or do we embrace it?",
+          "url": "https://medium.com/codex/embrace-ai-pair-programming-or-perish-359a4c1a58c8",
+          "imageUrl": "https://miro.medium.com/max/720/1*g5Bb1Cgq1QWkNyZkFJPXoA.webp",
+          "tech": []
+        },
+        {
+          "category": "publications",
+          "title": "The Binary Search Methodology",
+          "type": "writing",
+          "date": "October 2021",
+          "subtitle": "Published in CodeX.",
+          "description": "A practical methodology for building software that I completely made up in a vacuum and is completely original.",
+          "url": "https://medium.com/codex/the-binary-search-methodology-3cd21fc66531",
+          "imageUrl": "https://miro.medium.com/max/720/1*2MTujmy2vodReeVNFdx8TQ.webp",
+          "tech": []
+        },
+        {
+          "category": "publications",
+          "title": "Why Proof of Work is elegant and Proof of Stake is not",
+          "type": "writing",
+          "date": "October 2021",
+          "subtitle": "Published in Coinmonks.",
+          "description": "What can I say, I'm a sucker for elegant math. Proof of Stake is not the picture of elegance its older brother is.",
+          "url": "https://medium.com/coinmonks/why-proof-of-work-is-elegant-and-proof-of-stake-is-not-4988cdc8805f",
+          "imageUrl": "https://miro.medium.com/max/720/1*hhFG5jniMBT_5A4lvkaSNg.webp",
+          "tech": []
+        },
+        {
+          "category": "publications",
+          "title": "Take the Time to Write Less Code",
+          "type": "writing",
+          "date": "February 2019",
+          "subtitle": "Published in CodeX.",
+          "description": "Something from Pascal the programmer: please take the time to write less code. Thank you.",
+          "url": "https://medium.com/codex/take-the-time-to-write-less-code-1bf0ab385a38",
+          "imageUrl": "https://miro.medium.com/max/720/1*95u9XPdy0jCIbvG4z9OsNw.webp"
+        },
+        {
+          "category": "publications",
+          "title": "Physics Engines Explained: Part II",
+          "type": "writing",
+          "date": "July 2024",
+          "subtitle": "You thought the last article was deep.",
+          "description": "Now the question: what makes physics engines break? In this article, I dive DEEP into linear algebra in complex space to find explicit conditions for failure. Believe me, it's cool!",
+          "url": "https://thegoldenmule.medium.com/physics-engine-deep-dive-part-ii-cb8d1fda1f9b",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*GDEI8bHKk6Yfq4hxdu_SFg.jpeg",
+          "tech": []
+        },
+        {
+          "category": "publications",
+          "title": "Physics Engines Explained: Part I",
+          "type": "writing",
+          "date": "July 2024",
+          "subtitle": "Get ready for some math.",
+          "description": "An unusual departure for my writing: hard math. We dive into the theory of rigid body systems and begin an exploration into what makes physics engines tick.",
+          "url": "https://thegoldenmule.medium.com/physics-engines-explained-part-i-25c595ddc5b2",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:730/format:webp/0*IspZqqnDZvZmWWsY.png",
+          "tech": []
+        },
+        {
+          "category": "publications",
+          "title": "Effectively Working in Teams: Baltic German Style",
+          "type": "writing",
+          "date": "March 2023",
+          "subtitle": "Published in Geek Culture.",
+          "description": "How can we understand each other? Thoughts from sociology, biocybernetics, and of course, mathematics.",
+          "url": "https://medium.com/geekculture/software-development-dynamics-baltic-german-style-43a526a13444",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/0*wqkes4CAigOKmIfX.jpg",
+          "tech": []
+        },
+        {
+          "category": "publications",
+          "title": "NFT Collectors Are Geniuses",
+          "type": "writing",
+          "date": "December 2022",
+          "subtitle": "Published in Coinmonks.",
+          "description": "NFTs may be mathematically attractive but daggum if they aren't complicated. So complicated that most of them are horribly broken.",
+          "url": "https://medium.com/coinmonks/nft-collectors-are-geniuses-3edbc427c48c",
+          "imageUrl": "https://miro.medium.com/max/720/1*ovBG4SiY_uoFNRZ_NhoqIA.webp",
+          "tech": ["solidity"]
+        },
+        {
+          "category": "publications",
+          "title": "In which I probably invented a whole new branch of mathematics and computer science",
+          "type": "writing",
+          "date": "July 2022",
+          "subtitle": "Published in Geek Culture.",
+          "description": "My love for literature and math leads me down a strange path... Follow along in WONDER on a numerical exploration of classic authors.",
+          "url": "https://medium.com/geekculture/in-which-i-probably-invented-a-whole-new-branch-of-mathematics-and-computer-science-fbfa6e224631",
+          "imageUrl": "https://miro.medium.com/max/720/0*zJq9-2Qbvvi--dR9.webp",
+          "tech": ["python"]
+        },
+        {
+          "category": "publications",
+          "title": "Doug McIlroy vs Donald Knuth",
+          "type": "writing",
+          "date": "July 2022",
+          "subtitle": "Published in CodeX.",
+          "description": "Storytelling is a lost art in software engineering. What happens when you pit massive brains against one another?",
+          "url": "https://medium.com/codex/doug-mcilroy-vs-donald-knuth-dbafec5d6b24",
+          "imageUrl": "https://miro.medium.com/max/720/1*AoHzgWzzBdrVLpd9e_P4IQ.webp",
+          "tech": []
+        },
+        {
+          "category": "publications",
+          "title": "Programming where Failure is Not an Option",
+          "type": "writing",
+          "date": "June 2022",
+          "subtitle": "Published in CodeX.",
+          "description": "Are we coding for space shuttles here? Why are we so afraid of failure?",
+          "url": "https://medium.com/codex/programming-where-failure-is-not-an-option-d42dfa938b42",
+          "imageUrl": "https://miro.medium.com/max/720/0*Hpa_ocOdiYzRZVyb.webp",
+          "tech": []
+        }
+      ]
+    },
+    {
+      "category": "career",
+      "title": "Experiments",
+      "subtitle": "",
+      "type": "",
+      "date": "",
+      "description": "Non-work projects I've done.",
+      "url": "https://thegoldenmule.com",
+      "tech": ["games", "web3", "web", "mobile", "software"],
+      "size": 45,
+      "children": [
+        {
+          "category": "code",
+          "title": "Spherical Terrain Generation",
+          "type": "graphics",
+          "date": "January 2013",
+          "description": "Everyone has created flat procedural terrain-- but what methods can be used for generating spherical terrain? This two part post builds on geospheres and explores one method of geometry creation and one method for an accompanying Earthlike shader.",
+          "url": "https://thegoldenmule.com/blog/2013/01/spherical-terrain-generation/",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/world.png",
+          "tech": ["cs", "unity"]
+        },
+        {
+          "category": "code",
+          "title": "Porter Stemmer",
+          "type": "misc",
+          "date": "September 2011",
+          "description": "An ancient and naive implementation of Porter's stemming algorithm. Essentially, it takes words and decomposes them down to their root.",
+          "url": "https://github.com/thegoldenmule/PStem",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/stem.png",
+          "tech": ["js"]
+        },
+        {
+          "category": "code",
+          "title": "Scorched3D",
+          "type": "games",
+          "date": "September 2011",
+          "description": "Now in 2D! An ancient, Scorched Earth style, software rendered, hot-seat multiplayer extravaganza.",
+          "url": "https://thegoldenmule.com/labs/Scorch3d/",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/ScorchedAnimation.gif",
+          "tech": ["js"]
+        },
+        {
+          "category": "code",
+          "title": "Scorched Earth Style Terrain",
+          "type": "physics",
+          "date": "August 2011",
+          "description": "For those of you wanting to generate interesting 2D terrains, similar to the Mother of All Games: Scorched Earth. These don't use silly fractals or perlin-- those are too boring!",
+          "url": "https://thegoldenmule.com/blog/2011/08/terramorphic-genesis-algorithms-or-terrain-generation/",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/TGA.png",
+          "tech": ["js"]
+        },
+        {
+          "category": "code",
+          "title": "Einstein",
+          "type": "physics",
+          "date": "August 2011",
+          "description": "A relativity engine-- essentially any object in the scene can be the Observer, and every object has a clock. Both time and space are transformed by speed relative to the current Observer.",
+          "url": "https://thegoldenmule.com/blog/2011/08/internet-einstein-einstein-internet/",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/ss.png",
+          "tech": ["haxe"]
+        },
+        {
+          "category": "code",
+          "title": "SOS",
+          "type": "software",
+          "date": "August 2011",
+          "description": "An XML log target for SOS Max that works across HaXe's AS3 and JS targets.",
+          "url": "https://github.com/thegoldenmule/HaXe-SOSTrace",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/SOS.png",
+          "tech": ["haxe"]
+        },
+        {
+          "category": "code",
+          "title": "Jint-Unity",
+          "type": "software",
+          "date": "April 2017",
+          "description": "A Javascript interpreter for Unity.",
+          "url": "https://github.com/thegoldenmule/jint",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/test.gif",
+          "tech": ["cs"]
+        },
+
+        {
+          "category": "code",
+          "title": "Story",
+          "type": "exploration",
+          "date": "March 2015",
+          "description": "Story is a research project that leverages the Python NLT and machine learning techniques for gaming. It's a reverse text adventure. The goal is to use natural language input to describe an environment to a computer, which then makes choices about how to use the environment to accomplish the described goal.",
+          "url": "https://github.com/thegoldenmule/story",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/vsdLA.png",
+          "tech": ["python"]
+        },
+        {
+          "category": "code",
+          "title": "Playing With Cinder",
+          "type": "graphics",
+          "date": "January 2015",
+          "description": "My first project using Cinder. It's very simple, linking luma from a video capture source to various properties of a bunch of circles (in the biz we call them particles).",
+          "url": "https://github.com/thegoldenmule/CameraOutline",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/cinder.png",
+          "tech": ["c"]
+        },
+        {
+          "category": "code",
+          "title": "Email Backup",
+          "type": "misc",
+          "date": "December 2014",
+          "description": "A set of tools for backing up email. Yes, it sounds boring, but it was fun and I needed something simple.",
+          "url": "https://github.com/thegoldenmule/email-backup",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/ebackupUsage.png",
+          "tech": ["python"]
+        },
+        {
+          "category": "code",
+          "title": "Itsy",
+          "type": "physics",
+          "date": "May 2014",
+          "description": "A cute name for an otherwise uncaring software-rendered particle system.",
+          "url": "https://github.com/thegoldenmule/Itsy",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/Itsy.png",
+          "tech": ["js"]
+        },
+
+        {
+          "category": "code",
+          "title": "Dependency Injection in Unity3d",
+          "type": "software",
+          "date": "December 2013",
+          "description": "A couple classes for using Ninject as a dependency injection solution in Unity3d.",
+          "url": "https://thegoldenmule.com/blog/2013/12/ninject-and-unity/",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/ninject.png",
+          "tech": ["cs", "unity"]
+        },
+        {
+          "category": "code",
+          "title": "Kristmas Klein Bagel",
+          "type": "graphics",
+          "date": "December 2013",
+          "description": "A short exploration of generating a 3d immersion of a 4d Klein bottle.",
+          "url": "https://github.com/thegoldenmule/Topology",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/Klein.png",
+          "tech": ["cs", "unity"]
+        },
+        {
+          "category": "code",
+          "title": "Separating Axes Theorem",
+          "type": "physics",
+          "date": "December 2013",
+          "description": "A very basic implementation of the separating axes theorem for collision detection. This was created for illustrative purposes, and has, let's say, a few bugs.",
+          "url": "https://thegoldenmule.com/blog/2013/12/supercolliders-in-unity/",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/collision.png",
+          "tech": ["cs", "unity"]
+        },
+        {
+          "category": "code",
+          "title": "All Mine",
+          "type": "games",
+          "date": "October 2013",
+          "description": "A simple game built with Cocos2d that expands on Minesweeper. Energy, biodiesel, unit types and actions-- lots of fun stuff!",
+          "url": "https://bitbucket.org/benthehutt/all-mine/src/",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/cocos.png",
+          "tech": ["objc"]
+        },
+        {
+          "category": "code",
+          "title": "Telemetrino",
+          "type": "iot",
+          "date": "September 2013",
+          "description": "Strapping an Arduino + accelerometer to an RC car.",
+          "url": "https://thegoldenmule.com/blog/2013/09/of-wisdom-teeth-and-acceleration/",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/accelerationTelemetry.png",
+          "tech": ["cs"]
+        },
+        {
+          "category": "code",
+          "title": "Fabric Sim",
+          "type": "physics",
+          "date": "August 2013",
+          "description": "A simple fabric simulation. Uses a spring system with point masses and Verlet integration. The original used my own graphics engine, but this uses ThreeJS.",
+          "url": "https://www.thegoldenmule.com/labs/three-physics/",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/FabricAnimation.gif",
+          "tech": ["js", "webgl"]
+        },
+        {
+          "category": "code",
+          "title": "boX",
+          "type": "graphics",
+          "date": "August 2013",
+          "description": "That's not an 'x' at all! It's a chi! A 2D WebGL graphics engine, twice as pretentious as LateX.",
+          "url": "https://github.com/thegoldenmule/boX",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/boXAnimation.gif",
+          "tech": ["js", "webgl", "glsl"]
+        },
+        {
+          "category": "code",
+          "title": "On Geosphere Construction",
+          "type": "graphics",
+          "date": "January 2013",
+          "description": "The geometrical construction of a sphere based on the subdivision of an icosahedron. This method creates a sphere where each triangle is the same size.",
+          "url": "https://thegoldenmule.com/blog/2013/01/geosphere-revisited/",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/geosphere.png",
+          "tech": ["cs", "unity"]
+        },
+        {
+          "category": "code",
+          "title": "Realtime Clouds on the GPU",
+          "type": "graphics",
+          "date": "January 2013",
+          "description": "A two part study into noise functions and how they might be used to create purely GPU-based moving clouds.",
+          "url": "https://thegoldenmule.com/blog/2013/01/real-time-clouds-pt-1-a-study-of-noise-functions/",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/clouds.png",
+          "tech": ["cs", "unity"]
+        },
+        {
+          "category": "code",
+          "title": "Quicktype Maintainer",
+          "type": "software",
+          "date": "2019",
+          "description": "After major contributions to go, csharp, and prop-types generators, I was asked to be a maintainer.",
+          "url": "https://github.com/quicktype/quicktype/pulls?q=is%3Apr+author%3Athegoldenmule+is%3Aclosed",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/quicktype.png",
+          "tech": ["typescript"]
+        },
+        {
+          "category": "code",
+          "title": "UWP Support for Antlr",
+          "type": "misc",
+          "date": "March 2018",
+          "description": "I used ANTLR to make a DSL for the Enkluplayer UI system. The only problem: it didn't run on HoloLens. This PR fixed the ANTLR project for UWP.",
+          "url": "https://github.com/antlr/antlr4/pull/2267",
+          "imageUrl": "https://www.antlr.org/images/antlr-logo.png",
+          "tech": ["cs"]
+        },
+        {
+          "category": "code",
+          "title": "NaturalLogger",
+          "type": "software",
+          "date": "September 2017",
+          "description": "A Unity library for sending logs to Natural-Log.",
+          "url": "https://github.com/thegoldenmule/naturallog-examples",
+          "imageUrl": "https://raw.githubusercontent.com/thegoldenmule/naturallog/master/assets/icons/png/128x128.png",
+          "tech": ["cs"]
+        },
+        {
+          "category": "code",
+          "title": "Natural-Log",
+          "type": "software",
+          "date": "September 2017",
+          "description": "A socket server and slick client, wrapped in a cross platform binary using Electron.io.",
+          "url": "https://github.com/thegoldenmule/naturallog",
+          "imageUrl": "https://raw.githubusercontent.com/thegoldenmule/naturallog/master/assets/screenshot.png",
+          "tech": ["js", "socketio"]
+        },
+
+        {
+          "category": "code",
+          "title": "Core-AVR",
+          "type": "iot",
+          "date": "August 2017",
+          "description": "Libraries for working with 32-bit Atmel AVR microcontrollers. They are not good.",
+          "url": "https://github.com/Open-farm/openfarm-core-avr",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/openfarm-core-avr-thumb.png",
+          "tech": ["c"]
+        },
+        {
+          "category": "code",
+          "title": "Stegasaurus",
+          "type": "exploration",
+          "date": "July 2017",
+          "description": "Hide data in pictures (steganography), which are then stored in plain sight: on Facebook. Stegasaurus encrypts data with a one time pad, which is then stored... in other pictures.",
+          "url": "https://github.com/thegoldenmule/stegosaurus",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/steg.jpg",
+          "tech": ["python"]
+        },
+        {
+          "category": "code",
+          "title": "Ffabricator",
+          "type": "software",
+          "date": "September 2021",
+          "description": "A simple Akka + ASP.NET server that creates HLS streams from WebM or MP4 videos.",
+          "url": "https://github.com/thegoldenmule/ffabricator",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/ffabricator.png",
+          "tech": ["cs", "dotnet", "akka"]
+        },
+        {
+          "category": "products",
+          "title": "Nk-Js",
+          "subtitle": "Web based SaaS Product",
+          "type": "software",
+          "date": "Feb-June 2021",
+          "description": "Nk-js is an end-to-end encrypted js library for use with nk-server: the no-knowledge store.",
+          "url": "https://github.com/thegoldenmule/nk/tree/develop/nk-js",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/nk.gif",
+          "tech": ["js", "react", "redux", "bootstrap"]
+        },
+
+        {
+          "category": "products",
+          "title": "Nk-Server",
+          "subtitle": "BaaS Product",
+          "type": "exploration",
+          "date": "Feb 2021",
+          "description": "No peeking. An end-to-end encrypted, no-knowledge key/value storage server.",
+          "url": "https://github.com/thegoldenmule/nk/tree/develop/nk-server",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/nk.gif",
+          "tech": ["cs", "webapi", "dotnet"]
+        },
+
+        {
+          "category": "products",
+          "title": "Nano Watch",
+          "subtitle": "Web-based SaaS Product",
+          "type": "software",
+          "date": "January 2021",
+          "description": "Nano watch is a simple web app that watches nanopool mining rigs and pushes browser notifications when the monitored rigs dip below a target hashrate.",
+          "url": "https://github.com/thegoldenmule/nano-watch",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/nano-watch.png",
+          "tech": ["react", "bootstrap"]
+        },
+        {
+          "category": "products",
+          "title": "Webtrono.me",
+          "subtitle": "Web-based SaaS Product",
+          "type": "software",
+          "date": "2022",
+          "description": "Web-based metronomes are terrible, but not this one! A configurable, sample-accurate metronome in the browser. Create your routine and track your progress with your new practice buddy.",
+          "url": "https://webtrono.me",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/webtronome2.png",
+          "tech": [
+            "aws",
+            "docker",
+            "nodejs",
+            "sailsjs",
+            "react",
+            "redux",
+            "bootstrap"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "career",
       "title": "Founder: SpyreIO",
       "subtitle": "Founder",
       "type": "games",
@@ -12,6 +530,17 @@
       "tech": ["games", "web3", "web", "mobile", "software"],
       "size": 45,
       "children": [
+        {
+          "category": "publications",
+          "title": "A Counterpoint to Account Abstraction",
+          "type": "writing",
+          "date": "July 2024",
+          "subtitle": "In which I take on Web3's newest fad.",
+          "description": "Account Abstraction, or Smart Wallets, are the newest fad. Everyone and their grandmother is making wallets. So why have we chosen to skip them for now?",
+          "url": "https://medium.com/spyre-io/a-counterpoint-to-account-abstraction-df71d1f179d9",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*zSHIlzSPQP-b-HkD2B_mPg.jpeg",
+          "tech": ["web3"]
+        },
         {
           "category": "products",
           "title": "Hangman Clash",
@@ -31,8 +560,7 @@
             "react",
             "tailwind"
           ],
-          "size": 38,
-          "layer": 0
+          "size": 38
         },
         {
           "category": "publications",
@@ -75,6 +603,17 @@
           "url": "https://github.com/spyre-io/chain-chomp/",
           "imageUrl": "https://thegoldenmule.com/thumbnails/chomp.png",
           "tech": ["js", "viem", "sailsjs"]
+        },
+        {
+          "category": "code",
+          "title": "Nakama-js",
+          "subtitle": "A small but mighty OSS contribution.",
+          "type": "software",
+          "date": "July 2024",
+          "description": "An incredibly complicated fix deep inside of Nakama's JS library. Okay it was a one-liner but it was a hard to find one-liner.",
+          "url": "https://github.com/heroiclabs/nakama-js/pull/196",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/nakama.png",
+          "tech": ["ts"]
         }
       ]
     },
@@ -197,7 +736,103 @@
         "ipfs",
         "polygon"
       ],
-      "size": 50
+      "size": 50,
+      "children": [
+        {
+          "category": "products",
+          "title": "Canceled Web3 Title",
+          "subtitle": "Big Run Studios",
+          "type": "games",
+          "date": "2022",
+          "description": "We built out a transparent, custodial wallet system on top of the Polygon Network. For this project I wrote ERC20 and ERC1155 contracts, IPFS integration (with heavy caching!), and all sorts of other nifty features to introduce the crypto and social gaming communities. I even made a Go code contribution to the Polygon Edge project (see entry below).",
+          "tech": ["solidity", "go", "nodejs", "unity"]
+        },
+        {
+          "category": "products",
+          "title": "Word Star",
+          "subtitle": "Big Run Studios",
+          "type": "games",
+          "date": "2022",
+          "description": "A skill-based, multiplayer word game.",
+          "url": "https://bigrunstudios.com/games/word-star/",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/word-star.png",
+          "tech": ["unity", "cs", "nodejs", "aws", "snowflake", "tableau"]
+        },
+        {
+          "category": "products",
+          "title": "Big Cooking",
+          "subtitle": "Big Run Studios",
+          "type": "games",
+          "date": "2021",
+          "description": "A skill-based, multiplayer cooking game.",
+          "url": "https://bigrunstudios.com/games/big-cooking-2/",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/big-cooking.png",
+          "tech": ["unity", "cs", "nodejs", "aws", "snowflake", "tableau"]
+        },
+        {
+          "category": "publications",
+          "title": "Game Logic Q&A",
+          "type": "media",
+          "date": "Feb 2021",
+          "description": "An interview with Myke Parrott of i-Gem on the challenges of hiring in the games industry. Drinking game: one shot for every 'um' and you'll be out quick.",
+          "url": "https://www.youtube.com/watch?v=EhxSBasCB2U",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/yt_logo_rgb_light.png",
+          "tech": []
+        },
+        {
+          "category": "products",
+          "title": "Farm Sweeper",
+          "subtitle": "Big Run Studios",
+          "type": "games",
+          "date": "2019",
+          "description": "A skill-based twist to the game of multiplayer minesweeper.",
+          "url": "https://bigrunstudios.com/games/farm-sweeper/",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/farmsweeper.png",
+          "tech": ["unity", "cs", "nodejs", "aws", "snowflake", "tableau"]
+        },
+        {
+          "category": "products",
+          "title": "Big Run Solitaire",
+          "subtitle": "Big Run Studios",
+          "type": "games",
+          "date": "2020",
+          "description": "A skill-based twist to the game of multiplayer solitaire.",
+          "url": "https://bigrunstudios.com/games/big-run-solitaire/",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/solitaire.png",
+          "tech": ["unity", "cs", "nodejs", "aws", "snowflake", "tableau"]
+        },
+        {
+          "category": "products",
+          "title": "Blackout Bingo",
+          "subtitle": "Big Run Studios",
+          "type": "games",
+          "date": "2020",
+          "description": "A skill-based twist to the game of multiplayer bingo.",
+          "url": "https://bigrunstudios.com/games/blackout-bingo-2/",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/blackout-bingo.png",
+          "tech": ["unity", "cs", "nodejs", "aws", "snowflake", "tableau"]
+        },
+        {
+          "category": "publications",
+          "title": "Blackout Blitz dev Big Run Studios hires Benjamin Jordan as new CTO",
+          "subtitle": "Pocket Gamer",
+          "type": "media",
+          "date": "March 2020",
+          "description": "Hear ye, hear ye: random guy on the internet gets a job!",
+          "url": "https://www.pocketgamer.biz/job-news/73421/big-run-studios-hires-benjamin-jordan-new-cto/",
+          "imageUrl": "https://imgs.pocketgamer.biz/PGbiz_logo_210x204.png"
+        },
+        {
+          "category": "code",
+          "title": "Polygon Edge",
+          "type": "software",
+          "date": "March 2022",
+          "description": "I fixed some cross origin issues in Polygon Edge: the EVM-compatible blockchain tech.",
+          "url": "https://github.com/0xPolygon/polygon-edge/pull/414",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/polygon-logo.svg",
+          "tech": ["go"]
+        }
+      ]
     },
     {
       "category": "career",
@@ -220,6 +855,17 @@
           "description": "Did I mention I teach in the CS Masters program at Saint Louis University? For my computer graphics course, we pair-programmed an entire 3D engine from scratch.",
           "url": "https://thegoldenmule.medium.com/a-complete-ish-3d-engine-in-1200-lines-b5babf4b72ed",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*KidhxH5QHiplzlXv6SOU6g.jpeg",
+          "tech": []
+        },
+        {
+          "category": "publications",
+          "title": "What is the point of higher education in computer science?",
+          "type": "writing",
+          "date": "March 2022",
+          "subtitle": "Published in CodeX.",
+          "description": "Now that I'm officially a highly professional academic, I realize I have no clue what I should be doing.",
+          "url": "https://medium.com/codex/what-is-the-point-of-higher-education-in-computer-science-b8a29b63ebdc",
+          "imageUrl": "https://miro.medium.com/max/720/0*uj51YZ0qr_A5wFeQ.webp",
           "tech": []
         }
       ]
@@ -341,6 +987,123 @@
           "url": "https://github.com/enklu/commons-gradle-unity",
           "imageUrl": "https://thegoldenmule.com/thumbnails/nakama.png",
           "tech": ["unity", "cs", "groovy"]
+        },
+        {
+          "category": "products",
+          "title": "Enkluplayer",
+          "subtitle": "Synchronous Multiplayer Client SDK",
+          "type": "software",
+          "date": "2017-2020",
+          "description": "Enkluplayer is a collaborative, cross-platform multiplayer AR runtime that is unfortunately now closed-source. Live behavior and UI scripting across devices. Drag and drop asset import. Enkluplayer lets users collaboratively design and publish multiplayer-by-default AR experiences.",
+          "url": "https://github.com/enklu/enkluplayer",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/player-small.gif",
+          "tech": ["cs", "unity"]
+        },
+        {
+          "category": "products",
+          "title": "Enklu Cloud",
+          "subtitle": "Web-based SaaS Product",
+          "type": "software",
+          "date": "2017-2020",
+          "description": "Enklu Cloud is the leading platform for collaborative authoring and sharing of immersive multiplayer AR experiences.",
+          "url": "https://cloud.enklu.com",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/cloud.gif",
+          "tech": [
+            "cs",
+            "js",
+            "groovy",
+            "cg",
+            "webgl",
+            "socketio",
+            "dotnetty",
+            "azure",
+            "sailsjs",
+            "nodejs",
+            "react",
+            "redux",
+            "bootstrap",
+            "akka",
+            "jenkins",
+            "aws",
+            "docker"
+          ]
+        },
+        {
+          "category": "code",
+          "title": "HoloLens 2 Multiplayer",
+          "type": "ar",
+          "date": "2019",
+          "description": "We created a multiplayer spellcasting demo in just a few hours for an invite-only tech day at Microsoft Reactor.",
+          "url": "https://www.thegoldenmule.com/videos/duel.mp4",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/duel.gif",
+          "tech": ["cs", "js", "dotnetty", "akka"]
+        },
+        {
+          "category": "code",
+          "title": "Conversational AI World Building",
+          "type": "exploration",
+          "date": "2019",
+          "description": "At another invite-only Microsoft hackathon, I created a prototype for a conversational world-building application using Azure's LUIS and Enklu. The computer asks what you see and builds the scene as you describe it.",
+          "url": "https://www.thegoldenmule.com/videos/story.mp4",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/story.gif",
+          "tech": ["cs", "js", "dotnetty", "akka"]
+        },
+        {
+          "category": "products",
+          "title": "Magic Mirror",
+          "subtitle": "Location Based Entertainment Product",
+          "type": "ar",
+          "date": "October 2019",
+          "description": "We were the first to adapt the Azure Kinect to live entertainment by adding Azure Kinect support to Enkluplayer. This ran as an interactive installation at Universal Studios in LA where lightning shot from your fingertips.",
+          "url": "https://www.thegoldenmule.com/videos/azure-kinect-dev.mp4",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/azure-kinect-preview.gif",
+          "tech": ["cs", "js", "dotnetty", "akka", "docker"]
+        },
+        {
+          "category": "code",
+          "title": "100 HoloLens Multiplayer @ E3",
+          "type": "ar",
+          "date": "June 2019",
+          "description": "We created the world's first 100 HoloLens multiplayer experience at E3. Over 7500 attendees were able to put on a HoloLens and explore magical powers in the Unreal Garden.",
+          "imageUrl": "https://www.thegoldenmule.com/thumbnails/player-small.gif",
+          "url": "https://www.youtube.com/watch?v=j1usTNschXg",
+          "tech": ["cs", "js", "dotnetty", "akka", "docker"]
+        },
+        {
+          "category": "code",
+          "title": "Kinect + Enklu + E3",
+          "type": "ar",
+          "date": "June 2019",
+          "description": "At E3, we used our Kinect v2 integration to give wings to passers-by.",
+          "url": "https://www.thegoldenmule.com/videos/e3-wings-mp4.mp4",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/e3-wings.gif",
+          "tech": [
+            "cs",
+            "js",
+            "groovy",
+            "cg",
+            "socketio",
+            "dotnetty",
+            "azure",
+            "sailsjs",
+            "nodejs",
+            "react",
+            "redux",
+            "bootstrap",
+            "akka",
+            "jenkins",
+            "aws",
+            "docker"
+          ]
+        },
+        {
+          "category": "code",
+          "title": "StrangeIOC-UWP",
+          "type": "software",
+          "date": "August 2017",
+          "description": "Open source fork of StrangeIOC library, compatible with UWP.",
+          "url": "https://github.com/enklu/StrangeIOC-UWP",
+          "tech": ["cs"]
         }
       ]
     },
@@ -354,7 +1117,38 @@
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/nc-logo.svg",
       "tech": ["cs", "unity", "cg", "js", "akka", "webapi", "dotnet", "aws"],
-      "size": 40
+      "size": 40,
+      "children": [
+        {
+          "category": "publications",
+          "title": "Technical Directing with Benjamin Jordan",
+          "subtitle": "The Debug Log Podcast",
+          "type": "media",
+          "date": "June 2017",
+          "description": "An interview I did with the #1 game development podcast! Listen as I dispense ancient wisdom on the art of technical management.",
+          "url": "https://podcasts.apple.com/tr/podcast/the-debug-log/id1019074514",
+          "imageUrl": "https://image.simplecastcdn.com/images/7d467b31-7d8d-4b88-ac8f-a24d5b91fb04/0adaff37-07d9-4ce7-b4e8-7715d03216d9/300x300/1469557783artwork.jpg"
+        },
+        {
+          "category": "products",
+          "title": "Criminal Empire",
+          "type": "games",
+          "date": "2017",
+          "description": "Build an empire.",
+          "url": "https://play.google.com/store/apps/details?id=com.goldslugz.criminal.empire&hl=en_US&gl=US",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/criminal.png",
+          "tech": ["cs", "unity", "aws", "docker", "dotnetty", "webapi"]
+        },
+        {
+          "category": "products",
+          "title": "Canceled Title",
+          "subtitle": "NCSOFT",
+          "type": "games",
+          "date": "2017",
+          "description": "Wish I could say more!",
+          "tech": ["cs", "unity", "aws", "docker", "dotnetty", "webapi"]
+        }
+      ]
     },
     {
       "category": "career",
@@ -366,7 +1160,58 @@
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/Kixeye.webp",
       "tech": ["flash", "cs", "unity", "cg", "agal", "js"],
-      "size": 25
+      "size": 25,
+      "children": [
+        {
+          "category": "products",
+          "title": "Canceled Title",
+          "subtitle": "Kixeye",
+          "type": "games",
+          "date": "2013",
+          "description": "Wish I could say more!",
+          "tech": ["cs", "unity", "cg"]
+        },
+        {
+          "category": "products",
+          "title": "Kixeye.com",
+          "subtitle": "Kixeye",
+          "type": "games",
+          "date": "2013",
+          "description": "I worked on shared systems that games used across Kixeye.com, like chat and mail.",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/kixeye-website.png",
+          "tech": ["js"]
+        },
+        {
+          "category": "products",
+          "title": "War Commander",
+          "subtitle": "Kixeye",
+          "type": "games",
+          "date": "2013",
+          "description": "Build bases and units. Find targets. Kill 'em all.",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/war-commander.jpg",
+          "tech": ["flash"]
+        },
+        {
+          "category": "products",
+          "title": "Battle Pirates",
+          "subtitle": "Kixeye",
+          "type": "games",
+          "date": "2012",
+          "description": "Build bases and ships. Find targets. Kill 'em all.",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/battle-pirates.jpg",
+          "tech": ["flash"]
+        },
+        {
+          "category": "products",
+          "title": "War Commander: Rogue Assault",
+          "subtitle": "Kixeye",
+          "type": "games",
+          "date": "2014",
+          "description": "Build bases and units... on mobile. Find targets. Kill 'em all.",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/rogue-assault.jpg",
+          "tech": ["cs", "unity", "cg"]
+        }
+      ]
     },
     {
       "category": "career",
@@ -378,7 +1223,29 @@
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/et-logo.jpg",
       "tech": ["flash", "java"],
-      "size": 25
+      "size": 25,
+      "children": [
+        {
+          "category": "products",
+          "title": "Canceled Title",
+          "subtitle": "Electrotank",
+          "type": "games",
+          "date": "2011",
+          "description": "Wish I could say more!",
+          "tech": ["flash", "java"]
+        },
+        {
+          "category": "products",
+          "title": "Imagine Town",
+          "subtitle": "Ubisoft",
+          "type": "games",
+          "date": "2010",
+          "description": "An MMO for tweens we made in partnership with Ubisoft.",
+          "url": "https://www.youtube.com/watch?v=1QpbQhP67VE",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/imagine.png",
+          "tech": ["flash", "java"]
+        }
+      ]
     },
     {
       "category": "career",
@@ -415,915 +1282,6 @@
       "imageUrl": "https://thegoldenmule.com/thumbnails/machine.png",
       "tech": ["flash"],
       "size": 20
-    },
-
-    {
-      "category": "publications",
-      "title": "A Counterpoint to Account Abstraction",
-      "type": "writing",
-      "date": "July 2024",
-      "subtitle": "In which I take on Web3's newest fad.",
-      "description": "Account Abstraction, or Smart Wallets, are the newest fad. Everyone and their grandmother is making wallets. So why have we chosen to skip them for now?",
-      "url": "https://medium.com/spyre-io/a-counterpoint-to-account-abstraction-df71d1f179d9",
-      "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*zSHIlzSPQP-b-HkD2B_mPg.jpeg",
-      "tech": ["web3"]
-    },
-    {
-      "category": "publications",
-      "title": "Physics Engines Explained: Part II",
-      "type": "writing",
-      "date": "July 2024",
-      "subtitle": "You thought the last article was deep.",
-      "description": "Now the question: what makes physics engines break? In this article, I dive DEEP into linear algebra in complex space to find explicit conditions for failure. Believe me, it's cool!",
-      "url": "https://thegoldenmule.medium.com/physics-engine-deep-dive-part-ii-cb8d1fda1f9b",
-      "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*GDEI8bHKk6Yfq4hxdu_SFg.jpeg",
-      "tech": []
-    },
-    {
-      "category": "publications",
-      "title": "Physics Engines Explained: Part I",
-      "type": "writing",
-      "date": "July 2024",
-      "subtitle": "Get ready for some math.",
-      "description": "An unusual departure for my writing: hard math. We dive into the theory of rigid body systems and begin an exploration into what makes physics engines tick.",
-      "url": "https://thegoldenmule.medium.com/physics-engines-explained-part-i-25c595ddc5b2",
-      "imageUrl": "https://miro.medium.com/v2/resize:fit:730/format:webp/0*IspZqqnDZvZmWWsY.png",
-      "tech": []
-    },
-    {
-      "category": "code",
-      "title": "Nakama-js",
-      "subtitle": "A small but mighty OSS contribution.",
-      "type": "software",
-      "date": "July 2024",
-      "description": "An incredibly complicated fix deep inside of Nakama's JS library. Okay it was a one-liner but it was a hard to find one-liner.",
-      "url": "https://github.com/heroiclabs/nakama-js/pull/196",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/nakama.png",
-      "tech": ["ts"]
-    },
-
-    {
-      "category": "publications",
-      "title": "Effectively Working in Teams: Baltic German Style",
-      "type": "writing",
-      "date": "March 2023",
-      "subtitle": "Published in Geek Culture.",
-      "description": "How can we understand each other? Thoughts from sociology, biocybernetics, and of course, mathematics.",
-      "url": "https://medium.com/geekculture/software-development-dynamics-baltic-german-style-43a526a13444",
-      "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/0*wqkes4CAigOKmIfX.jpg",
-      "tech": []
-    },
-
-    {
-      "category": "publications",
-      "title": "NFT Collectors Are Geniuses",
-      "type": "writing",
-      "date": "December 2022",
-      "subtitle": "Published in Coinmonks.",
-      "description": "NFTs may be mathematically attractive but daggum if they aren't complicated. So complicated that most of them are horribly broken.",
-      "url": "https://medium.com/coinmonks/nft-collectors-are-geniuses-3edbc427c48c",
-      "imageUrl": "https://miro.medium.com/max/720/1*ovBG4SiY_uoFNRZ_NhoqIA.webp",
-      "tech": ["solidity"]
-    },
-    {
-      "category": "products",
-      "title": "Canceled Web3 Title",
-      "subtitle": "Big Run Studios",
-      "type": "games",
-      "date": "2022",
-      "description": "We built out a transparent, custodial wallet system on top of the Polygon Network. For this project I wrote ERC20 and ERC1155 contracts, IPFS integration (with heavy caching!), and all sorts of other nifty features to introduce the crypto and social gaming communities. I even made a Go code contribution to the Polygon Edge project (see entry below).",
-      "tech": ["solidity", "go", "nodejs", "unity"]
-    },
-    {
-      "category": "publications",
-      "title": "In which I probably invented a whole new branch of mathematics and computer science",
-      "type": "writing",
-      "date": "July 2022",
-      "subtitle": "Published in Geek Culture.",
-      "description": "My love for literature and math leads me down a strange path... Follow along in WONDER on a numerical exploration of classic authors.",
-      "url": "https://medium.com/geekculture/in-which-i-probably-invented-a-whole-new-branch-of-mathematics-and-computer-science-fbfa6e224631",
-      "imageUrl": "https://miro.medium.com/max/720/0*zJq9-2Qbvvi--dR9.webp",
-      "tech": ["python"]
-    },
-    {
-      "category": "publications",
-      "title": "Doug McIlroy vs Donald Knuth",
-      "type": "writing",
-      "date": "July 2022",
-      "subtitle": "Published in CodeX.",
-      "description": "Storytelling is a lost art in software engineering. What happens when you pit massive brains against one another?",
-      "url": "https://medium.com/codex/doug-mcilroy-vs-donald-knuth-dbafec5d6b24",
-      "imageUrl": "https://miro.medium.com/max/720/1*AoHzgWzzBdrVLpd9e_P4IQ.webp",
-      "tech": []
-    },
-    {
-      "category": "publications",
-      "title": "Programming where Failure is Not an Option",
-      "type": "writing",
-      "date": "June 2022",
-      "subtitle": "Published in CodeX.",
-      "description": "Are we coding for space shuttles here? Why are we so afraid of failure?",
-      "url": "https://medium.com/codex/programming-where-failure-is-not-an-option-d42dfa938b42",
-      "imageUrl": "https://miro.medium.com/max/720/0*Hpa_ocOdiYzRZVyb.webp",
-      "tech": []
-    },
-    {
-      "category": "publications",
-      "title": "What is the point of higher education in computer science?",
-      "type": "writing",
-      "date": "March 2022",
-      "subtitle": "Published in CodeX.",
-      "description": "Now that I'm officially a highly professional academic, I realize I have no clue what I should be doing.",
-      "url": "https://medium.com/codex/what-is-the-point-of-higher-education-in-computer-science-b8a29b63ebdc",
-      "imageUrl": "https://miro.medium.com/max/720/0*uj51YZ0qr_A5wFeQ.webp",
-      "tech": []
-    },
-    {
-      "category": "code",
-      "title": "Polygon Edge",
-      "type": "software",
-      "date": "March 2022",
-      "description": "I fixed some cross origin issues in Polygon Edge: the EVM-compatible blockchain tech.",
-      "url": "https://github.com/0xPolygon/polygon-edge/pull/414",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/polygon-logo.svg",
-      "tech": ["go"]
-    },
-    {
-      "category": "publications",
-      "title": "GitHub Copilot and major world religions",
-      "type": "writing",
-      "date": "February 2022",
-      "subtitle": "Published in Geek Culture.",
-      "description": "My little AI co-programmer is quickly becoming an indispensible tool. Let's talk about metaphysics-- wait what?",
-      "url": "https://medium.com/geekculture/github-copilot-vs-major-world-religions-44829926e055",
-      "imageUrl": "https://miro.medium.com/max/640/0*FMaBgXwuQmK7KEcg.webp",
-      "tech": []
-    },
-    {
-      "category": "publications",
-      "title": "Shaping Young Minds with Agile Thinking",
-      "type": "writing",
-      "date": "February 2022",
-      "subtitle": "Published in Geek Culture.",
-      "description": "Why Agile methodology matters, and how I'm teaching it to CS masters students. If only someone had shown me these things when I was a whipper-snapper!",
-      "url": "https://medium.com/geekculture/shaping-young-minds-with-agile-thinking-33b63ccd3c12",
-      "imageUrl": "https://miro.medium.com/max/720/0*c9YjL7ReG6E2NgT_.webp",
-      "tech": []
-    },
-    {
-      "category": "publications",
-      "title": "How many bugs should your product have?",
-      "type": "writing",
-      "date": "January 2022",
-      "subtitle": "Published in CodeX.",
-      "description": "It's a tough question, but it's one we should be asking ourselves: how many bugs should our product have before we show it to someone?",
-      "url": "https://medium.com/codex/how-many-bugs-should-your-product-have-fd7edd1c61d",
-      "imageUrl": "https://miro.medium.com/max/720/1*7qXL7JrTggt2Akx7gRXMYg.webp",
-      "tech": []
-    },
-    {
-      "category": "products",
-      "title": "Word Star",
-      "subtitle": "Big Run Studios",
-      "type": "games",
-      "date": "2022",
-      "description": "A skill-based, multiplayer word game.",
-      "url": "https://bigrunstudios.com/games/word-star/",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/word-star.png",
-      "tech": ["unity", "cs", "nodejs", "aws", "snowflake", "tableau"]
-    },
-    {
-      "category": "products",
-      "title": "Webtrono.me",
-      "subtitle": "Web-based SaaS Product",
-      "type": "software",
-      "date": "2022",
-      "description": "Web-based metronomes are terrible, but not this one! A configurable, sample-accurate metronome in the browser. Create your routine and track your progress with your new practice buddy.",
-      "url": "https://webtrono.me",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/webtronome2.png",
-      "tech": [
-        "aws",
-        "docker",
-        "nodejs",
-        "sailsjs",
-        "react",
-        "redux",
-        "bootstrap"
-      ]
-    },
-    {
-      "category": "publications",
-      "title": "What you can't know about being a startup CTO",
-      "type": "writing",
-      "date": "December 2021",
-      "subtitle": "Published in CodeX.",
-      "description": "The term 'Startup CTO' can mean just about anything, depending on the startup-- but there is one thing they all have in common: wrestling with the unknown.",
-      "url": "https://medium.com/codex/what-you-cant-know-about-being-a-startup-cto-80138aceb68f",
-      "imageUrl": "https://miro.medium.com/max/720/1*3wxO_yDf9w7_I8NcJYmn9A.webp",
-      "tech": []
-    },
-    {
-      "category": "publications",
-      "title": "Embrace AI pair programming or perish",
-      "type": "writing",
-      "date": "October 2021",
-      "subtitle": "Published in CodeX.",
-      "description": "The future is here and the only choice we have is how to respond: do we reject it, or do we embrace it?",
-      "url": "https://medium.com/codex/embrace-ai-pair-programming-or-perish-359a4c1a58c8",
-      "imageUrl": "https://miro.medium.com/max/720/1*g5Bb1Cgq1QWkNyZkFJPXoA.webp",
-      "tech": []
-    },
-    {
-      "category": "publications",
-      "title": "The Binary Search Methodology",
-      "type": "writing",
-      "date": "October 2021",
-      "subtitle": "Published in CodeX.",
-      "description": "A practical methodology for building software that I completely made up in a vacuum and is completely original.",
-      "url": "https://medium.com/codex/the-binary-search-methodology-3cd21fc66531",
-      "imageUrl": "https://miro.medium.com/max/720/1*2MTujmy2vodReeVNFdx8TQ.webp",
-      "tech": []
-    },
-    {
-      "category": "publications",
-      "title": "Why Proof of Work is elegant and Proof of Stake is not",
-      "type": "writing",
-      "date": "October 2021",
-      "subtitle": "Published in Coinmonks.",
-      "description": "What can I say, I'm a sucker for elegant math. Proof of Stake is not the picture of elegance its older brother is.",
-      "url": "https://medium.com/coinmonks/why-proof-of-work-is-elegant-and-proof-of-stake-is-not-4988cdc8805f",
-      "imageUrl": "https://miro.medium.com/max/720/1*hhFG5jniMBT_5A4lvkaSNg.webp",
-      "tech": []
-    },
-    {
-      "category": "code",
-      "title": "Ffabricator",
-      "type": "software",
-      "date": "September 2021",
-      "description": "A simple Akka + ASP.NET server that creates HLS streams from WebM or MP4 videos.",
-      "url": "https://github.com/thegoldenmule/ffabricator",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/ffabricator.png",
-      "tech": ["cs", "dotnet", "akka"]
-    },
-    {
-      "category": "products",
-      "title": "Nk-Js",
-      "subtitle": "Web based SaaS Product",
-      "type": "software",
-      "date": "Feb-June 2021",
-      "description": "Nk-js is an end-to-end encrypted js library for use with nk-server: the no-knowledge store.",
-      "url": "https://github.com/thegoldenmule/nk/tree/develop/nk-js",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/nk.gif",
-      "tech": ["js", "react", "redux", "bootstrap"]
-    },
-    {
-      "category": "products",
-      "title": "Big Cooking",
-      "subtitle": "Big Run Studios",
-      "type": "games",
-      "date": "2021",
-      "description": "A skill-based, multiplayer cooking game.",
-      "url": "https://bigrunstudios.com/games/big-cooking-2/",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/big-cooking.png",
-      "tech": ["unity", "cs", "nodejs", "aws", "snowflake", "tableau"]
-    },
-    {
-      "category": "publications",
-      "title": "Game Logic Q&A",
-      "type": "media",
-      "date": "Feb 2021",
-      "description": "An interview with Myke Parrott of i-Gem on the challenges of hiring in the games industry. Drinking game: one shot for every 'um' and you'll be out quick.",
-      "url": "https://www.youtube.com/watch?v=EhxSBasCB2U",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/yt_logo_rgb_light.png",
-      "tech": []
-    },
-    {
-      "category": "products",
-      "title": "Nk-Server",
-      "subtitle": "BaaS Product",
-      "type": "exploration",
-      "date": "Feb 2021",
-      "description": "No peeking. An end-to-end encrypted, no-knowledge key/value storage server.",
-      "url": "https://github.com/thegoldenmule/nk/tree/develop/nk-server",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/nk.gif",
-      "tech": ["cs", "webapi", "dotnet"]
-    },
-    {
-      "category": "products",
-      "title": "Farm Sweeper",
-      "subtitle": "Big Run Studios",
-      "type": "games",
-      "date": "2019",
-      "description": "A skill-based twist to the game of multiplayer minesweeper.",
-      "url": "https://bigrunstudios.com/games/farm-sweeper/",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/farmsweeper.png",
-      "tech": ["unity", "cs", "nodejs", "aws", "snowflake", "tableau"]
-    },
-    {
-      "category": "products",
-      "title": "Nano Watch",
-      "subtitle": "Web-based SaaS Product",
-      "type": "software",
-      "date": "January 2021",
-      "description": "Nano watch is a simple web app that watches nanopool mining rigs and pushes browser notifications when the monitored rigs dip below a target hashrate.",
-      "url": "https://github.com/thegoldenmule/nano-watch",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/nano-watch.png",
-      "tech": ["react", "bootstrap"]
-    },
-    {
-      "category": "products",
-      "title": "Big Run Solitaire",
-      "subtitle": "Big Run Studios",
-      "type": "games",
-      "date": "2020",
-      "description": "A skill-based twist to the game of multiplayer solitaire.",
-      "url": "https://bigrunstudios.com/games/big-run-solitaire/",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/solitaire.png",
-      "tech": ["unity", "cs", "nodejs", "aws", "snowflake", "tableau"]
-    },
-    {
-      "category": "products",
-      "title": "Blackout Bingo",
-      "subtitle": "Big Run Studios",
-      "type": "games",
-      "date": "2020",
-      "description": "A skill-based twist to the game of multiplayer bingo.",
-      "url": "https://bigrunstudios.com/games/blackout-bingo-2/",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/blackout-bingo.png",
-      "tech": ["unity", "cs", "nodejs", "aws", "snowflake", "tableau"]
-    },
-    {
-      "category": "publications",
-      "title": "Blackout Blitz dev Big Run Studios hires Benjamin Jordan as new CTO",
-      "subtitle": "Pocket Gamer",
-      "type": "media",
-      "date": "March 2020",
-      "description": "Hear ye, hear ye: random guy on the internet gets a job!",
-      "url": "https://www.pocketgamer.biz/job-news/73421/big-run-studios-hires-benjamin-jordan-new-cto/",
-      "imageUrl": "https://imgs.pocketgamer.biz/PGbiz_logo_210x204.png"
-    },
-
-    {
-      "category": "products",
-      "title": "Enkluplayer",
-      "subtitle": "Synchronous Multiplayer Client SDK",
-      "type": "software",
-      "date": "2017-2020",
-      "description": "Enkluplayer is a collaborative, cross-platform multiplayer AR runtime that is unfortunately now closed-source. Live behavior and UI scripting across devices. Drag and drop asset import. Enkluplayer lets users collaboratively design and publish multiplayer-by-default AR experiences.",
-      "url": "https://github.com/enklu/enkluplayer",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/player-small.gif",
-      "tech": ["cs", "unity"]
-    },
-    {
-      "category": "products",
-      "title": "Enklu Cloud",
-      "subtitle": "Web-based SaaS Product",
-      "type": "software",
-      "date": "2017-2020",
-      "description": "Enklu Cloud is the leading platform for collaborative authoring and sharing of immersive multiplayer AR experiences.",
-      "url": "https://cloud.enklu.com",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/cloud.gif",
-      "tech": [
-        "cs",
-        "js",
-        "groovy",
-        "cg",
-        "webgl",
-        "socketio",
-        "dotnetty",
-        "azure",
-        "sailsjs",
-        "nodejs",
-        "react",
-        "redux",
-        "bootstrap",
-        "akka",
-        "jenkins",
-        "aws",
-        "docker"
-      ]
-    },
-    {
-      "category": "code",
-      "title": "HoloLens 2 Multiplayer",
-      "type": "ar",
-      "date": "2019",
-      "description": "We created a multiplayer spellcasting demo in just a few hours for an invite-only tech day at Microsoft Reactor.",
-      "url": "https://www.thegoldenmule.com/videos/duel.mp4",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/duel.gif",
-      "tech": ["cs", "js", "dotnetty", "akka"]
-    },
-    {
-      "category": "code",
-      "title": "Conversational AI World Building",
-      "type": "exploration",
-      "date": "2019",
-      "description": "At another invite-only Microsoft hackathon, I created a prototype for a conversational world-building application using Azure's LUIS and Enklu. The computer asks what you see and builds the scene as you describe it.",
-      "url": "https://www.thegoldenmule.com/videos/story.mp4",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/story.gif",
-      "tech": ["cs", "js", "dotnetty", "akka"]
-    },
-    {
-      "category": "products",
-      "title": "Magic Mirror",
-      "subtitle": "Location Based Entertainment Product",
-      "type": "ar",
-      "date": "October 2019",
-      "description": "We were the first to adapt the Azure Kinect to live entertainment by adding Azure Kinect support to Enkluplayer. This ran as an interactive installation at Universal Studios in LA where lightning shot from your fingertips.",
-      "url": "https://www.thegoldenmule.com/videos/azure-kinect-dev.mp4",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/azure-kinect-preview.gif",
-      "tech": ["cs", "js", "dotnetty", "akka", "docker"]
-    },
-    {
-      "category": "code",
-      "title": "100 HoloLens Multiplayer @ E3",
-      "type": "ar",
-      "date": "June 2019",
-      "description": "We created the world's first 100 HoloLens multiplayer experience at E3. Over 7500 attendees were able to put on a HoloLens and explore magical powers in the Unreal Garden.",
-      "imageUrl": "https://www.thegoldenmule.com/thumbnails/player-small.gif",
-      "url": "https://www.youtube.com/watch?v=j1usTNschXg",
-      "tech": ["cs", "js", "dotnetty", "akka", "docker"]
-    },
-    {
-      "category": "code",
-      "title": "Kinect + Enklu + E3",
-      "type": "ar",
-      "date": "June 2019",
-      "description": "At E3, we used our Kinect v2 integration to give wings to passers-by.",
-      "url": "https://www.thegoldenmule.com/videos/e3-wings-mp4.mp4",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/e3-wings.gif",
-      "tech": [
-        "cs",
-        "js",
-        "groovy",
-        "cg",
-        "socketio",
-        "dotnetty",
-        "azure",
-        "sailsjs",
-        "nodejs",
-        "react",
-        "redux",
-        "bootstrap",
-        "akka",
-        "jenkins",
-        "aws",
-        "docker"
-      ]
-    },
-    {
-      "category": "code",
-      "title": "Mamba",
-      "type": "iot",
-      "date": "May 2019",
-      "description": "Mamba is a .NET Core application that connects Kinect stream data to the Enklu multiplayer servers. In this way, we could attach assets to body parts and sync them between 'multiverse mirrors' and HoloLenses.",
-      "url": "https://github.com/enklu/mamba",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/mamba-small.gif",
-      "tech": ["cs", "dotnet", "dotnetty"]
-    },
-    {
-      "category": "code",
-      "title": "Chelydra",
-      "type": "iot",
-      "date": "March 2019",
-      "description": "Chelydra is a .NET Core controller that connects a DSLR camera to Enklu multiplayer services. HoloLens players can trigger pictures to be taken via AR controls.",
-      "url": "https://github.com/enklu/chelydra",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/snap.jpg",
-      "tech": ["cs", "dotnet", "dotnetty"]
-    },
-    {
-      "category": "publications",
-      "title": "Take the Time to Write Less Code",
-      "type": "writing",
-      "date": "February 2019",
-      "subtitle": "Published in CodeX.",
-      "description": "Something from Pascal the programmer: please take the time to write less code. Thank you.",
-      "url": "https://medium.com/codex/take-the-time-to-write-less-code-1bf0ab385a38",
-      "imageUrl": "https://miro.medium.com/max/720/1*95u9XPdy0jCIbvG4z9OsNw.webp"
-    },
-    {
-      "category": "code",
-      "title": "Quicktype Maintainer",
-      "type": "software",
-      "date": "2019",
-      "description": "After major contributions to go, csharp, and prop-types generators, I was asked to be a maintainer.",
-      "url": "https://github.com/quicktype/quicktype/pulls?q=is%3Apr+author%3Athegoldenmule+is%3Aclosed",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/quicktype.png",
-      "tech": ["typescript"]
-    },
-    {
-      "category": "code",
-      "title": "UWP Support for Antlr",
-      "type": "misc",
-      "date": "March 2018",
-      "description": "I used ANTLR to make a DSL for the Enkluplayer UI system. The only problem: it didn't run on HoloLens. This PR fixed the ANTLR project for UWP.",
-      "url": "https://github.com/antlr/antlr4/pull/2267",
-      "imageUrl": "https://www.antlr.org/images/antlr-logo.png",
-      "tech": ["cs"]
-    },
-    {
-      "category": "code",
-      "title": "Unity Plugin",
-      "type": "misc",
-      "date": "February 2018",
-      "description": "Gradle plugin for running Unity from a gradle task.",
-      "url": "https://github.com/enklu/commons-gradle-unity",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/gradle-unity.png",
-      "tech": ["groovy"]
-    },
-
-    {
-      "category": "code",
-      "title": "Unity Messaging Library",
-      "type": "software",
-      "date": "September 2017",
-      "description": "Open source libraries, used at Enklu and beyond, for safe, single threaded message dispatch.",
-      "url": "https://github.com/enklu/commons-unity-messaging",
-      "tech": ["cs"]
-    },
-    {
-      "category": "code",
-      "title": "NaturalLogger",
-      "type": "software",
-      "date": "September 2017",
-      "description": "A Unity library for sending logs to Natural-Log.",
-      "url": "https://github.com/thegoldenmule/naturallog-examples",
-      "imageUrl": "https://raw.githubusercontent.com/thegoldenmule/naturallog/master/assets/icons/png/128x128.png",
-      "tech": ["cs"]
-    },
-    {
-      "category": "code",
-      "title": "Natural-Log",
-      "type": "software",
-      "date": "September 2017",
-      "description": "A socket server and slick client, wrapped in a cross platform binary using Electron.io.",
-      "url": "https://github.com/thegoldenmule/naturallog",
-      "imageUrl": "https://raw.githubusercontent.com/thegoldenmule/naturallog/master/assets/screenshot.png",
-      "tech": ["js", "socketio"]
-    },
-    {
-      "category": "code",
-      "title": "StrangeIOC-UWP",
-      "type": "software",
-      "date": "August 2017",
-      "description": "Open source fork of StrangeIOC library, compatible with UWP.",
-      "url": "https://github.com/enklu/StrangeIOC-UWP",
-      "tech": ["cs"]
-    },
-    {
-      "category": "code",
-      "title": "Unity Debug Rendering Library",
-      "type": "software",
-      "date": "August 2017",
-      "description": "Open source library, used at Enklu and beyond, for rendering primitives for debuging Unity applications.",
-      "url": "https://github.com/enklu/commons-unity-debugrendering",
-      "tech": ["cs"]
-    },
-    {
-      "category": "code",
-      "title": "Unity HTTP Library",
-      "type": "software",
-      "date": "August 2017",
-      "description": "Open source libraries, used at Enklu and beyond, for making HTTP requests.",
-      "url": "https://github.com/enklu/commons-unity-http",
-      "tech": ["cs"]
-    },
-    {
-      "category": "code",
-      "title": "Core-AVR",
-      "type": "iot",
-      "date": "August 2017",
-      "description": "Libraries for working with 32-bit Atmel AVR microcontrollers. They are not good.",
-      "url": "https://github.com/Open-farm/openfarm-core-avr",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/openfarm-core-avr-thumb.png",
-      "tech": ["c"]
-    },
-    {
-      "category": "code",
-      "title": "Stegasaurus",
-      "type": "exploration",
-      "date": "July 2017",
-      "description": "Hide data in pictures (steganography), which are then stored in plain sight: on Facebook. Stegasaurus encrypts data with a one time pad, which is then stored... in other pictures.",
-      "url": "https://github.com/thegoldenmule/stegosaurus",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/steg.jpg",
-      "tech": ["python"]
-    },
-    {
-      "category": "code",
-      "title": "Unity Logging Library",
-      "type": "software",
-      "date": "June 2017",
-      "description": "Open source libraries, used at Enklu and beyond, for easy to use logging in Unity.",
-      "url": "https://github.com/enklu/commons-unity-logging",
-      "tech": ["cs"]
-    },
-    {
-      "category": "products",
-      "title": "Criminal Empire",
-      "type": "games",
-      "date": "2017",
-      "description": "Build an empire.",
-      "url": "https://play.google.com/store/apps/details?id=com.goldslugz.criminal.empire&hl=en_US&gl=US",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/criminal.png",
-      "tech": ["cs", "unity", "aws", "docker", "dotnetty", "webapi"]
-    },
-    {
-      "category": "products",
-      "title": "Canceled Title",
-      "subtitle": "NCSOFT",
-      "type": "games",
-      "date": "2017",
-      "description": "Wish I could say more!",
-      "tech": ["cs", "unity", "aws", "docker", "dotnetty", "webapi"]
-    },
-    {
-      "category": "publications",
-      "title": "Technical Directing with Benjamin Jordan",
-      "subtitle": "The Debug Log Podcast",
-      "type": "media",
-      "date": "June 2017",
-      "description": "An interview I did with the #1 game development podcast! Listen as I dispense ancient wisdom on the art of technical management.",
-      "url": "https://podcasts.apple.com/tr/podcast/the-debug-log/id1019074514",
-      "imageUrl": "https://image.simplecastcdn.com/images/7d467b31-7d8d-4b88-ac8f-a24d5b91fb04/0adaff37-07d9-4ce7-b4e8-7715d03216d9/300x300/1469557783artwork.jpg"
-    },
-    {
-      "category": "code",
-      "title": "Jint-Unity",
-      "type": "software",
-      "date": "April 2017",
-      "description": "A Javascript interpreter for Unity.",
-      "url": "https://github.com/thegoldenmule/jint",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/test.gif",
-      "tech": ["cs"]
-    },
-
-    {
-      "category": "code",
-      "title": "Story",
-      "type": "exploration",
-      "date": "March 2015",
-      "description": "Story is a research project that leverages the Python NLT and machine learning techniques for gaming. It's a reverse text adventure. The goal is to use natural language input to describe an environment to a computer, which then makes choices about how to use the environment to accomplish the described goal.",
-      "url": "https://github.com/thegoldenmule/story",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/vsdLA.png",
-      "tech": ["python"]
-    },
-    {
-      "category": "code",
-      "title": "Playing With Cinder",
-      "type": "graphics",
-      "date": "January 2015",
-      "description": "My first project using Cinder. It's very simple, linking luma from a video capture source to various properties of a bunch of circles (in the biz we call them particles).",
-      "url": "https://github.com/thegoldenmule/CameraOutline",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/cinder.png",
-      "tech": ["c"]
-    },
-    {
-      "category": "code",
-      "title": "Email Backup",
-      "type": "misc",
-      "date": "December 2014",
-      "description": "A set of tools for backing up email. Yes, it sounds boring, but it was fun and I needed something simple.",
-      "url": "https://github.com/thegoldenmule/email-backup",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/ebackupUsage.png",
-      "tech": ["python"]
-    },
-    {
-      "category": "code",
-      "title": "Itsy",
-      "type": "physics",
-      "date": "May 2014",
-      "description": "A cute name for an otherwise uncaring software-rendered particle system.",
-      "url": "https://github.com/thegoldenmule/Itsy",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/Itsy.png",
-      "tech": ["js"]
-    },
-    {
-      "category": "products",
-      "title": "War Commander: Rogue Assault",
-      "subtitle": "Kixeye",
-      "type": "games",
-      "date": "2014",
-      "description": "Build bases and units... on mobile. Find targets. Kill 'em all.",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/rogue-assault.jpg",
-      "tech": ["cs", "unity", "cg"]
-    },
-    {
-      "category": "code",
-      "title": "Dependency Injection in Unity3d",
-      "type": "software",
-      "date": "December 2013",
-      "description": "A couple classes for using Ninject as a dependency injection solution in Unity3d.",
-      "url": "https://thegoldenmule.com/blog/2013/12/ninject-and-unity/",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/ninject.png",
-      "tech": ["cs", "unity"]
-    },
-    {
-      "category": "code",
-      "title": "Kristmas Klein Bagel",
-      "type": "graphics",
-      "date": "December 2013",
-      "description": "A short exploration of generating a 3d immersion of a 4d Klein bottle.",
-      "url": "https://github.com/thegoldenmule/Topology",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/Klein.png",
-      "tech": ["cs", "unity"]
-    },
-    {
-      "category": "code",
-      "title": "Separating Axes Theorem",
-      "type": "physics",
-      "date": "December 2013",
-      "description": "A very basic implementation of the separating axes theorem for collision detection. This was created for illustrative purposes, and has, let's say, a few bugs.",
-      "url": "https://thegoldenmule.com/blog/2013/12/supercolliders-in-unity/",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/collision.png",
-      "tech": ["cs", "unity"]
-    },
-    {
-      "category": "code",
-      "title": "All Mine",
-      "type": "games",
-      "date": "October 2013",
-      "description": "A simple game built with Cocos2d that expands on Minesweeper. Energy, biodiesel, unit types and actions-- lots of fun stuff!",
-      "url": "https://bitbucket.org/benthehutt/all-mine/src/",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/cocos.png",
-      "tech": ["objc"]
-    },
-    {
-      "category": "code",
-      "title": "Telemetrino",
-      "type": "iot",
-      "date": "September 2013",
-      "description": "Strapping an Arduino + accelerometer to an RC car.",
-      "url": "https://thegoldenmule.com/blog/2013/09/of-wisdom-teeth-and-acceleration/",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/accelerationTelemetry.png",
-      "tech": ["cs"]
-    },
-    {
-      "category": "code",
-      "title": "Fabric Sim",
-      "type": "physics",
-      "date": "August 2013",
-      "description": "A simple fabric simulation. Uses a spring system with point masses and Verlet integration. The original used my own graphics engine, but this uses ThreeJS.",
-      "url": "https://www.thegoldenmule.com/labs/three-physics/",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/FabricAnimation.gif",
-      "tech": ["js", "webgl"]
-    },
-    {
-      "category": "code",
-      "title": "boX",
-      "type": "graphics",
-      "date": "August 2013",
-      "description": "That's not an 'x' at all! It's a chi! A 2D WebGL graphics engine, twice as pretentious as LateX.",
-      "url": "https://github.com/thegoldenmule/boX",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/boXAnimation.gif",
-      "tech": ["js", "webgl", "glsl"]
-    },
-    {
-      "category": "code",
-      "title": "On Geosphere Construction",
-      "type": "graphics",
-      "date": "January 2013",
-      "description": "The geometrical construction of a sphere based on the subdivision of an icosahedron. This method creates a sphere where each triangle is the same size.",
-      "url": "https://thegoldenmule.com/blog/2013/01/geosphere-revisited/",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/geosphere.png",
-      "tech": ["cs", "unity"]
-    },
-    {
-      "category": "code",
-      "title": "Realtime Clouds on the GPU",
-      "type": "graphics",
-      "date": "January 2013",
-      "description": "A two part study into noise functions and how they might be used to create purely GPU-based moving clouds.",
-      "url": "https://thegoldenmule.com/blog/2013/01/real-time-clouds-pt-1-a-study-of-noise-functions/",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/clouds.png",
-      "tech": ["cs", "unity"]
-    },
-    {
-      "category": "code",
-      "title": "Spherical Terrain Generation",
-      "type": "graphics",
-      "date": "January 2013",
-      "description": "Everyone has created flat procedural terrain-- but what methods can be used for generating spherical terrain? This two part post builds on geospheres and explores one method of geometry creation and one method for an accompanying Earthlike shader.",
-      "url": "https://thegoldenmule.com/blog/2013/01/spherical-terrain-generation/",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/world.png",
-      "tech": ["cs", "unity"]
-    },
-    {
-      "category": "products",
-      "title": "Canceled Title",
-      "subtitle": "Kixeye",
-      "type": "games",
-      "date": "2013",
-      "description": "Wish I could say more!",
-      "tech": ["cs", "unity", "cg"]
-    },
-    {
-      "category": "products",
-      "title": "Kixeye.com",
-      "subtitle": "Kixeye",
-      "type": "games",
-      "date": "2013",
-      "description": "I worked on shared systems that games used across Kixeye.com, like chat and mail.",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/kixeye-website.png",
-      "tech": ["js"]
-    },
-    {
-      "category": "products",
-      "title": "War Commander",
-      "subtitle": "Kixeye",
-      "type": "games",
-      "date": "2013",
-      "description": "Build bases and units. Find targets. Kill 'em all.",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/war-commander.jpg",
-      "tech": ["flash"]
-    },
-    {
-      "category": "products",
-      "title": "Battle Pirates",
-      "subtitle": "Kixeye",
-      "type": "games",
-      "date": "2012",
-      "description": "Build bases and ships. Find targets. Kill 'em all.",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/battle-pirates.jpg",
-      "tech": ["flash"]
-    },
-
-    {
-      "category": "code",
-      "title": "Porter Stemmer",
-      "type": "misc",
-      "date": "September 2011",
-      "description": "An ancient and naive implementation of Porter's stemming algorithm. Essentially, it takes words and decomposes them down to their root.",
-      "url": "https://github.com/thegoldenmule/PStem",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/stem.png",
-      "tech": ["js"]
-    },
-    {
-      "category": "code",
-      "title": "Scorched3D",
-      "type": "games",
-      "date": "September 2011",
-      "description": "Now in 2D! An ancient, Scorched Earth style, software rendered, hot-seat multiplayer extravaganza.",
-      "url": "https://thegoldenmule.com/labs/Scorch3d/",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/ScorchedAnimation.gif",
-      "tech": ["js"]
-    },
-    {
-      "category": "code",
-      "title": "Scorched Earth Style Terrain",
-      "type": "physics",
-      "date": "August 2011",
-      "description": "For those of you wanting to generate interesting 2D terrains, similar to the Mother of All Games: Scorched Earth. These don't use silly fractals or perlin-- those are too boring!",
-      "url": "https://thegoldenmule.com/blog/2011/08/terramorphic-genesis-algorithms-or-terrain-generation/",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/TGA.png",
-      "tech": ["js"]
-    },
-    {
-      "category": "code",
-      "title": "Einstein",
-      "type": "physics",
-      "date": "August 2011",
-      "description": "A relativity engine-- essentially any object in the scene can be the Observer, and every object has a clock. Both time and space are transformed by speed relative to the current Observer.",
-      "url": "https://thegoldenmule.com/blog/2011/08/internet-einstein-einstein-internet/",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/ss.png",
-      "tech": ["haxe"]
-    },
-    {
-      "category": "code",
-      "title": "SOS",
-      "type": "software",
-      "date": "August 2011",
-      "description": "An XML log target for SOS Max that works across HaXe's AS3 and JS targets.",
-      "url": "https://github.com/thegoldenmule/HaXe-SOSTrace",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/SOS.png",
-      "tech": ["haxe"]
-    },
-    {
-      "category": "products",
-      "title": "Canceled Title",
-      "subtitle": "Electrotank",
-      "type": "games",
-      "date": "2011",
-      "description": "Wish I could say more!",
-      "tech": ["flash", "java"]
-    },
-    {
-      "category": "products",
-      "title": "Imagine Town",
-      "subtitle": "Ubisoft",
-      "type": "games",
-      "date": "2010",
-      "description": "An MMO for tweens we made in partnership with Ubisoft.",
-      "url": "https://www.youtube.com/watch?v=1QpbQhP67VE",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/imagine.png",
-      "tech": ["flash", "java"]
-    },
-    {
-      "category": "products",
-      "title": "Contract Work",
-      "type": "games",
-      "date": "Before 2010",
-      "description": "A smorgasbord of projects for clients including Texas Instruments, Sun Microsystems, and How Machines Work.",
-      "tech": ["flash"]
     }
   ]
 }
