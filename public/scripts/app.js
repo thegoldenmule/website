@@ -474,7 +474,7 @@ const createAsteroid = (event) => {
       style: {
         fill: categoryColor,
         fontSize: 12,
-        fontFamily: "Roboto",
+        fontFamily: "Robotomono Semibold",
       },
     });
     titleText.x = -size / 2 - titleText.width / 2;
