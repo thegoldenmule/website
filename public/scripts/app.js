@@ -84,6 +84,10 @@ const redrawChildLines = (mainLayer) => () => {
 };
 
 const selectAsteroid = (asteroid) => {
+  if (!mainAsteroids.includes(asteroid)) {
+    return;
+  }
+
   if (selectedAsteroid) {
     selectedAsteroid.titleText.style.fill =
       selectedAsteroid.titleText.previousFill;
@@ -109,20 +113,17 @@ const selectAsteroid = (asteroid) => {
 
   selectedAsteroid = asteroid;
 
-  // is this a main asteroid?
-  if (mainAsteroids.includes(asteroid)) {
-    // dim all other main asteroids
-    for (const mainAsteroid of mainAsteroids) {
-      if (mainAsteroid !== asteroid) {
-        mainAsteroid.alpha = 0.2;
-      } else {
-        mainAsteroid.alpha = 1;
-      }
+  // dim all other main asteroids
+  for (const mainAsteroid of mainAsteroids) {
+    if (mainAsteroid !== asteroid) {
+      mainAsteroid.alpha = 0.2;
+    } else {
+      mainAsteroid.alpha = 1;
     }
-
-    // hide connecting lines
-    connectedLines.visible = false;
   }
+
+  // hide connecting lines
+  connectedLines.visible = false;
 
   selectedAsteroid.titleText.previousFill =
     selectedAsteroid.titleText.style.fill;
@@ -582,4 +583,10 @@ const createAsteroids = (filteredEvents, layerIndex) => {
   layers[mainLayerIndex].addChildAt(childLines, 0);
 
   app.ticker.add(redrawChildLines(layers[mainLayerIndex]));
+
+  // add camera control
+  app.ticker.add(() => {
+    if (selectedAsteroid) {
+    }
+  });
 })();
