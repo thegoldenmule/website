@@ -97,10 +97,33 @@ const selectAsteroid = (asteroid) => {
 
   if (selectedAsteroid === asteroid) {
     selectedAsteroid = null;
+    connectedLines.visible = true;
+
+    // un-dim all main asteroids
+    for (const mainAsteroid of mainAsteroids) {
+      mainAsteroid.alpha = 1;
+    }
+
     return;
   }
 
   selectedAsteroid = asteroid;
+
+  // is this a main asteroid?
+  if (mainAsteroids.includes(asteroid)) {
+    // dim all other main asteroids
+    for (const mainAsteroid of mainAsteroids) {
+      if (mainAsteroid !== asteroid) {
+        mainAsteroid.alpha = 0.2;
+      } else {
+        mainAsteroid.alpha = 1;
+      }
+    }
+
+    // hide connecting lines
+    connectedLines.visible = false;
+  }
+
   selectedAsteroid.titleText.previousFill =
     selectedAsteroid.titleText.style.fill;
   selectedAsteroid.titleText.previousAlpha = selectedAsteroid.titleText.alpha;
