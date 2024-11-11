@@ -125,7 +125,7 @@
     },
     {
       "category": "career",
-      "title": "Goldenmule Media",
+      "title": "Founder: SpyreIO",
       "subtitle": "Founder",
       "type": "games",
       "date": "2023-Present",
@@ -133,12 +133,11 @@
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/logo_square.png",
       "tech": ["games", "web3", "web", "mobile", "software"],
-      "size": 25,
-      "layer": 0
+      "size": 45
     },
     {
       "category": "career",
-      "title": "N3twork Studios",
+      "title": "VPE: N3twork Studios",
       "subtitle": "VP, Engineering",
       "type": "games",
       "date": "Mar 2023-Dec 2023",
@@ -146,8 +145,7 @@
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/network-logo.jpg",
       "tech": ["java", "cs", "js", "unity", "nodejs", "react", "redux", "bootstrap", "jenkins", "aws", "docker", "kinesis", "tableau", "solidity", "ipfs", "polygon", "forte"],
-      "size": 35,
-      "layer": 0
+      "size": 45
     },
     {
       "category": "publications",
@@ -162,7 +160,7 @@
     },
     {
       "category": "career",
-      "title": "Big Run Studios",
+      "title": "CTO: Big Run Studios",
       "subtitle": "Chief Technical Officer",
       "type": "games",
       "date": "2020-2023",
@@ -170,21 +168,19 @@
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/br-logo.png",
       "tech": ["go", "cs", "js", "unity", "nakama", "sailsjs", "nodejs", "react", "redux", "bootstrap", "akka", "jenkins", "aws", "docker", "kinesis", "snowflake", "tableau", "solidity", "ipfs", "polygon"],
-      "size": 32,
-      "layer": 0
+      "size": 50
     },
     {
       "category": "career",
-      "title": "Saint Louis University",
-      "subtitle": "Adjunct Instructor",
+      "title": "Adjunct: SLU",
+      "subtitle": "Saint Louis University",
       "type": "teaching",
       "date": "2022-Present",
       "description": "I teach classes for the SLU CS Master's program. So far, Computer Graphics (CSCI 4820) and Principles of Software Engineering (CSCI-5030). My course material is (mostly) on GitHub.",
       "url": "https://github.com/thegoldenmule/csci-5030/",
       "imageUrl": "https://www.slu.edu/ico/apple-touch-icon.png",
       "tech": [],
-      "size": 31,
-      "layer": 0
+      "size": 35
     },    
     {
       "category": "publications",
@@ -468,7 +464,7 @@
     },
     {
       "category": "career",
-      "title": "Enklu",
+      "title": "CTO: Enklu",
       "subtitle": "Chief Technology Officer",
       "type": "games",
       "date": "2017-2020",
@@ -476,8 +472,7 @@
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/enklu-logo.svg",
       "tech": ["cs", "js", "groovy", "cg", "webgl", "socketio", "dotnetty", "azure", "sailsjs", "nodejs", "react", "redux", "bootstrap", "akka", "jenkins", "aws", "docker"],
-      "size": 34,
-      "layer": 0
+      "size": 45
     },
     
     {
@@ -740,7 +735,7 @@
     },
     {
       "category": "career",
-      "title": "NCSOFT",
+      "title": "Tech Director: NCSOFT",
       "subtitle": "Studio Technical Director",
       "type": "games",
       "date": "2015-2017",
@@ -748,12 +743,11 @@
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/nc-logo.svg",
       "tech": ["cs", "unity", "cg", "js", "akka", "webapi", "dotnet", "aws"],
-      "size": 28,
-      "layer": 0
+      "size": 40
     },
     {
       "category": "career",
-      "title": "Kixeye",
+      "title": "Staff Engineer: Kixeye",
       "subtitle": "Staff Engineer",
       "type": "games",
       "date": "2012-2015",
@@ -761,8 +755,7 @@
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/Kixeye.webp",
       "tech": ["flash", "cs", "unity", "cg", "agal", "js"],
-      "size": 25,
-      "layer": 0
+      "size": 25
     },
     {
       "category": "code",
@@ -963,8 +956,7 @@
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/et-logo.jpg",
       "tech": ["flash", "java"],
-      "size": 25,
-      "layer": 1
+      "size": 25
     },
     {
       "category": "code",
@@ -1046,15 +1038,15 @@
     },
     {
       "category": "career",
-      "title": "ITS Student Worker, Truman State University",
+      "title": "Student Worker",
+      "subtitle": "Truman State University",
       "type": "games",
       "date": "2005-2009",
       "description": "At Truman, I worked on network engineering and IT: mostly in Perl, VB, and C. It was here that I first learned how awful printer software could be.",
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/truman-logo.svg",
       "tech": ["perl", "js", "vb"],
-      "size": 17,
-      "layer": 1
+      "size": 20
     },
     {
       "category": "career",
@@ -1066,8 +1058,7 @@
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/pixelwelders.jpg",
       "tech": ["flash"],
-      "size": 17,
-      "layer": 1
+      "size": 20
     },
     {
       "category": "career",
@@ -1079,8 +1070,7 @@
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/machine.png",
       "tech": ["flash"],
-      "size": 17,
-      "layer": 1
+      "size": 20
     }
   ]
 }

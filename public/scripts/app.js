@@ -14,6 +14,7 @@ let ship = null;
 let layers = null;
 let popout = null;
 let selectedAsteroid = null;
+let events = [];
 
 const selectAsteroid = (asteroid) => {
   if (selectedAsteroid === asteroid) {
@@ -24,6 +25,7 @@ const selectAsteroid = (asteroid) => {
     selectedAsteroid.titleText.style.fill =
       selectedAsteroid.titleText.previousFill;
     selectedAsteroid.titleText.alpha = selectedAsteroid.titleText.previousAlpha;
+    selectedAsteroid.redraw();
   }
 
   selectedAsteroid = asteroid;
@@ -33,6 +35,7 @@ const selectAsteroid = (asteroid) => {
 
   selectedAsteroid.titleText.style.fill = 0xffffff;
   selectedAsteroid.titleText.alpha = 1;
+  selectedAsteroid.redraw(0xffffff);
   popout.populate(selectedAsteroid);
 };
 
@@ -154,15 +157,16 @@ const createParallaxBackgrounds = () => {
   app.stage.addChild(background);
 
   const colors = [0x333333, 0x444444, 0x555555, 0x666666, 0x777777];
-  const speeds = [0.1, 0.2, 0.3, 0.4, 0.5];
+  const speeds = [0.2, 0.4, 0.6, 0.8, 1];
 
-  for (let i = 0; i < 5; i++) {
+  const len = 5;
+  for (let i = 0; i < len; i++) {
     const color = colors[i % colors.length];
     const speed = speeds[i % speeds.length];
 
     const layer = generateBackground(app, color);
     layer.color = color;
-    layer.opacity = (i + 2) / 7;
+    layer.opacity = (i - 2 + 4) / 9;
     background.addChild(layer);
 
     app.ticker.add(() => {
@@ -233,15 +237,161 @@ const createPopout = () => {
   };
 
   app.stage.addChild(popout);
+  popout.visible = false;
 };
 
 const categoryToAsteroidColor = (category) => {
   switch (category) {
     case "career":
+      // gold
       return "#d0961a";
+    case "publications":
+      // purple
+      return "#b145c5";
+    case "products":
+      // green
+      return "#1ab145";
+    case "code":
+      // blue
+      return "#1a6ed0";
   }
 
   return "#ffffff";
+};
+
+const createAsteroid = (event) => {
+  const {
+    category,
+    title,
+    subtitle,
+    type,
+    date,
+    description,
+    url,
+    imageUrl,
+    tech,
+    size = Math.random() * 10 + 5,
+    x,
+    y,
+  } = event;
+  const numPoints = Math.floor(Math.random() * 5) + 5;
+
+  // pick a random layer to add the asteroid to
+  let layerIndex = Math.floor(Math.random() * layers.length);
+  if (event.hasOwnProperty("layer")) {
+    layerIndex = layers.length - event.layer - 1;
+  }
+  const layer = layers[layerIndex];
+
+  const categoryColor = categoryToAsteroidColor(category);
+  const asteroid = new Graphics();
+
+  asteroid.generatePoints = () => {
+    asteroid.points = [];
+
+    for (let i = 0; i < numPoints; i++) {
+      const angle = (i / numPoints) * Math.PI * 2;
+      const radius = size / 4 + (3 * (Math.random() * size)) / 4;
+
+      asteroid.points.push({
+        x: x + Math.cos(angle) * radius,
+        y: y + Math.sin(angle) * radius,
+      });
+    }
+  };
+
+  asteroid.redraw = (color = categoryColor) => {
+    asteroid
+      .clear()
+      .setStrokeStyle({ color, width: 1, alpha: layer.opacity })
+      .setFillStyle({ color: backgroundColor });
+
+    const points = asteroid.points;
+    for (let i = 0; i < points.length; i++) {
+      const point = points[i];
+      if (i === 0) {
+        asteroid.moveTo(point.x, point.y);
+      } else {
+        asteroid.lineTo(point.x, point.y);
+      }
+    }
+
+    asteroid.closePath().stroke().fill();
+  };
+  asteroid.generatePoints();
+  asteroid.redraw(categoryColor);
+  layer.addChild(asteroid);
+
+  // add the title
+  const titleText = new Text({
+    text: title,
+    style: {
+      fill: categoryColor,
+      fontSize: 12,
+    },
+  });
+  titleText.alpha = layer.opacity;
+  titleText.x = x - titleText.width / 2;
+  titleText.y = y + size + 5;
+  asteroid.addChild(titleText);
+
+  // load image
+  const spriteContainer = new Container();
+  Assets.load(imageUrl)
+    .then((tex) => {
+      const aspectRatio = tex.width / tex.height;
+
+      const sprite = new Sprite(tex);
+      sprite.width = 100;
+      sprite.height = 100 / aspectRatio;
+      spriteContainer.addChild(sprite);
+    })
+    .catch((err) => {
+      //
+    });
+
+  // mouseover
+  asteroid.interactive = true;
+  asteroid.buttonMode = true;
+  asteroid.titleText = titleText;
+  asteroid.event = event;
+  asteroid.sprite = spriteContainer;
+  asteroid.on("mouseover", () => selectAsteroid(asteroid));
+  asteroid.on("touchmove", () => selectAsteroid(asteroid));
+  asteroid.on("touchstart", () => selectAsteroid(asteroid));
+};
+
+const createAsteroids = (filteredEvents) => {
+  // generate random x,y positions for events
+  const bufferX = app.screen.width / 2;
+  const bufferY = app.screen.height / 2;
+  const positions = filteredEvents.map(() => ({
+    x: bufferX + Math.random() * app.screen.width,
+    y: bufferY + Math.random() * app.screen.height,
+  }));
+
+  // now iteratively space out intersecting asteroids
+  for (let i = 0; i < 10; i++) {
+    for (let j = 0; j < filteredEvents.length; j++) {
+      for (let k = j + 1; k < filteredEvents.length; k++) {
+        if (
+          Math.abs(positions[j].x - positions[k].x) < 50 &&
+          Math.abs(positions[j].y - positions[k].y) < 50
+        ) {
+          positions[j].x += 50;
+          positions[j].y += 50;
+        }
+      }
+    }
+  }
+
+  // for each event, create a random, irregular polygon asteroid
+  filteredEvents.forEach((event, i) =>
+    createAsteroid({
+      ...event,
+      ...positions[i],
+    })
+  );
 };
 
 (async () => {
@@ -266,96 +416,8 @@ const categoryToAsteroidColor = (category) => {
   addShipMovement();
 
   const res = await fetch("/timeline.json");
-  const { events } = await res.json();
+  const json = await res.json();
+  events = json.events;
 
-  // for each event, create a random, irregular polygon asteroid
-  events.forEach((event) => {
-    const {
-      category,
-      title,
-      subtitle,
-      type,
-      date,
-      description,
-      url,
-      imageUrl,
-      tech,
-      size = Math.random() * 10 + 5,
-    } = event;
-    // todo: pull x, y, size from the event
-    const x = Math.random() * app.screen.width * 1.5;
-    const y = Math.random() * app.screen.height * 1.5;
-    const points = Math.floor(Math.random() * 5) + 5;
-
-    // pick a random layer to add the asteroid to
-    let layerIndex = Math.floor(Math.random() * layers.length);
-    if (event.hasOwnProperty("layer")) {
-      layerIndex = layers.length - event.layer - 1;
-    }
-    const layer = layers[layerIndex];
-
-    const color = categoryToAsteroidColor(category);
-    const asteroid = new Graphics()
-      .setStrokeStyle({ color, width: 1, alpha: layer.opacity })
-      .setFillStyle({ color: backgroundColor })
-      .moveTo(x, y);
-
-    for (let i = 0; i < points; i++) {
-      const angle = (i / points) * Math.PI * 2;
-      const radius = size + Math.random() * 5;
-
-      if (i === 0) {
-        asteroid.moveTo(
-          x + Math.cos(angle) * radius,
-          y + Math.sin(angle) * radius
-        );
-      } else {
-        asteroid.lineTo(
-          x + Math.cos(angle) * radius,
-          y + Math.sin(angle) * radius
-        );
-      }
-    }
-
-    asteroid.closePath().stroke().fill();
-    layer.addChild(asteroid);
-
-    // add the title
-    const titleText = new Text({
-      text: title,
-      style: {
-        fill: color,
-        fontSize: 12,
-      },
-    });
-    titleText.alpha = layer.opacity;
-    titleText.x = x - titleText.width / 2;
-    titleText.y = y + size + 5;
-    asteroid.addChild(titleText);
-
-    // load image
-    const spriteContainer = new Container();
-    Assets.load(imageUrl)
-      .then((tex) => {
-        const aspectRatio = tex.width / tex.height;
-
-        const sprite = new Sprite(tex);
-        sprite.width = 100;
-        sprite.height = 100 / aspectRatio;
-        spriteContainer.addChild(sprite);
-      })
-      .catch((err) => {
-        //
-      });
-
-    // mouseover
-    asteroid.interactive = true;
-    asteroid.buttonMode = true;
-    asteroid.titleText = titleText;
-    asteroid.event = event;
-    asteroid.sprite = spriteContainer;
-    asteroid.on("mouseover", () => selectAsteroid(asteroid));
-    asteroid.on("touchmove", () => selectAsteroid(asteroid));
-    asteroid.on("touchstart", () => selectAsteroid(asteroid));
-  });
+  createAsteroids(events.filter(({ category }) => category === "career"));
 })();
