@@ -226,14 +226,17 @@ const createPopout = () => {
   popout.addChild(imageContainer);
 
   popout.populate = (asteroid) => {
-    const { subtitle, date, description, imageUrl } = asteroid.event;
+    const { subtitle, date, description } = asteroid.event;
     const { sprite } = asteroid;
 
     subtitleText.text = subtitle || "";
     dateText.text = date || "";
     descriptionText.text = description || "";
-    imageContainer.removeChildren();
-    imageContainer.addChild(sprite);
+
+    if (sprite) {
+      imageContainer.removeChildren();
+      imageContainer.addChild(sprite);
+    }
   };
 
   app.stage.addChild(popout);
@@ -273,14 +276,9 @@ const createAsteroid = (event) => {
     size = Math.random() * 10 + 5,
     x,
     y,
+    layerIndex,
   } = event;
   const numPoints = Math.floor(Math.random() * 5) + 5;
-
-  // pick a random layer to add the asteroid to
-  let layerIndex = Math.floor(Math.random() * layers.length);
-  if (event.hasOwnProperty("layer")) {
-    layerIndex = layers.length - event.layer - 1;
-  }
   const layer = layers[layerIndex];
 
   const categoryColor = categoryToAsteroidColor(category);
@@ -323,39 +321,45 @@ const createAsteroid = (event) => {
   layer.addChild(asteroid);
 
   // add the title
-  const titleText = new Text({
-    text: title,
-    style: {
-      fill: categoryColor,
-      fontSize: 12,
-    },
-  });
-  titleText.alpha = layer.opacity;
-  titleText.x = x - titleText.width / 2;
-  titleText.y = y + size + 5;
-  asteroid.addChild(titleText);
+  if (title) {
+    const titleText = new Text({
+      text: title,
+      style: {
+        fill: categoryColor,
+        fontSize: 12,
+      },
+    });
+    titleText.alpha = layer.opacity;
+    titleText.x = x - titleText.width / 2;
+    titleText.y = y + size + 5;
+
+    asteroid.titleText = titleText;
+    asteroid.addChild(titleText);
+  }
 
   // load image
-  const spriteContainer = new Container();
-  Assets.load(imageUrl)
-    .then((tex) => {
-      const aspectRatio = tex.width / tex.height;
+  if (imageUrl) {
+    const spriteContainer = new Container();
+    Assets.load(imageUrl)
+      .then((tex) => {
+        const aspectRatio = tex.width / tex.height;
 
-      const sprite = new Sprite(tex);
-      sprite.width = 100;
-      sprite.height = 100 / aspectRatio;
-      spriteContainer.addChild(sprite);
-    })
-    .catch((err) => {
-      //
-    });
+        const sprite = new Sprite(tex);
+        sprite.width = 100;
+        sprite.height = 100 / aspectRatio;
+        spriteContainer.addChild(sprite);
+      })
+      .catch((err) => {
+        //
+      });
+
+    asteroid.sprite = spriteContainer;
+  }
 
   // mouseover
   asteroid.interactive = true;
   asteroid.buttonMode = true;
-  asteroid.titleText = titleText;
   asteroid.event = event;
-  asteroid.sprite = spriteContainer;
   asteroid.on("mouseover", () => selectAsteroid(asteroid));
   asteroid.on("touchmove", () => selectAsteroid(asteroid));
   asteroid.on("touchstart", () => selectAsteroid(asteroid));
@@ -390,6 +394,7 @@ const createAsteroids = (filteredEvents) => {
     createAsteroid({
       ...event,
       ...positions[i],
+      layerIndex: layers.length - 1,
     })
   );
 };
@@ -419,5 +424,5 @@ const createAsteroids = (filteredEvents) => {
   const json = await res.json();
   events = json.events;
 
-  createAsteroids(events.filter(({ category }) => category === "career"));
+  createAsteroids(events);
 })();
