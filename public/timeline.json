@@ -1,40 +1,422 @@
 {
   "events": [
     {
-      "category": "products",
-      "title": "Hangman Clash",
-      "subtitle": "A Goldenmule Media first.",
+      "category": "career",
+      "title": "Founder: SpyreIO",
+      "subtitle": "Founder",
       "type": "games",
-      "date": "Sept 2024",
-      "description": "A bespoke twist to the familiar. Realtime, blockchain-enabled, skill-based multiplayer game.",
-      "url": "https://hangmanclash.com",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/hangman.png",
-      "tech": ["js", "ts", "go", "viem", "nakama", "pixijs", "react", "tailwind"],
-      "size": 38,
-      "layer": 0
+      "date": "2023-Present",
+      "description": "Software development studio, working on internal and external projects. Email me if you want to work together!",
+      "url": "https://www.linkedin.com/in/benjaminmicahj/",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/logo_square.png",
+      "tech": ["games", "web3", "web", "mobile", "software"],
+      "size": 45,
+      "children": [
+        {
+          "category": "products",
+          "title": "Hangman Clash",
+          "subtitle": "A Goldenmule Media first.",
+          "type": "games",
+          "date": "Sept 2024",
+          "description": "A bespoke twist to the familiar. Realtime, blockchain-enabled, skill-based multiplayer game.",
+          "url": "https://hangmanclash.com",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/hangman.png",
+          "tech": [
+            "js",
+            "ts",
+            "go",
+            "viem",
+            "nakama",
+            "pixijs",
+            "react",
+            "tailwind"
+          ],
+          "size": 38,
+          "layer": 0
+        },
+        {
+          "category": "publications",
+          "title": "Thirdweb Accelerator Recipient",
+          "subtitle": "Partnering with Thirdweb for our first game.",
+          "type": "games",
+          "date": "August 2024",
+          "description": "Accepted into the Thirdweb Startup Program to bring our first game to market. This is a program for select startups to deep-dive their products built on top of Thirdweb's excellent products.",
+          "url": "https://x.com/spyreio/status/1828510057270477168",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/thirdweb.png",
+          "tech": [
+            "js",
+            "ts",
+            "go",
+            "viem",
+            "nakama",
+            "pixijs",
+            "react",
+            "tailwind"
+          ]
+        },
+        {
+          "category": "code",
+          "title": "Spyre JS SDK",
+          "subtitle": "A typescript and react module for building games on Spyre.",
+          "type": "software",
+          "date": "May 2024",
+          "description": "A typescript and react module for building games on Spyre.",
+          "url": "https://github.com/spyre-io/js",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/chomp.png",
+          "tech": ["js", "magic", "thirdweb", "viem", "nakama"]
+        },
+        {
+          "category": "code",
+          "title": "Chain-chomp",
+          "subtitle": "Custom cryto-protocol server.",
+          "type": "software",
+          "date": "May 2024",
+          "description": "Chain-chomp is an HTTP server for interacting with Spyre and USDC smart contracts, providing a gasless end-user experience.",
+          "url": "https://github.com/spyre-io/chain-chomp/",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/chomp.png",
+          "tech": ["js", "viem", "sailsjs"]
+        }
+      ]
     },
     {
-      "category": "publications",
-      "title": "Thirdweb Accelerator Recipient",
-      "subtitle": "Partnering with Thirdweb for our first game.",
+      "category": "career",
+      "title": "Founder: Goldenmule Media",
+      "subtitle": "Founder",
       "type": "games",
-      "date": "August 2024",
-      "description": "Accepted into the Thirdweb Startup Program to bring our first game to market. This is a program for select startups to deep-dive their products built on top of Thirdweb's excellent products.",
-      "url": "https://x.com/spyreio/status/1828510057270477168",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/thirdweb.png",
-      "tech": ["js", "ts", "go", "viem", "nakama", "pixijs", "react", "tailwind"]
+      "date": "2023-Present",
+      "description": "Software development studio, working on internal and external projects. Email me if you want to work together!",
+      "url": "https://www.linkedin.com/in/benjaminmicahj/",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/logo_square.png",
+      "tech": ["games", "web3", "web", "mobile", "software"],
+      "size": 45,
+      "children": [
+        {
+          "category": "products",
+          "title": "Powerhouse Partner",
+          "subtitle": "Building tools for DAOs.",
+          "type": "software",
+          "date": "2024",
+          "description": "I've got a jacket and everything. Officially a Powerhouse parner, building out core technology for the MakerDAO Sustainable Ecosystem Scaling Core Unit.",
+          "url": "https://powerhouse.inc",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/powerhouse.jpg",
+          "tech": ["ts"]
+        },
+        {
+          "category": "products",
+          "title": "Arbitrum Grants Portal",
+          "subtitle": "Goldenmule Contract",
+          "type": "software",
+          "date": "Mar 2024 - Apr 2024",
+          "description": "Tech advisor for Powerhouse's decentralized toolkit. Additionally, built tools and user flows on Powerhouse tech for tracking progress of Arbitrum grant recipients, in conjunction with Stable Labs.",
+          "url": "https://www.powerhouse.inc/",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/arb.png",
+          "tech": ["react", "software", "web", "mobile", "web3"]
+        },
+        {
+          "category": "products",
+          "title": "Powerhouse Analytics Engine",
+          "subtitle": "Goldenmule Contract",
+          "type": "software",
+          "date": "Aug 2024 - Dec 2024",
+          "description": "Built a powerful, open-source analytics system that can run anywhere.",
+          "url": "https://github.com/powerhouse-inc/analytics-engine",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/arb.png",
+          "tech": ["software", "web", "web3"]
+        },
+        {
+          "category": "products",
+          "title": "Bindery Books",
+          "subtitle": "Goldenmule Contract",
+          "type": "software",
+          "date": "Oct 2024 - Feb 2024",
+          "description": "Short term contract for Bindery Books doing GCP DevOps, containerization, and full-stack web work.",
+          "url": "https://binderybooks.com/",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/bindery.png",
+          "tech": ["nextjs", "software", "web", "mobile", "docker", "gcp"]
+        }
+      ]
     },
     {
-      "category": "products",
-      "title": "Powerhouse Partner",
-      "subtitle": "Building tools for DAOs.",
-      "type": "software",
-      "date": "2024",
-      "description": "I've got a jacket and everything. Officially a Powerhouse parner, building out core technology for the MakerDAO Sustainable Ecosystem Scaling Core Unit.",
-      "url": "https://powerhouse.inc",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/powerhouse.jpg",
-      "tech": ["ts"]
+      "category": "career",
+      "title": "VPE: N3twork Studios",
+      "subtitle": "VP, Engineering",
+      "type": "games",
+      "date": "Mar 2023-Dec 2023",
+      "description": "I led N3twork's engineering, IT, and QA disciplines.",
+      "url": "https://www.linkedin.com/in/benjaminmicahj/",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/network-logo.jpg",
+      "tech": [
+        "java",
+        "cs",
+        "js",
+        "unity",
+        "nodejs",
+        "react",
+        "redux",
+        "bootstrap",
+        "jenkins",
+        "aws",
+        "docker",
+        "kinesis",
+        "tableau",
+        "solidity",
+        "ipfs",
+        "polygon",
+        "forte"
+      ],
+      "size": 45
     },
+    {
+      "category": "career",
+      "title": "CTO: Big Run Studios",
+      "subtitle": "Chief Technical Officer",
+      "type": "games",
+      "date": "2020-2023",
+      "description": "I run Big Run's engineering team, stem to stern! And I run a tight ship, mind ye-- we build great games, great teams, and great tech.",
+      "url": "https://www.linkedin.com/in/benjaminmicahj/",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/br-logo.png",
+      "tech": [
+        "go",
+        "cs",
+        "js",
+        "unity",
+        "nakama",
+        "sailsjs",
+        "nodejs",
+        "react",
+        "redux",
+        "bootstrap",
+        "akka",
+        "jenkins",
+        "aws",
+        "docker",
+        "kinesis",
+        "snowflake",
+        "tableau",
+        "solidity",
+        "ipfs",
+        "polygon"
+      ],
+      "size": 50
+    },
+    {
+      "category": "career",
+      "title": "Adjunct: SLU",
+      "subtitle": "Saint Louis University",
+      "type": "teaching",
+      "date": "2022-Present",
+      "description": "I teach classes for the SLU CS Master's program. So far, Computer Graphics (CSCI 4820) and Principles of Software Engineering (CSCI-5030). My course material is (mostly) on GitHub.",
+      "url": "https://github.com/thegoldenmule/csci-5030/",
+      "imageUrl": "https://www.slu.edu/ico/apple-touch-icon.png",
+      "tech": [],
+      "size": 35,
+      "children": [
+        {
+          "category": "publications",
+          "title": "A Complete-ish 3D Engine in 1200 Lines",
+          "type": "writing",
+          "date": "July 2024",
+          "subtitle": "They said it coudn't be done.",
+          "description": "Did I mention I teach in the CS Masters program at Saint Louis University? For my computer graphics course, we pair-programmed an entire 3D engine from scratch.",
+          "url": "https://thegoldenmule.medium.com/a-complete-ish-3d-engine-in-1200-lines-b5babf4b72ed",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*KidhxH5QHiplzlXv6SOU6g.jpeg",
+          "tech": []
+        }
+      ]
+    },
+    {
+      "category": "career",
+      "title": "CTO: Enklu",
+      "subtitle": "Chief Technology Officer",
+      "type": "games",
+      "date": "2017-2020",
+      "description": "'CTO' at Enklu meant 'guy that writes everything'-- and this was fun. After a stint doing 99% management, I dove into 99% coding again, writing the full stack for the HoloLens collaborative platform that outperforms Microsoft's own.",
+      "url": "https://www.linkedin.com/in/benjaminmicahj/",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/enklu-logo.svg",
+      "tech": [
+        "cs",
+        "js",
+        "groovy",
+        "cg",
+        "webgl",
+        "socketio",
+        "dotnetty",
+        "azure",
+        "sailsjs",
+        "nodejs",
+        "react",
+        "redux",
+        "bootstrap",
+        "akka",
+        "jenkins",
+        "aws",
+        "docker"
+      ],
+      "size": 45,
+      "children": [
+        {
+          "category": "code",
+          "title": "commons-unity-mamba",
+          "subtitle": "Highly configurable, multiplayer connected Kinect controller.",
+          "type": "software",
+          "date": "2018",
+          "description": "",
+          "url": "https://github.com/enklu/commons-unity-mamba",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/nakama.png",
+          "tech": ["unity", "cs"]
+        },
+        {
+          "category": "code",
+          "title": "chelydra",
+          "subtitle": "Multiplayer-connected DSLR controller.",
+          "type": "software",
+          "date": "2017",
+          "description": "",
+          "url": "https://github.com/enklu/chelydra",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/nakama.png",
+          "tech": ["unity", "cs"]
+        },
+        {
+          "category": "code",
+          "title": "commons-unity-http",
+          "subtitle": "An open-source Unity HTTP library.",
+          "type": "software",
+          "date": "2017",
+          "description": "",
+          "url": "https://github.com/enklu/commons-unity-http",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/nakama.png",
+          "tech": ["unity", "cs"]
+        },
+        {
+          "category": "code",
+          "title": "commons-unity-messaging",
+          "subtitle": "An open-source Unity messaging library.",
+          "type": "software",
+          "date": "2017",
+          "description": "",
+          "url": "https://github.com/enklu/commons-unity-messaging",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/nakama.png",
+          "tech": ["unity", "cs"]
+        },
+        {
+          "category": "code",
+          "title": "commons-unity-logging",
+          "subtitle": "An open-source Unity logging library.",
+          "type": "software",
+          "date": "2017",
+          "description": "",
+          "url": "https://github.com/enklu/commons-unity-logging",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/nakama.png",
+          "tech": ["unity", "cs"]
+        },
+        {
+          "category": "code",
+          "title": "commons-unity-async",
+          "subtitle": "An open-source Unity library for asynchronous work (before async/await).",
+          "type": "software",
+          "date": "2017",
+          "description": "",
+          "url": "https://github.com/enklu/commons-unity-async",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/nakama.png",
+          "tech": ["unity", "cs"]
+        },
+        {
+          "category": "code",
+          "title": "commons-unity-debugrendering",
+          "subtitle": "An open-source Unity library for rendering primitives for debug purposes.",
+          "type": "software",
+          "date": "2017",
+          "description": "",
+          "url": "https://github.com/enklu/commons-unity-debugrendering",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/nakama.png",
+          "tech": ["unity", "cs"]
+        },
+        {
+          "category": "code",
+          "title": "commons-gradle-unity",
+          "subtitle": "Gradle plugin to run Unity commands.",
+          "type": "software",
+          "date": "2017",
+          "description": "",
+          "url": "https://github.com/enklu/commons-gradle-unity",
+          "imageUrl": "https://thegoldenmule.com/thumbnails/nakama.png",
+          "tech": ["unity", "cs", "groovy"]
+        }
+      ]
+    },
+    {
+      "category": "career",
+      "title": "Tech Director: NCSOFT",
+      "subtitle": "Studio Technical Director",
+      "type": "games",
+      "date": "2015-2017",
+      "description": "I ran engineering for two AAA game teams, a core tech group, and a tools engineering team.",
+      "url": "https://www.linkedin.com/in/benjaminmicahj/",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/nc-logo.svg",
+      "tech": ["cs", "unity", "cg", "js", "akka", "webapi", "dotnet", "aws"],
+      "size": 40
+    },
+    {
+      "category": "career",
+      "title": "Staff Engineer: Kixeye",
+      "subtitle": "Staff Engineer",
+      "type": "games",
+      "date": "2012-2015",
+      "description": "The Mos Eisley of game development studios. Here I worked on Flash, Unity, and web games at scale, while doing my best not to get run over.",
+      "url": "https://www.linkedin.com/in/benjaminmicahj/",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/Kixeye.webp",
+      "tech": ["flash", "cs", "unity", "cg", "agal", "js"],
+      "size": 25
+    },
+    {
+      "category": "career",
+      "title": "Electrotank",
+      "subtitle": "Jr > Sr > Lead Engineer",
+      "type": "games",
+      "date": "2009-2012",
+      "description": "My first fulltime job out of college was working for this MMO technology provider. We build the tech and the games on top of them for the biggest Flash MMOs on the planet.",
+      "url": "https://www.linkedin.com/in/benjaminmicahj/",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/et-logo.jpg",
+      "tech": ["flash", "java"],
+      "size": 25
+    },
+    {
+      "category": "career",
+      "title": "Student Worker",
+      "subtitle": "Truman State University",
+      "type": "games",
+      "date": "2005-2009",
+      "description": "At Truman, I worked on network engineering and IT: mostly in Perl, VB, and C. It was here that I first learned how awful printer software could be.",
+      "url": "https://www.linkedin.com/in/benjaminmicahj/",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/truman-logo.svg",
+      "tech": ["perl", "js", "vb"],
+      "size": 20
+    },
+    {
+      "category": "career",
+      "title": "Pixelwelders",
+      "subtitle": "Flash Contractor",
+      "type": "games",
+      "date": "2007-2009",
+      "description": "I paid my way through college with part-time Flash work on games and websites for the company, Pixelwelders.",
+      "url": "https://www.linkedin.com/in/benjaminmicahj/",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/pixelwelders.jpg",
+      "tech": ["flash"],
+      "size": 20
+    },
+    {
+      "category": "career",
+      "title": "How Machines Work",
+      "subtitle": "Flash Contractor",
+      "type": "games",
+      "date": "2006-2007",
+      "description": "My first job in the industry! I worked part time for this small flash development shop. I was brought in after I sold them the rights to a rigid-body physics engine I wrote my senior year of high school.",
+      "url": "https://www.linkedin.com/in/benjaminmicahj/",
+      "imageUrl": "https://thegoldenmule.com/thumbnails/machine.png",
+      "tech": ["flash"],
+      "size": 20
+    },
+
     {
       "category": "publications",
       "title": "A Counterpoint to Account Abstraction",
@@ -79,74 +461,7 @@
       "imageUrl": "https://thegoldenmule.com/thumbnails/nakama.png",
       "tech": ["ts"]
     },
-    {
-      "category": "publications",
-      "title": "A Complete-ish 3D Engine in 1200 Lines",
-      "type": "writing",
-      "date": "July 2024",
-      "subtitle": "They said it coudn't be done.",
-      "description": "Did I mention I teach in the CS Masters program at Saint Louis University? For my computer graphics course, we pair-programmed an entire 3D engine from scratch.",
-      "url": "https://thegoldenmule.medium.com/a-complete-ish-3d-engine-in-1200-lines-b5babf4b72ed",
-      "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*KidhxH5QHiplzlXv6SOU6g.jpeg",
-      "tech": []
-    },
-    {
-      "category": "code",
-      "title": "Chain-chomp",
-      "subtitle": "Custom cryto-protocol server.",
-      "type": "software",
-      "date": "May 2024",
-      "description": "Chain-chomp is an HTTP server for interacting with Spyre and USDC smart contracts, providing a gasless end-user experience.",
-      "url": "https://github.com/spyre-io/chain-chomp/",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/chomp.png",
-      "tech": ["js", "viem", "sailsjs"]
-    },
-    {
-      "category": "products",
-      "title": "Arbitrum Grants Portal",
-      "subtitle": "Goldenmule Contract",
-      "type": "software",
-      "date": "Mar 2024 - Apr 2024",
-      "description": "Tech advisor for Powerhouse's decentralized toolkit. Additionally, built tools and user flows on Powerhouse tech for tracking progress of Arbitrum grant recipients, in conjunction with Stable Labs.",
-      "url": "https://www.powerhouse.inc/",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/arb.png",
-      "tech": ["react", "software", "web", "mobile", "web3"]
-    },
-    {
-      "category": "products",
-      "title": "Bindery Books",
-      "subtitle": "Goldenmule Contract",
-      "type": "software",
-      "date": "Oct 2024 - Feb 2024",
-      "description": "Short term contract for Bindery Books doing GCP DevOps, containerization, and full-stack web work.",
-      "url": "https://binderybooks.com/",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/bindery.png",
-      "tech": ["nextjs", "software", "web", "mobile", "docker", "gcp"]
-    },
-    {
-      "category": "career",
-      "title": "Founder: SpyreIO",
-      "subtitle": "Founder",
-      "type": "games",
-      "date": "2023-Present",
-      "description": "Software development studio, working on internal and external projects. Email me if you want to work together!",
-      "url": "https://www.linkedin.com/in/benjaminmicahj/",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/logo_square.png",
-      "tech": ["games", "web3", "web", "mobile", "software"],
-      "size": 45
-    },
-    {
-      "category": "career",
-      "title": "VPE: N3twork Studios",
-      "subtitle": "VP, Engineering",
-      "type": "games",
-      "date": "Mar 2023-Dec 2023",
-      "description": "I led N3twork's engineering, IT, and QA disciplines.",
-      "url": "https://www.linkedin.com/in/benjaminmicahj/",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/network-logo.jpg",
-      "tech": ["java", "cs", "js", "unity", "nodejs", "react", "redux", "bootstrap", "jenkins", "aws", "docker", "kinesis", "tableau", "solidity", "ipfs", "polygon", "forte"],
-      "size": 45
-    },
+
     {
       "category": "publications",
       "title": "Effectively Working in Teams: Baltic German Style",
@@ -158,30 +473,7 @@
       "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/0*wqkes4CAigOKmIfX.jpg",
       "tech": []
     },
-    {
-      "category": "career",
-      "title": "CTO: Big Run Studios",
-      "subtitle": "Chief Technical Officer",
-      "type": "games",
-      "date": "2020-2023",
-      "description": "I run Big Run's engineering team, stem to stern! And I run a tight ship, mind ye-- we build great games, great teams, and great tech.",
-      "url": "https://www.linkedin.com/in/benjaminmicahj/",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/br-logo.png",
-      "tech": ["go", "cs", "js", "unity", "nakama", "sailsjs", "nodejs", "react", "redux", "bootstrap", "akka", "jenkins", "aws", "docker", "kinesis", "snowflake", "tableau", "solidity", "ipfs", "polygon"],
-      "size": 50
-    },
-    {
-      "category": "career",
-      "title": "Adjunct: SLU",
-      "subtitle": "Saint Louis University",
-      "type": "teaching",
-      "date": "2022-Present",
-      "description": "I teach classes for the SLU CS Master's program. So far, Computer Graphics (CSCI 4820) and Principles of Software Engineering (CSCI-5030). My course material is (mostly) on GitHub.",
-      "url": "https://github.com/thegoldenmule/csci-5030/",
-      "imageUrl": "https://www.slu.edu/ico/apple-touch-icon.png",
-      "tech": [],
-      "size": 35
-    },    
+
     {
       "category": "publications",
       "title": "NFT Collectors Are Geniuses",
@@ -298,7 +590,7 @@
       "description": "A skill-based, multiplayer word game.",
       "url": "https://bigrunstudios.com/games/word-star/",
       "imageUrl": "https://thegoldenmule.com/thumbnails/word-star.png",
-      "tech": ["unity", "cs", "nodejs",  "aws", "snowflake", "tableau"]
+      "tech": ["unity", "cs", "nodejs", "aws", "snowflake", "tableau"]
     },
     {
       "category": "products",
@@ -309,7 +601,15 @@
       "description": "Web-based metronomes are terrible, but not this one! A configurable, sample-accurate metronome in the browser. Create your routine and track your progress with your new practice buddy.",
       "url": "https://webtrono.me",
       "imageUrl": "https://thegoldenmule.com/thumbnails/webtronome2.png",
-      "tech": ["aws", "docker", "nodejs", "sailsjs", "react", "redux", "bootstrap"]
+      "tech": [
+        "aws",
+        "docker",
+        "nodejs",
+        "sailsjs",
+        "react",
+        "redux",
+        "bootstrap"
+      ]
     },
     {
       "category": "publications",
@@ -462,19 +762,7 @@
       "url": "https://www.pocketgamer.biz/job-news/73421/big-run-studios-hires-benjamin-jordan-new-cto/",
       "imageUrl": "https://imgs.pocketgamer.biz/PGbiz_logo_210x204.png"
     },
-    {
-      "category": "career",
-      "title": "CTO: Enklu",
-      "subtitle": "Chief Technology Officer",
-      "type": "games",
-      "date": "2017-2020",
-      "description": "'CTO' at Enklu meant 'guy that writes everything'-- and this was fun. After a stint doing 99% management, I dove into 99% coding again, writing the full stack for the HoloLens collaborative platform that outperforms Microsoft's own.",
-      "url": "https://www.linkedin.com/in/benjaminmicahj/",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/enklu-logo.svg",
-      "tech": ["cs", "js", "groovy", "cg", "webgl", "socketio", "dotnetty", "azure", "sailsjs", "nodejs", "react", "redux", "bootstrap", "akka", "jenkins", "aws", "docker"],
-      "size": 45
-    },
-    
+
     {
       "category": "products",
       "title": "Enkluplayer",
@@ -495,7 +783,25 @@
       "description": "Enklu Cloud is the leading platform for collaborative authoring and sharing of immersive multiplayer AR experiences.",
       "url": "https://cloud.enklu.com",
       "imageUrl": "https://thegoldenmule.com/thumbnails/cloud.gif",
-      "tech": ["cs", "js", "groovy", "cg", "webgl", "socketio", "dotnetty", "azure", "sailsjs", "nodejs", "react", "redux", "bootstrap", "akka", "jenkins", "aws", "docker"]
+      "tech": [
+        "cs",
+        "js",
+        "groovy",
+        "cg",
+        "webgl",
+        "socketio",
+        "dotnetty",
+        "azure",
+        "sailsjs",
+        "nodejs",
+        "react",
+        "redux",
+        "bootstrap",
+        "akka",
+        "jenkins",
+        "aws",
+        "docker"
+      ]
     },
     {
       "category": "code",
@@ -546,7 +852,24 @@
       "description": "At E3, we used our Kinect v2 integration to give wings to passers-by.",
       "url": "https://www.thegoldenmule.com/videos/e3-wings-mp4.mp4",
       "imageUrl": "https://thegoldenmule.com/thumbnails/e3-wings.gif",
-      "tech": ["cs", "js", "groovy", "cg", "socketio", "dotnetty", "azure", "sailsjs", "nodejs", "react", "redux", "bootstrap", "akka", "jenkins", "aws", "docker"]
+      "tech": [
+        "cs",
+        "js",
+        "groovy",
+        "cg",
+        "socketio",
+        "dotnetty",
+        "azure",
+        "sailsjs",
+        "nodejs",
+        "react",
+        "redux",
+        "bootstrap",
+        "akka",
+        "jenkins",
+        "aws",
+        "docker"
+      ]
     },
     {
       "category": "code",
@@ -608,7 +931,7 @@
       "imageUrl": "https://thegoldenmule.com/thumbnails/gradle-unity.png",
       "tech": ["groovy"]
     },
-    
+
     {
       "category": "code",
       "title": "Unity Messaging Library",
@@ -733,30 +1056,7 @@
       "imageUrl": "https://thegoldenmule.com/thumbnails/test.gif",
       "tech": ["cs"]
     },
-    {
-      "category": "career",
-      "title": "Tech Director: NCSOFT",
-      "subtitle": "Studio Technical Director",
-      "type": "games",
-      "date": "2015-2017",
-      "description": "I ran engineering for two AAA game teams, a core tech group, and a tools engineering team.",
-      "url": "https://www.linkedin.com/in/benjaminmicahj/",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/nc-logo.svg",
-      "tech": ["cs", "unity", "cg", "js", "akka", "webapi", "dotnet", "aws"],
-      "size": 40
-    },
-    {
-      "category": "career",
-      "title": "Staff Engineer: Kixeye",
-      "subtitle": "Staff Engineer",
-      "type": "games",
-      "date": "2012-2015",
-      "description": "The Mos Eisley of game development studios. Here I worked on Flash, Unity, and web games at scale, while doing my best not to get run over.",
-      "url": "https://www.linkedin.com/in/benjaminmicahj/",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/Kixeye.webp",
-      "tech": ["flash", "cs", "unity", "cg", "agal", "js"],
-      "size": 25
-    },
+
     {
       "category": "code",
       "title": "Story",
@@ -819,7 +1119,7 @@
     },
     {
       "category": "code",
-      "title" : "Kristmas Klein Bagel",
+      "title": "Kristmas Klein Bagel",
       "type": "graphics",
       "date": "December 2013",
       "description": "A short exploration of generating a 3d immersion of a 4d Klein bottle.",
@@ -879,7 +1179,7 @@
     },
     {
       "category": "code",
-      "title" : "On Geosphere Construction",
+      "title": "On Geosphere Construction",
       "type": "graphics",
       "date": "January 2013",
       "description": "The geometrical construction of a sphere based on the subdivision of an icosahedron. This method creates a sphere where each triangle is the same size.",
@@ -889,7 +1189,7 @@
     },
     {
       "category": "code",
-      "title" : "Realtime Clouds on the GPU",
+      "title": "Realtime Clouds on the GPU",
       "type": "graphics",
       "date": "January 2013",
       "description": "A two part study into noise functions and how they might be used to create purely GPU-based moving clouds.",
@@ -899,7 +1199,7 @@
     },
     {
       "category": "code",
-      "title" : "Spherical Terrain Generation",
+      "title": "Spherical Terrain Generation",
       "type": "graphics",
       "date": "January 2013",
       "description": "Everyone has created flat procedural terrain-- but what methods can be used for generating spherical terrain? This two part post builds on geospheres and explores one method of geometry creation and one method for an accompanying Earthlike shader.",
@@ -946,18 +1246,7 @@
       "imageUrl": "https://thegoldenmule.com/thumbnails/battle-pirates.jpg",
       "tech": ["flash"]
     },
-    {
-      "category": "career",
-      "title": "Electrotank",
-      "subtitle": "Jr > Sr > Lead Engineer",
-      "type": "games",
-      "date": "2009-2012",
-      "description": "My first fulltime job out of college was working for this MMO technology provider. We build the tech and the games on top of them for the biggest Flash MMOs on the planet.",
-      "url": "https://www.linkedin.com/in/benjaminmicahj/",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/et-logo.jpg",
-      "tech": ["flash", "java"],
-      "size": 25
-    },
+
     {
       "category": "code",
       "title": "Porter Stemmer",
@@ -1035,42 +1324,6 @@
       "date": "Before 2010",
       "description": "A smorgasbord of projects for clients including Texas Instruments, Sun Microsystems, and How Machines Work.",
       "tech": ["flash"]
-    },
-    {
-      "category": "career",
-      "title": "Student Worker",
-      "subtitle": "Truman State University",
-      "type": "games",
-      "date": "2005-2009",
-      "description": "At Truman, I worked on network engineering and IT: mostly in Perl, VB, and C. It was here that I first learned how awful printer software could be.",
-      "url": "https://www.linkedin.com/in/benjaminmicahj/",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/truman-logo.svg",
-      "tech": ["perl", "js", "vb"],
-      "size": 20
-    },
-    {
-      "category": "career",
-      "title": "Pixelwelders",
-      "subtitle": "Flash Contractor",
-      "type": "games",
-      "date": "2007-2009",
-      "description": "I paid my way through college with part-time Flash work on games and websites for the company, Pixelwelders.",
-      "url": "https://www.linkedin.com/in/benjaminmicahj/",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/pixelwelders.jpg",
-      "tech": ["flash"],
-      "size": 20
-    },
-    {
-      "category": "career",
-      "title": "How Machines Work",
-      "subtitle": "Flash Contractor",
-      "type": "games",
-      "date": "2006-2007",
-      "description": "My first job in the industry! I worked part time for this small flash development shop. I was brought in after I sold them the rights to a rigid-body physics engine I wrote my senior year of high school.",
-      "url": "https://www.linkedin.com/in/benjaminmicahj/",
-      "imageUrl": "https://thegoldenmule.com/thumbnails/machine.png",
-      "tech": ["flash"],
-      "size": 20
     }
   ]
 }

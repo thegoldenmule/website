@@ -6,5 +6,10 @@
     "editor.codeActionsOnSave": {
       "source.organizeImports": "explicit"
     }
+  },
+  "[json]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   }
 }
