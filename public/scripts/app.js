@@ -15,6 +15,7 @@ let layers = null;
 let popout = null;
 let mainAsteroids = null;
 let connectedLines = null;
+let childLines = null;
 let selectedAsteroid = null;
 let events = [];
 
@@ -56,16 +57,47 @@ const redrawConnectedLines = () => {
   }
 };
 
-const selectAsteroid = (asteroid) => {
-  if (selectedAsteroid === asteroid) {
-    return;
-  }
+const redrawChildLines = (mainLayer) => () => {
+  childLines.clear();
 
+  if (selectedAsteroid) {
+    const { childAsteroids } = selectedAsteroid;
+    if (!childAsteroids) {
+      return;
+    }
+
+    const globalPos = selectedAsteroid.getGlobalPosition();
+    const position = mainLayer.toLocal(globalPos);
+
+    for (const child of childAsteroids) {
+      const childGlobalPos = child.getGlobalPosition();
+      const childPosition = mainLayer.toLocal(childGlobalPos);
+      const lineColor = child === selectedAsteroid ? 0xffffff : 0x444444;
+
+      childLines
+        .setStrokeStyle({ color: lineColor, width: 1 })
+        .moveTo(position.x, position.y)
+        .lineTo(childPosition.x, childPosition.y)
+        .stroke();
+    }
+  }
+};
+
+const selectAsteroid = (asteroid) => {
   if (selectedAsteroid) {
     selectedAsteroid.titleText.style.fill =
       selectedAsteroid.titleText.previousFill;
     selectedAsteroid.titleText.alpha = selectedAsteroid.titleText.previousAlpha;
     selectedAsteroid.redraw();
+
+    for (const child of selectedAsteroid.childAsteroids || []) {
+      child.deactivate();
+    }
+  }
+
+  if (selectedAsteroid === asteroid) {
+    selectedAsteroid = null;
+    return;
   }
 
   selectedAsteroid = asteroid;
@@ -77,6 +109,10 @@ const selectAsteroid = (asteroid) => {
   selectedAsteroid.titleText.alpha = 1;
   selectedAsteroid.redraw(0xffffff);
   popout.populate(selectedAsteroid);
+
+  for (const child of selectedAsteroid.childAsteroids || []) {
+    child.activate();
+  }
 
   redrawConnectedLines();
 };
@@ -208,12 +244,20 @@ const createParallaxBackgrounds = () => {
 
     const layer = generateBackground(app, color);
     layer.color = color;
-    layer.opacity = (i - 2 + 4) / 9;
+    layer.opacity = i === len - 1 ? 1 : (i - 2 + 4) / 9;
     background.addChild(layer);
 
     app.ticker.add(() => {
-      layer.x = -ship.x * speed;
-      layer.y = -ship.y * speed;
+      if (selectedAsteroid) {
+        return;
+      }
+
+      // lerp the layer's position based on the ship's position
+      const targetX = -ship.x * speed;
+      const targetY = -ship.y * speed;
+
+      layer.x += (targetX - layer.x) * 0.05;
+      layer.y += (targetY - layer.y) * 0.05;
     });
 
     layers.push(layer);
@@ -345,7 +389,7 @@ const createAsteroid = (event) => {
   asteroid.redraw = (color = categoryColor) => {
     asteroid
       .clear()
-      .setStrokeStyle({ color, width: 1, alpha: layer.opacity })
+      .setStrokeStyle({ color, width: 1 })
       .setFillStyle({ color: backgroundColor });
 
     const points = asteroid.points;
@@ -364,6 +408,20 @@ const createAsteroid = (event) => {
   asteroid.redraw(categoryColor);
   layer.addChild(asteroid);
 
+  asteroid.activate = () => {
+    if (asteroid.titleText) {
+      asteroid.titleText.visible = true;
+      asteroid.alpha = 1;
+    }
+  };
+
+  asteroid.deactivate = () => {
+    if (asteroid.titleText) {
+      asteroid.titleText.visible = false;
+      asteroid.alpha = layer.opacity;
+    }
+  };
+
   // add the title
   if (title) {
     const titleText = new Text({
@@ -373,7 +431,6 @@ const createAsteroid = (event) => {
         fontSize: 12,
       },
     });
-    titleText.alpha = layer.opacity;
     titleText.x = -size;
     titleText.y = size;
 
@@ -404,14 +461,14 @@ const createAsteroid = (event) => {
   asteroid.interactive = true;
   asteroid.buttonMode = true;
   asteroid.event = event;
-  asteroid.on("mouseover", () => selectAsteroid(asteroid));
-  asteroid.on("touchmove", () => selectAsteroid(asteroid));
+  asteroid.alpha = layer.opacity;
+  asteroid.on("mousedown", () => selectAsteroid(asteroid));
   asteroid.on("touchstart", () => selectAsteroid(asteroid));
 
   return asteroid;
 };
 
-const createAsteroids = (filteredEvents) => {
+const createAsteroids = (filteredEvents, layerIndex) => {
   // generate random x,y positions for events
   const bufferX = app.screen.width / 2;
   const bufferY = app.screen.height / 2;
@@ -436,8 +493,7 @@ const createAsteroids = (filteredEvents) => {
   }
 
   // for each event, create a random, irregular polygon asteroid
-  const layerIndex = layers.length - 1;
-  mainAsteroids = filteredEvents.map((event, i) =>
+  const asteroids = filteredEvents.map((event, i) =>
     createAsteroid({
       ...event,
       ...positions[i],
@@ -445,10 +501,7 @@ const createAsteroids = (filteredEvents) => {
     })
   );
 
-  // connect asteroids with lines
-  connectedLines = new Graphics();
-  layers[layerIndex].addChildAt(connectedLines, 0);
-  redrawConnectedLines();
+  return asteroids;
 };
 
 (async () => {
@@ -476,5 +529,34 @@ const createAsteroids = (filteredEvents) => {
   const json = await res.json();
   events = json.events;
 
-  createAsteroids(events);
+  const mainLayerIndex = layers.length - 1;
+  mainAsteroids = createAsteroids(events, mainLayerIndex);
+
+  // connect main asteroids with lines
+  connectedLines = new Graphics();
+  layers[mainLayerIndex].addChildAt(connectedLines, 0);
+  redrawConnectedLines();
+
+  // create child asteroids
+  for (const asteroid of mainAsteroids) {
+    const { event } = asteroid;
+    const { children } = event;
+    if (!children) {
+      continue;
+    }
+
+    // random index between 0 and mainLayerIndex - 1
+    const layerIndex = Math.floor(Math.random() * mainLayerIndex);
+    asteroid.childAsteroids = createAsteroids(children, layerIndex);
+
+    for (const child of asteroid.childAsteroids) {
+      child.deactivate();
+    }
+  }
+
+  // prep for child asteroids
+  childLines = new Graphics();
+  layers[mainLayerIndex].addChildAt(childLines, 0);
+
+  app.ticker.add(redrawChildLines(layers[mainLayerIndex]));
 })();
