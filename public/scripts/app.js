@@ -9,6 +9,8 @@ import {
 } from "./pixi.mjs";
 
 const backgroundColor = "#222222";
+const colors = [0x333333, 0x444444, 0x555555, 0x666666, 0x777777];
+const speeds = [0.2, 0.4, 0.6, 0.8, 1];
 
 let app = null;
 let ship,
@@ -267,9 +269,6 @@ const createParallaxBackgrounds = () => {
   const background = new Graphics();
   app.stage.addChild(background);
 
-  const colors = [0x333333, 0x444444, 0x555555, 0x666666, 0x777777];
-  const speeds = [0.2, 0.4, 0.6, 0.8, 1];
-
   const len = 5;
   for (let i = 0; i < len; i++) {
     const color = colors[i % colors.length];
@@ -430,11 +429,11 @@ const createAsteroid = (event) => {
     }
   };
 
-  asteroid.redraw = (color = categoryColor) => {
+  asteroid.redraw = (color = categoryColor, fill = backgroundColor) => {
     asteroid
       .clear()
       .setStrokeStyle({ color, width: 1 })
-      .setFillStyle({ color: backgroundColor });
+      .setFillStyle({ color: fill });
 
     const points = asteroid.points;
     for (let i = 0; i < points.length; i++) {
@@ -456,6 +455,7 @@ const createAsteroid = (event) => {
     if (asteroid.titleText) {
       asteroid.titleText.visible = true;
       asteroid.alpha = 1;
+      asteroid.redraw(categoryColor, categoryColor);
     }
   };
 
@@ -463,6 +463,7 @@ const createAsteroid = (event) => {
     if (asteroid.titleText) {
       asteroid.titleText.visible = false;
       asteroid.alpha = layer.opacity;
+      asteroid.redraw();
     }
   };
 
@@ -473,6 +474,7 @@ const createAsteroid = (event) => {
       style: {
         fill: categoryColor,
         fontSize: 12,
+        fontFamily: "Roboto",
       },
     });
     titleText.x = -size / 2 - titleText.width / 2;
@@ -516,8 +518,9 @@ const createAsteroids = (filteredEvents, layerIndex) => {
   // generate random x,y positions for events
   const bufferX = app.screen.width / 2;
   const bufferY = app.screen.height / 2;
-  const width = app.screen.width / (layers.length - layerIndex);
-  const height = app.screen.height / (layers.length - layerIndex);
+  const layerScaler = speeds[layerIndex];
+  const width = app.screen.width * layerScaler;
+  const height = app.screen.height * layerScaler;
   const positions = filteredEvents.map(() => ({
     x: bufferX + Math.random() * width,
     y: bufferY + Math.random() * height,
@@ -527,12 +530,15 @@ const createAsteroids = (filteredEvents, layerIndex) => {
   for (let i = 0; i < 10; i++) {
     for (let j = 0; j < filteredEvents.length; j++) {
       for (let k = j + 1; k < filteredEvents.length; k++) {
-        if (
-          Math.abs(positions[j].x - positions[k].x) < 50 &&
-          Math.abs(positions[j].y - positions[k].y) < 50
-        ) {
-          positions[j].x += 50;
-          positions[j].y += 50;
+        const dx = positions[j].x - positions[k].x;
+        const dy = positions[j].y - positions[k].y;
+        const minDist = 100;
+        if (Math.abs(dx) < minDist && Math.abs(dy) < minDist) {
+          // push apart j and k along the dx/dy vector
+          positions[j].x += dx * 0.25;
+          positions[j].y += dy * 0.25;
+          positions[k].x -= dx * 0.25;
+          positions[k].y -= dy * 0.25;
         }
       }
     }
@@ -563,6 +569,11 @@ const createAsteroids = (filteredEvents, layerIndex) => {
     powerPreference: "high-performance",
   });
   document.body.appendChild(app.canvas);
+
+  Assets.addBundle("fonts", [
+    { alias: "Roboto", src: "fonts/RobotoMono-SemiBold.ttf" },
+  ]);
+  await Assets.loadBundle("fonts");
 
   createParallaxBackgrounds();
   createShip();
