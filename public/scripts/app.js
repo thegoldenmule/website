@@ -14,8 +14,9 @@ const speeds = [0.2, 0.4, 0.6, 0.8, 1];
 
 let app = null;
 let mainContainer = null;
-let ship,
-  trail = null;
+let ship = null,
+  trail = null,
+  shipPointer = null;
 let layers = null;
 let popout = null;
 let mainAsteroids = null;
@@ -169,12 +170,18 @@ const createShip = () => {
   ship.x = app.screen.width / 2;
   ship.y = app.screen.height / 2;
 
+  // create the ship pointer
+  shipPointer = new Graphics().setStrokeStyle({ color, width: 1 });
+
+  mainContainer.addChild(shipPointer);
   mainContainer.addChild(ship);
 };
 
 const addShipMovement = () => {
   app.stage.eventMode = "dynamic";
   const targetPosition = { x: app.stage.width / 4, y: app.stage.height / 4 };
+
+  let lastUpdated = 0;
   const updateTargetPosition = (e) => {
     if (selectedAsteroid) {
       return;
@@ -185,6 +192,10 @@ const addShipMovement = () => {
       0,
       Math.min(app.screen.height, e.data.global.y)
     );
+
+    // draw circle around target position
+    shipPointer.clear().circle(targetPosition.x, targetPosition.y, 50).stroke();
+    lastUpdated = Date.now();
   };
   app.stage.on("globalmousemove", updateTargetPosition);
   app.stage.on("globaltouchmove", updateTargetPosition);
@@ -213,6 +224,11 @@ const addShipMovement = () => {
     // apply friction
     velocity.x *= friction;
     velocity.y *= friction;
+
+    // alpha + visibility of pointer
+    const alpha = Math.max(0, 1 - (Date.now() - lastUpdated) / 1000);
+    shipPointer.alpha = alpha;
+    shipPointer.visible = selectedAsteroid ? false : true;
   });
 };
 
@@ -479,6 +495,8 @@ const createAsteroid = (event) => {
         fill: categoryColor,
         fontSize: 12,
         fontFamily: "Robotomono Semibold",
+        wordWrap: true,
+        wordWrapWidth: 100,
       },
     });
     titleText.x = -size / 2 - titleText.width / 2;
