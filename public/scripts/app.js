@@ -1,6 +1,7 @@
 import {
   Application,
   Assets,
+  Bounds,
   Container,
   Graphics,
   Sprite,
@@ -125,10 +126,10 @@ const selectAsteroid = (asteroid) => {
   // hide connecting lines
   connectedLines.visible = false;
 
+  // turn on text
   selectedAsteroid.titleText.previousFill =
     selectedAsteroid.titleText.style.fill;
   selectedAsteroid.titleText.previousAlpha = selectedAsteroid.titleText.alpha;
-
   selectedAsteroid.titleText.style.fill = 0xffffff;
   selectedAsteroid.titleText.alpha = 1;
   selectedAsteroid.redraw(0xffffff);
@@ -168,6 +169,10 @@ const addShipMovement = () => {
   app.stage.eventMode = "dynamic";
   const targetPosition = { x: 0, y: 0 };
   const updateTargetPosition = (e) => {
+    if (selectedAsteroid) {
+      return;
+    }
+
     targetPosition.x = e.data.global.x;
     targetPosition.y = e.data.global.y;
   };
@@ -175,7 +180,7 @@ const addShipMovement = () => {
   app.stage.on("globaltouchmove", updateTargetPosition);
 
   const velocity = { x: 0, y: 0 };
-  const acceleration = 0.1;
+  const acceleration = 0.2;
   const friction = 0.9;
   const rotationSpeed = 0.05;
 
@@ -264,28 +269,39 @@ const createParallaxBackgrounds = () => {
   const len = 5;
   for (let i = 0; i < len; i++) {
     const color = colors[i % colors.length];
-    const speed = speeds[i % speeds.length];
 
     const layer = generateBackground(app, color);
     layer.color = color;
     layer.opacity = i === len - 1 ? 1 : (i - 2 + 4) / 9;
     background.addChild(layer);
 
-    app.ticker.add(() => {
-      if (selectedAsteroid) {
-        return;
-      }
+    layers.push(layer);
+  }
 
-      // lerp the layer's position based on the ship's position
+  app.ticker.add(() => {
+    // move main layer based on ship position
+    if (!selectedAsteroid) {
+      const mainLayer = layers[len - 1];
+      const speed = speeds[len - 1];
       const targetX = -ship.x * speed;
       const targetY = -ship.y * speed;
 
-      layer.x += (targetX - layer.x) * 0.05;
-      layer.y += (targetY - layer.y) * 0.05;
-    });
+      mainLayer.x += (targetX - mainLayer.x) * 0.05;
+      mainLayer.y += (targetY - mainLayer.y) * 0.05;
+    }
 
-    layers.push(layer);
-  }
+    // move the rest of the layers based on the main layer
+    for (let i = 0; i < len - 1; i++) {
+      const layer = layers[i];
+      const speed = speeds[i % speeds.length];
+
+      const targetX = layers[len - 1].x * speed;
+      const targetY = layers[len - 1].y * speed;
+
+      layer.x += targetX - layer.x;
+      layer.y += targetY - layer.y;
+    }
+  });
 
   return layers;
 };
@@ -496,9 +512,11 @@ const createAsteroids = (filteredEvents, layerIndex) => {
   // generate random x,y positions for events
   const bufferX = app.screen.width / 2;
   const bufferY = app.screen.height / 2;
+  const width = app.screen.width / (layers.length - layerIndex);
+  const height = app.screen.height / (layers.length - layerIndex);
   const positions = filteredEvents.map(() => ({
-    x: bufferX + Math.random() * app.screen.width,
-    y: bufferY + Math.random() * app.screen.height,
+    x: bufferX + Math.random() * width,
+    y: bufferY + Math.random() * height,
   }));
 
   // now iteratively space out intersecting asteroids
@@ -587,6 +605,39 @@ const createAsteroids = (filteredEvents, layerIndex) => {
   // add camera control
   app.ticker.add(() => {
     if (selectedAsteroid) {
+      // lerp layers so we can see everything in the bounds
+      const mainLayer = layers[mainLayerIndex];
+
+      // center on screen
+      const bounds = calculateBounds();
+      const x = bounds.left + bounds.width / 2 - app.screen.width / 2;
+      const y = bounds.top + bounds.height / 2 - app.screen.height / 2;
+
+      const targetX = -x;
+      const targetY = -y;
+
+      mainLayer.x += (targetX - mainLayer.x) * 0.05;
+      mainLayer.y += (targetY - mainLayer.y) * 0.05;
     }
   });
 })();
+
+const calculateBounds = () => {
+  // recalculate bounds
+  const mainLayer = layers[layers.length - 1];
+  const pos = mainLayer.toLocal(selectedAsteroid.getGlobalPosition());
+  const bounds = new Bounds(pos.x, pos.y, pos.x, pos.y);
+
+  for (const child of selectedAsteroid.childAsteroids || []) {
+    const childPos = mainLayer.toLocal(child.getGlobalPosition());
+
+    bounds.set(
+      Math.min(bounds.left, childPos.x),
+      Math.min(bounds.top, childPos.y),
+      Math.max(bounds.right, childPos.x),
+      Math.max(bounds.bottom, childPos.y)
+    );
+  }
+
+  return bounds;
+};
