@@ -9,7 +9,8 @@
       "description": "By no means an exhaustive list of my writing -- but some of the Greatest Hits.",
       "url": "https://thegoldenmule.medium.com",
       "tech": ["games", "web3", "web", "mobile", "software"],
-      "size": 45,
+      "size": 60,
+      "connectedLines": false,
       "children": [
         {
           "category": "publications",
@@ -187,7 +188,8 @@
       "description": "Non-work projects I've done.",
       "url": "https://thegoldenmule.com",
       "tech": ["games", "web3", "web", "mobile", "software"],
-      "size": 45,
+      "size": 60,
+      "connectedLines": false,
       "children": [
         {
           "category": "code",
