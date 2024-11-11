@@ -13,6 +13,7 @@ const colors = [0x333333, 0x444444, 0x555555, 0x666666, 0x777777];
 const speeds = [0.2, 0.4, 0.6, 0.8, 1];
 
 let app = null;
+let mainContainer = null;
 let ship,
   trail = null;
 let layers = null;
@@ -168,19 +169,22 @@ const createShip = () => {
   ship.x = app.screen.width / 2;
   ship.y = app.screen.height / 2;
 
-  app.stage.addChild(ship);
+  mainContainer.addChild(ship);
 };
 
 const addShipMovement = () => {
   app.stage.eventMode = "dynamic";
-  const targetPosition = { x: 0, y: 0 };
+  const targetPosition = { x: app.stage.width / 4, y: app.stage.height / 4 };
   const updateTargetPosition = (e) => {
     if (selectedAsteroid) {
       return;
     }
 
-    targetPosition.x = e.data.global.x;
-    targetPosition.y = e.data.global.y;
+    targetPosition.x = Math.max(0, Math.min(app.screen.width, e.data.global.x));
+    targetPosition.y = Math.max(
+      0,
+      Math.min(app.screen.height, e.data.global.y)
+    );
   };
   app.stage.on("globalmousemove", updateTargetPosition);
   app.stage.on("globaltouchmove", updateTargetPosition);
@@ -267,7 +271,7 @@ const createParallaxBackgrounds = () => {
   layers = [];
 
   const background = new Graphics();
-  app.stage.addChild(background);
+  mainContainer.addChild(background);
 
   const len = 5;
   for (let i = 0; i < len; i++) {
@@ -368,7 +372,7 @@ const createPopout = () => {
     }
   };
 
-  app.stage.addChild(popout);
+  mainContainer.addChild(popout);
   popout.visible = false;
 };
 
@@ -570,6 +574,12 @@ const createAsteroids = (filteredEvents, layerIndex) => {
   });
   document.body.appendChild(app.canvas);
 
+  mainContainer = new Container();
+  mainContainer.pivot.set(app.screen.width / 2, app.screen.height / 2);
+  mainContainer.x = app.screen.width / 2;
+  mainContainer.y = app.screen.height / 2;
+  app.stage.addChild(mainContainer);
+
   Assets.addBundle("fonts", [
     { alias: "Roboto", src: "fonts/RobotoMono-SemiBold.ttf" },
   ]);
@@ -636,10 +646,33 @@ const createAsteroids = (filteredEvents, layerIndex) => {
       mainLayer.x += dx;
       mainLayer.y += dy;
 
+      // we may need to zoom out for the bounds to fit on screen
+      const targetScale =
+        bounds.width === 0 || bounds.height === 0
+          ? 1
+          : Math.min(
+              1,
+              Math.min(
+                app.screen.width / bounds.width,
+                app.screen.height / bounds.height
+              )
+            );
+
+      // lerp the scale
+      mainContainer.scale.x += (targetScale - mainContainer.scale.x) * 0.05;
+      mainContainer.scale.y += (targetScale - mainContainer.scale.y) * 0.05;
+
+      // move the ship too
       ship.x += dx;
       ship.y += dy;
+
+      // turn stuff on
       ship.alpha = 0.1;
       trail.visible = false;
+    } else {
+      // lerp scale to 1
+      mainContainer.scale.x += (1 - mainContainer.scale.x) * 0.05;
+      mainContainer.scale.y += (1 - mainContainer.scale.y) * 0.05;
     }
   });
 })();
@@ -660,6 +693,8 @@ const calculateBounds = () => {
       Math.max(bounds.bottom, childPos.y)
     );
   }
+
+  bounds.pad(100);
 
   return bounds;
 };
