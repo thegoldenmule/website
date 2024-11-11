@@ -11,7 +11,8 @@ import {
 const backgroundColor = "#222222";
 
 let app = null;
-let ship = null;
+let ship,
+  trail = null;
 let layers = null;
 let popout = null;
 let mainAsteroids = null;
@@ -108,6 +109,9 @@ const selectAsteroid = (asteroid) => {
     for (const mainAsteroid of mainAsteroids) {
       mainAsteroid.alpha = 1;
     }
+
+    ship.alpha = 1;
+    trail.visible = true;
 
     return;
   }
@@ -211,7 +215,7 @@ const createShipMotionTrails = () => {
   const trailLength = 70;
   const trailColor = 0xffffff;
 
-  const trail = new Graphics();
+  trail = new Graphics();
   ship.parent.addChild(trail);
 
   app.ticker.add(() => {
@@ -471,7 +475,7 @@ const createAsteroid = (event) => {
         fontSize: 12,
       },
     });
-    titleText.x = -size;
+    titleText.x = -size / 2 - titleText.width / 2;
     titleText.y = size;
 
     asteroid.titleText = titleText;
@@ -616,8 +620,15 @@ const createAsteroids = (filteredEvents, layerIndex) => {
       const targetX = -x;
       const targetY = -y;
 
-      mainLayer.x += (targetX - mainLayer.x) * 0.05;
-      mainLayer.y += (targetY - mainLayer.y) * 0.05;
+      const dx = (targetX - mainLayer.x) * 0.05;
+      const dy = (targetY - mainLayer.y) * 0.05;
+      mainLayer.x += dx;
+      mainLayer.y += dy;
+
+      ship.x += dx;
+      ship.y += dy;
+      ship.alpha = 0.1;
+      trail.visible = false;
     }
   });
 })();
