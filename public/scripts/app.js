@@ -26,40 +26,59 @@ let selectedAsteroid = null;
 let events = [];
 
 const redrawConnectedLines = () => {
-  const previousConnectedLineAsteroid = (i) => {
-    for (let j = i - 1; j >= 0; j--) {
-      if (mainAsteroids[j].event.connectedLines !== false) {
-        return mainAsteroids[j];
-      }
-    }
+  connectedLines.clear().setStrokeStyle({ color: 0x444444, width: 1 });
 
-    return null;
-  };
-
-  let moveToed = false;
   for (let i = 0; i < mainAsteroids.length; i++) {
     const asteroid = mainAsteroids[i];
     if (asteroid.event.connectedLines === false) {
       continue;
     }
 
-    if (!moveToed) {
-      moveToed = true;
-      connectedLines.moveTo(asteroid.x, asteroid.y);
+    // get next asteroid
+    let nextAsteroid = null;
+    if (i < mainAsteroids.length - 1) {
+      nextAsteroid = mainAsteroids[i + 1];
     } else {
-      let lineColor = 0x444444;
-      if (
-        asteroid === selectedAsteroid ||
-        previousConnectedLineAsteroid(i) === selectedAsteroid
-      ) {
-        lineColor = 0xffffff;
-      }
+      break;
+    }
+
+    connectedLines
+      .moveTo(asteroid.x, asteroid.y)
+      .lineTo(nextAsteroid.x, nextAsteroid.y);
+
+    // draw an arrow every 50 pixels along the vector
+    const arrowDistance = 50;
+    const dx = nextAsteroid.x - asteroid.x;
+    const dy = nextAsteroid.y - asteroid.y;
+
+    const angle = Math.atan2(dy, dx);
+    const distance = Math.sqrt(dx * dx + dy * dy);
+    const numArrows = Math.floor(distance / arrowDistance);
+
+    // calculate the angles of the two arrow lines along the vector
+    const angle1 = angle + Math.PI / 6;
+    const angle2 = angle - Math.PI / 6;
+
+    for (let i = 1; i < numArrows; i++) {
+      const x = asteroid.x + (dx * i) / numArrows;
+      const y = asteroid.y + (dy * i) / numArrows;
+
+      const arrowLength = 10;
 
       connectedLines
-        .setStrokeStyle({ color: lineColor, width: 1 })
-        .lineTo(asteroid.x, asteroid.y)
-        .stroke();
+        .moveTo(x, y)
+        .lineTo(
+          x + Math.cos(angle1) * arrowLength,
+          y + Math.sin(angle1) * arrowLength
+        )
+        .moveTo(x, y)
+        .lineTo(
+          x + Math.cos(angle2) * arrowLength,
+          y + Math.sin(angle2) * arrowLength
+        );
     }
+
+    connectedLines.stroke();
   }
 };
 
