@@ -716,7 +716,39 @@
         "polygon",
         "forte"
       ],
-      "size": 45
+      "size": 45,
+      "children": [
+        {
+          "category": "products",
+          "title": "Legendary: Game of Heroes",
+          "subtitle": "N3TWORK Studios",
+          "type": "games",
+          "date": "2023",
+          "description": "I didn't write it, but was responsible for development and SRE teams for Legendary.",
+          "imageUrl": "tex/legendary.png",
+          "tech": ["unity", "java", "aws"]
+        },
+        {
+          "category": "products",
+          "title": "Triumph",
+          "subtitle": "N3TWORK Studios",
+          "type": "games",
+          "date": "2023",
+          "description": "I didn't write it (minor bugfixes notwithstanding), but ran the engineering org for Triumph.",
+          "imageUrl": "tex/triumph.png",
+          "tech": ["unity", "java", "aws"]
+        },
+        {
+          "category": "products",
+          "title": "Legendary: Heroes Unchained",
+          "subtitle": "N3TWORK Studios",
+          "type": "games",
+          "date": "2023",
+          "description": "I didn't write it, but ran the engineering org for LHU.",
+          "imageUrl": "tex/lhu.png",
+          "tech": ["unity", "java", "aws"]
+        }
+      ]
     },
     {
       "category": "career",
