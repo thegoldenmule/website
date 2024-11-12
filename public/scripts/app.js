@@ -523,7 +523,7 @@ const createPopout = () => {
     // center on screen
     popout.x = bgBuffer + app.screen.width / 2 - (maxW + bgBuffer * 2) / 2;
     popout.y = Math.max(
-      0,
+      50,
       bgBuffer + app.screen.height / 2 - popout.height / 2
     );
   };
