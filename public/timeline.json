@@ -14,6 +14,17 @@
       "children": [
         {
           "category": "publications",
+          "title": "Why I'm leaving programming behind for a cheese blog",
+          "type": "writing",
+          "date": "Sept 2024",
+          "subtitle": "Published in The Startup.",
+          "description": "I guess programming is over now? And other thoughts on AI.",
+          "url": "https://medium.com/swlh/why-im-leaving-programming-behind-for-a-cheese-blog-8efeb2edb601",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*My7yndGVvEqEllFFPrZchA.jpeg",
+          "tech": []
+        },
+        {
+          "category": "publications",
           "title": "GitHub Copilot and major world religions",
           "type": "writing",
           "date": "February 2022",

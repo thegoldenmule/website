@@ -120,41 +120,42 @@ const selectAsteroid = (asteroid) => {
   }
 
   if (selectedAsteroid) {
-    selectedAsteroid.titleText.style.fill =
-      selectedAsteroid.titleText.previousFill;
-    selectedAsteroid.titleText.alpha = selectedAsteroid.titleText.previousAlpha;
-    selectedAsteroid.redraw();
+    if (selectedAsteroid === asteroid) {
+      selectedAsteroid.titleText.style.fill =
+        selectedAsteroid.titleText.previousFill;
+      selectedAsteroid.titleText.alpha =
+        selectedAsteroid.titleText.previousAlpha;
+      selectedAsteroid.redraw();
 
-    for (const child of selectedAsteroid.childAsteroids || []) {
-      child.deactivate();
+      for (const child of selectedAsteroid.childAsteroids || []) {
+        child.deactivate();
+      }
+
+      selectedAsteroid = null;
+      connectedLines.visible = true;
+
+      // un-dim all main asteroids
+      for (const mainAsteroid of mainAsteroids) {
+        mainAsteroid.visible = true;
+      }
+
+      ship.alpha = 1;
+      trail.visible = true;
+      updateReticle();
+      popout.visible = false;
+
+      return;
     }
-  }
-
-  if (selectedAsteroid === asteroid) {
-    selectedAsteroid = null;
-    connectedLines.visible = true;
-
-    // un-dim all main asteroids
-    for (const mainAsteroid of mainAsteroids) {
-      mainAsteroid.alpha = 1;
-    }
-
-    ship.alpha = 1;
-    trail.visible = true;
-    updateReticle();
-    popout.visible = false;
 
     return;
   }
 
   selectedAsteroid = asteroid;
 
-  // dim all other main asteroids
+  // hide all other main asteroids
   for (const mainAsteroid of mainAsteroids) {
     if (mainAsteroid !== asteroid) {
-      mainAsteroid.alpha = 0.2;
-    } else {
-      mainAsteroid.alpha = 1;
+      mainAsteroid.visible = false;
     }
   }
 
@@ -229,7 +230,7 @@ const addShipMovement = () => {
   app.stage.on("globaltouchmove", updateTargetPosition);
 
   const velocity = { x: 0, y: 0 };
-  const acceleration = 0.1;
+  const acceleration = 0.2;
   const friction = 0.9;
   const rotationSpeed = 0.05;
 
@@ -267,6 +268,7 @@ const createShipMotionTrails = () => {
   const width = 15;
 
   trail = new Graphics();
+  /*
   ship.parent.addChildAt(trail, ship.parent.getChildIndex(ship));
 
   app.ticker.add(() => {
@@ -294,7 +296,7 @@ const createShipMotionTrails = () => {
     }
 
     trail.stroke();
-  });
+  });*/
 };
 
 const generateBackground = (app, color) => {
@@ -467,60 +469,51 @@ const createPopout = () => {
   imageContainer.x = subtitleText.x;
   popout.addChild(imageContainer);
 
-  popout.populate = (asteroid) => {
+  const reLayout = (asteroid) => {
     const { title, subtitle, date, description, url } = asteroid.event;
-    const { sprite } = asteroid;
-
     let y = 0;
-    if (sprite) {
-      imageContainer.removeChildren();
-      imageContainer.addChild(sprite);
-      imageContainer.y = y;
-      y += sprite.height + 10;
-    }
 
+    // image
+    imageContainer.y = y;
+    y += imageContainer.height + 10;
+
+    // title
     if (title) {
-      titleText.text = title;
       titleText.y = y;
       y += titleText.height + 20;
     }
 
+    // subtitle
     if (subtitle) {
-      subtitleText.text = subtitle;
       subtitleText.y = y;
       y += subtitleText.height + 10;
     }
 
+    // date
     if (date) {
-      dateText.text = date;
       dateText.y = y;
       y += dateText.height + 10;
     }
 
+    // description
     if (description) {
-      descriptionText.text = description;
       descriptionText.y = y;
       y += descriptionText.height + 10;
     }
 
-    // center close text
-    closeText.x = 0;
     closeText.y = 20 + y;
 
-    // add goto text
     if (url) {
-      currentUrl = url;
-      gotoText.visible = true;
       gotoText.y = closeText.y;
       gotoText.x = maxW - gotoText.width;
-    } else {
-      gotoText.visible = false;
     }
 
     // scale background
     const h = closeText.y + closeText.height;
     background
       .clear()
+      .setFillStyle({ color: 0x222222, alpha: 1 })
+      .setStrokeStyle({ color: 0xffffff, width: 8 })
       .rect(-bgBuffer, -bgBuffer, maxW + bgBuffer * 2, h + bgBuffer * 2)
       .stroke()
       .fill();
@@ -528,6 +521,73 @@ const createPopout = () => {
     // center on screen
     popout.x = bgBuffer + app.screen.width / 2 - (maxW + bgBuffer * 2) / 2;
     popout.y = bgBuffer + app.screen.height / 2 - popout.height / 2;
+  };
+
+  popout.populate = (asteroid) => {
+    const { title, subtitle, date, description, url, imageUrl } =
+      asteroid.event;
+
+    if (imageUrl) {
+      imageContainer.removeChildren();
+
+      Assets.load(imageUrl)
+        .then((tex) => {
+          const aspectRatio = tex.width / tex.height;
+
+          const sprite = new Sprite(tex);
+          if (aspectRatio > 1) {
+            const maxW = screen.width > 500 ? 400 : screen.width - 100;
+            sprite.width = maxW;
+            sprite.height = maxW / aspectRatio;
+          } else {
+            sprite.height = 300;
+            sprite.width = sprite.height * aspectRatio;
+          }
+
+          imageContainer.addChild(sprite);
+
+          reLayout(asteroid);
+        })
+        .catch((err) => {
+          //
+        });
+    } else {
+      imageContainer.removeChildren();
+    }
+
+    if (title) {
+      titleText.text = title;
+    } else {
+      titleText.text = "";
+    }
+
+    if (subtitle) {
+      subtitleText.text = subtitle;
+    } else {
+      subtitleText.text = "";
+    }
+
+    if (date) {
+      dateText.text = date;
+    } else {
+      dateText.text = "";
+    }
+
+    if (description) {
+      descriptionText.text = description;
+    } else {
+      descriptionText.text = "";
+    }
+
+    // add goto text
+    if (url) {
+      currentUrl = url;
+      gotoText.visible = true;
+    } else {
+      gotoText.visible = false;
+    }
+
+    reLayout(asteroid);
   };
 
   app.stage.addChild(popout);
@@ -697,32 +757,6 @@ const createAsteroid = (event) => {
     // add click handler
     asteroid.titleText = titleText;
     asteroid.addChild(titleText);
-  }
-
-  // load image
-  if (imageUrl) {
-    const spriteContainer = new Container();
-    Assets.load(imageUrl)
-      .then((tex) => {
-        const aspectRatio = tex.width / tex.height;
-
-        const sprite = new Sprite(tex);
-        if (aspectRatio > 1) {
-          const maxW = screen.width > 500 ? 400 : screen.width - 100;
-          sprite.width = maxW;
-          sprite.height = maxW / aspectRatio;
-        } else {
-          sprite.height = 300;
-          sprite.width = sprite.height * aspectRatio;
-        }
-
-        spriteContainer.addChild(sprite);
-      })
-      .catch((err) => {
-        //
-      });
-
-    asteroid.sprite = spriteContainer;
   }
 
   // mouseover
