@@ -357,6 +357,7 @@ const createParallaxBackgrounds = () => {
   return layers;
 };
 
+let currentUrl = "";
 const createPopout = () => {
   popout = new Container();
 
@@ -444,13 +445,29 @@ const createPopout = () => {
   closeText.on("touchstart", () => (popout.visible = false));
   popout.addChild(closeText);
 
+  // add goto text
+  const gotoText = new Text({
+    text: "Go to -->",
+    style: {
+      fill: 0xffffff,
+      fontSize: 20,
+      fontFamily: "Robotomono Semibold",
+    },
+  });
+  gotoText.interactive = true;
+  gotoText.buttonMode = true;
+  gotoText.cursor = "pointer";
+  gotoText.on("mousedown", () => window.open(currentUrl, "_blank"));
+  gotoText.on("touchstart", () => window.open(currentUrl, "_blank"));
+  popout.addChild(gotoText);
+
   // load the image
   const imageContainer = new Container();
   imageContainer.x = subtitleText.x;
   popout.addChild(imageContainer);
 
   popout.populate = (asteroid) => {
-    const { title, subtitle, date, description } = asteroid.event;
+    const { title, subtitle, date, description, url } = asteroid.event;
     const { sprite } = asteroid;
 
     let y = 0;
@@ -464,7 +481,7 @@ const createPopout = () => {
     if (title) {
       titleText.text = title;
       titleText.y = y;
-      y += titleText.height + 10;
+      y += titleText.height + 20;
     }
 
     if (subtitle) {
@@ -488,6 +505,16 @@ const createPopout = () => {
     // center close text
     closeText.x = 0;
     closeText.y = 20 + y;
+
+    // add goto text
+    if (url) {
+      currentUrl = url;
+      gotoText.visible = true;
+      gotoText.y = closeText.y;
+      gotoText.x = maxW - gotoText.width;
+    } else {
+      gotoText.visible = false;
+    }
 
     // scale background
     const h = closeText.y + closeText.height;
