@@ -473,6 +473,15 @@ const createPopout = () => {
     const { title, subtitle, date, description, url } = asteroid.event;
     let y = 0;
 
+    closeText.y = y;
+
+    if (url) {
+      gotoText.y = closeText.y;
+      gotoText.x = maxW - gotoText.width;
+    }
+
+    y += closeText.height + 10;
+
     // image
     imageContainer.y = y;
     y += imageContainer.height + 10;
@@ -501,15 +510,8 @@ const createPopout = () => {
       y += descriptionText.height + 10;
     }
 
-    closeText.y = 20 + y;
-
-    if (url) {
-      gotoText.y = closeText.y;
-      gotoText.x = maxW - gotoText.width;
-    }
-
     // scale background
-    const h = closeText.y + closeText.height;
+    const h = y;
     background
       .clear()
       .setFillStyle({ color: 0x222222, alpha: 1 })
