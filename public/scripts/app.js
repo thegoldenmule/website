@@ -371,6 +371,7 @@ const createPopout = () => {
   popout.addChild(background);
 
   // add the title
+  const maxW = screen.width > 500 ? 400 : screen.width - 2 * bgBuffer;
   const titleText = new Text({
     text: "",
     style: {
@@ -378,7 +379,7 @@ const createPopout = () => {
       fontSize: 24,
       fontFamily: "Robotomono Semibold",
       wordWrap: true,
-      wordWrapWidth: 400,
+      wordWrapWidth: maxW,
     },
   });
   titleText.x = -titleText.width / 2;
@@ -393,7 +394,7 @@ const createPopout = () => {
       fontSize: 20,
       fontFamily: "Robotomono Semibold",
       wordWrap: true,
-      wordWrapWidth: 400,
+      wordWrapWidth: maxW,
     },
   });
   subtitleText.x = -subtitleText.width / 2;
@@ -407,7 +408,7 @@ const createPopout = () => {
       fontSize: 16,
       fontFamily: "Robotomono Semibold",
       wordWrap: true,
-      wordWrapWidth: 400,
+      wordWrapWidth: maxW,
     },
   });
   dateText.x = subtitleText.x;
@@ -421,7 +422,7 @@ const createPopout = () => {
       fontSize: 18,
       fontFamily: "Robotomono Semibold",
       wordWrap: true,
-      wordWrapWidth: 400,
+      wordWrapWidth: maxW,
     },
   });
   descriptionText.x = subtitleText.x;
@@ -429,7 +430,7 @@ const createPopout = () => {
 
   // add close text
   const closeText = new Text({
-    text: " (x) Close ",
+    text: "(x) Close ",
     style: {
       fill: 0xffffff,
       fontSize: 20,
@@ -439,9 +440,8 @@ const createPopout = () => {
   closeText.interactive = true;
   closeText.buttonMode = true;
   closeText.cursor = "pointer";
-  closeText.on("mousedown", () => {
-    popout.visible = false;
-  });
+  closeText.on("mousedown", () => (popout.visible = false));
+  closeText.on("touchstart", () => (popout.visible = false));
   popout.addChild(closeText);
 
   // load the image
@@ -454,6 +454,13 @@ const createPopout = () => {
     const { sprite } = asteroid;
 
     let y = 0;
+    if (sprite) {
+      imageContainer.removeChildren();
+      imageContainer.addChild(sprite);
+      imageContainer.y = y;
+      y += sprite.height + 10;
+    }
+
     if (title) {
       titleText.text = title;
       titleText.y = y;
@@ -478,39 +485,24 @@ const createPopout = () => {
       y += descriptionText.height + 10;
     }
 
-    if (sprite) {
-      imageContainer.removeChildren();
-      imageContainer.addChild(sprite);
-      imageContainer.y = y;
-      y += sprite.height + 10;
-    }
-
-    // scale background
-    const w = Math.max(
-      subtitleText.width,
-      dateText.width,
-      descriptionText.width,
-      imageContainer.width
-    );
-
     // center close text
-    closeText.x = w / 2 - closeText.width / 2;
-    closeText.y = y;
+    closeText.x = 0;
+    closeText.y = 20 + y;
 
     // scale background
     const h = closeText.y + closeText.height;
     background
       .clear()
-      .rect(-bgBuffer, -bgBuffer, w + bgBuffer * 2, h + bgBuffer * 2)
+      .rect(-bgBuffer, -bgBuffer, maxW + bgBuffer * 2, h + bgBuffer * 2)
       .stroke()
       .fill();
 
     // center on screen
-    popout.x = app.screen.width / 2 - popout.width / 2;
-    popout.y = app.screen.height / 2 - popout.height / 2;
+    popout.x = bgBuffer + app.screen.width / 2 - (maxW + bgBuffer * 2) / 2;
+    popout.y = bgBuffer + app.screen.height / 2 - popout.height / 2;
   };
 
-  mainContainer.addChild(popout);
+  app.stage.addChild(popout);
   popout.visible = false;
 };
 
@@ -687,8 +679,15 @@ const createAsteroid = (event) => {
         const aspectRatio = tex.width / tex.height;
 
         const sprite = new Sprite(tex);
-        sprite.width = 100;
-        sprite.height = 100 / aspectRatio;
+        if (aspectRatio > 1) {
+          const maxW = screen.width > 500 ? 400 : screen.width - 100;
+          sprite.width = maxW;
+          sprite.height = maxW / aspectRatio;
+        } else {
+          sprite.height = 300;
+          sprite.width = sprite.height * aspectRatio;
+        }
+
         spriteContainer.addChild(sprite);
       })
       .catch((err) => {
