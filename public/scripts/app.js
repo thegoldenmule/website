@@ -111,6 +111,11 @@ const redrawChildLines = (mainLayer) => () => {
 
 const selectAsteroid = (asteroid) => {
   if (!mainAsteroids.includes(asteroid)) {
+    if (asteroid.isActivated) {
+      popout.populate(asteroid);
+      popout.visible = true;
+    }
+
     return;
   }
 
@@ -137,6 +142,7 @@ const selectAsteroid = (asteroid) => {
     ship.alpha = 1;
     trail.visible = true;
     updateReticle();
+    popout.visible = false;
 
     return;
   }
@@ -354,28 +360,57 @@ const createParallaxBackgrounds = () => {
 const createPopout = () => {
   popout = new Container();
 
+  // add background
+  const bgBuffer = 50;
+  const background = new Graphics()
+    .setFillStyle({ color: 0x222222, alpha: 1 })
+    .setStrokeStyle({ color: 0xffffff, width: 1 })
+    .rect(-bgBuffer, -bgBuffer, bgBuffer, bgBuffer)
+    .stroke()
+    .fill();
+  popout.addChild(background);
+
+  // add the title
+  const titleText = new Text({
+    text: "",
+    style: {
+      fill: 0xffffff,
+      fontSize: 24,
+      fontFamily: "Robotomono Semibold",
+      wordWrap: true,
+      wordWrapWidth: 400,
+    },
+  });
+  titleText.x = -titleText.width / 2;
+  titleText.y = -titleText.height / 2;
+  popout.addChild(titleText);
+
   // add the subtitle
   const subtitleText = new Text({
     text: "",
     style: {
       fill: 0xffffff,
-      fontSize: 8,
+      fontSize: 20,
+      fontFamily: "Robotomono Semibold",
+      wordWrap: true,
+      wordWrapWidth: 400,
     },
   });
   subtitleText.x = -subtitleText.width / 2;
-  subtitleText.y = 0;
   popout.addChild(subtitleText);
 
   // add the date
   const dateText = new Text({
     text: "",
     style: {
-      fill: 0xffffff,
-      fontSize: 8,
+      fill: 0xcccccc,
+      fontSize: 16,
+      fontFamily: "Robotomono Semibold",
+      wordWrap: true,
+      wordWrapWidth: 400,
     },
   });
   dateText.x = subtitleText.x;
-  dateText.y = 10;
   popout.addChild(dateText);
 
   // add the description
@@ -383,31 +418,96 @@ const createPopout = () => {
     text: "",
     style: {
       fill: 0xffffff,
-      fontSize: 8,
+      fontSize: 18,
+      fontFamily: "Robotomono Semibold",
+      wordWrap: true,
+      wordWrapWidth: 400,
     },
   });
   descriptionText.x = subtitleText.x;
-  descriptionText.y = 20;
   popout.addChild(descriptionText);
+
+  // add close text
+  const closeText = new Text({
+    text: " (x) Close ",
+    style: {
+      fill: 0xffffff,
+      fontSize: 20,
+      fontFamily: "Robotomono Semibold",
+    },
+  });
+  closeText.interactive = true;
+  closeText.buttonMode = true;
+  closeText.cursor = "pointer";
+  closeText.on("mousedown", () => {
+    popout.visible = false;
+  });
+  popout.addChild(closeText);
 
   // load the image
   const imageContainer = new Container();
   imageContainer.x = subtitleText.x;
-  imageContainer.y = 30;
   popout.addChild(imageContainer);
 
   popout.populate = (asteroid) => {
-    const { subtitle, date, description } = asteroid.event;
+    const { title, subtitle, date, description } = asteroid.event;
     const { sprite } = asteroid;
 
-    subtitleText.text = subtitle || "";
-    dateText.text = date || "";
-    descriptionText.text = description || "";
+    let y = 0;
+    if (title) {
+      titleText.text = title;
+      titleText.y = y;
+      y += titleText.height + 10;
+    }
+
+    if (subtitle) {
+      subtitleText.text = subtitle;
+      subtitleText.y = y;
+      y += subtitleText.height + 10;
+    }
+
+    if (date) {
+      dateText.text = date;
+      dateText.y = y;
+      y += dateText.height + 10;
+    }
+
+    if (description) {
+      descriptionText.text = description;
+      descriptionText.y = y;
+      y += descriptionText.height + 10;
+    }
 
     if (sprite) {
       imageContainer.removeChildren();
       imageContainer.addChild(sprite);
+      imageContainer.y = y;
+      y += sprite.height + 10;
     }
+
+    // scale background
+    const w = Math.max(
+      subtitleText.width,
+      dateText.width,
+      descriptionText.width,
+      imageContainer.width
+    );
+
+    // center close text
+    closeText.x = w / 2 - closeText.width / 2;
+    closeText.y = y;
+
+    // scale background
+    const h = closeText.y + closeText.height;
+    background
+      .clear()
+      .rect(-bgBuffer, -bgBuffer, w + bgBuffer * 2, h + bgBuffer * 2)
+      .stroke()
+      .fill();
+
+    // center on screen
+    popout.x = app.screen.width / 2 - popout.width / 2;
+    popout.y = app.screen.height / 2 - popout.height / 2;
   };
 
   mainContainer.addChild(popout);
@@ -545,6 +645,8 @@ const createAsteroid = (event) => {
       asteroid.alpha = 1;
       asteroid.redraw(categoryColor, categoryColor);
     }
+
+    asteroid.isActivated = true;
   };
 
   asteroid.deactivate = () => {
@@ -553,6 +655,8 @@ const createAsteroid = (event) => {
       asteroid.alpha = layer.opacity;
       asteroid.redraw();
     }
+
+    asteroid.isActivated = false;
   };
 
   // add the title
@@ -570,6 +674,7 @@ const createAsteroid = (event) => {
     titleText.x = -size / 2 - titleText.width / 2;
     titleText.y = size;
 
+    // add click handler
     asteroid.titleText = titleText;
     asteroid.addChild(titleText);
   }
@@ -596,6 +701,7 @@ const createAsteroid = (event) => {
   // mouseover
   asteroid.interactive = true;
   asteroid.buttonMode = true;
+  asteroid.cursor = "pointer";
   asteroid.event = event;
   asteroid.alpha = layer.opacity;
   asteroid.on("mousedown", () => selectAsteroid(asteroid));
