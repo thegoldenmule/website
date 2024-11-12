@@ -20,6 +20,7 @@ let ship = null,
 let layers = null;
 let popout = null;
 let mainAsteroids = null;
+let reticle = null;
 let connectedLines = null;
 let childLines = null;
 let selectedAsteroid = null;
@@ -135,6 +136,7 @@ const selectAsteroid = (asteroid) => {
 
     ship.alpha = 1;
     trail.visible = true;
+    updateReticle();
 
     return;
   }
@@ -167,6 +169,7 @@ const selectAsteroid = (asteroid) => {
   }
 
   redrawConnectedLines();
+  updateReticle();
 };
 
 const createShip = () => {
@@ -220,7 +223,7 @@ const addShipMovement = () => {
   app.stage.on("globaltouchmove", updateTargetPosition);
 
   const velocity = { x: 0, y: 0 };
-  const acceleration = 0.2;
+  const acceleration = 0.1;
   const friction = 0.9;
   const rotationSpeed = 0.05;
 
@@ -257,7 +260,7 @@ const createShipMotionTrails = () => {
   const trailColor = 0xffffff;
 
   trail = new Graphics();
-  ship.parent.addChild(trail);
+  //ship.parent.addChild(trail);
 
   app.ticker.add(() => {
     shipPositions.push({ x: ship.x, y: ship.y });
@@ -269,7 +272,7 @@ const createShipMotionTrails = () => {
     trail
       .clear()
       .moveTo(ship.x, ship.y)
-      .setStrokeStyle({ color: trailColor, width: 1, alpha: 1 });
+      .setStrokeStyle({ color: trailColor, width: 10, alpha: 1 });
 
     for (let i = shipPositions.length - 1; i >= 0; i--) {
       const position = shipPositions[i];
@@ -278,7 +281,7 @@ const createShipMotionTrails = () => {
         .stroke()
         .setStrokeStyle({
           color: trailColor,
-          width: 1,
+          width: 10,
           alpha: i / trailLength,
         });
     }
@@ -411,6 +414,45 @@ const createPopout = () => {
   popout.visible = false;
 };
 
+const createReticle = () => {
+  reticle = new Graphics();
+  layers[layers.length - 1].addChild(reticle);
+};
+
+const updateReticle = () => {
+  if (!selectedAsteroid) {
+    reticle.clear();
+    return;
+  }
+
+  const bounds = selectedAsteroid.bounds;
+  const maxSize = Math.max(bounds.width, bounds.height);
+
+  reticle
+    .clear()
+    // outer circle
+    .setStrokeStyle({ color: 0xffffff, width: 10, alpha: 0.1 })
+    .circle(0, 0, maxSize / 2 + 20)
+    .stroke()
+    // inner circle
+    .setStrokeStyle({ color: 0xffffff, width: 1, alpha: 0.5 })
+    .circle(0, 0, maxSize / 2 + 5)
+    // crosshairs
+    .moveTo(-maxSize / 2 - 20, 0)
+    .lineTo(maxSize / 2 + 20, 0)
+    .moveTo(0, -maxSize / 2 - 20)
+    .lineTo(0, maxSize / 2 + 20)
+    .stroke();
+
+  const mainLayer = layers[layers.length - 1];
+  const x = mainLayer.toLocal(selectedAsteroid.getGlobalPosition()).x;
+  const y = mainLayer.toLocal(selectedAsteroid.getGlobalPosition()).y;
+
+  reticle.x = x;
+  reticle.y = y;
+  reticle.visible = true;
+};
+
 const categoryToAsteroidColor = (category) => {
   switch (category) {
     case "career":
@@ -456,7 +498,7 @@ const createAsteroid = (event) => {
 
   asteroid.generatePoints = () => {
     asteroid.points = [];
-
+    const bounds = new Bounds();
     for (let i = 0; i < numPoints; i++) {
       const angle = (i / numPoints) * Math.PI * 2;
       const radius = size / 4 + (3 * (Math.random() * size)) / 4;
@@ -465,6 +507,13 @@ const createAsteroid = (event) => {
         x: Math.cos(angle) * radius,
         y: Math.sin(angle) * radius,
       });
+
+      bounds.set(
+        Math.min(bounds.left, asteroid.points[i].x),
+        Math.min(bounds.top, asteroid.points[i].y),
+        Math.max(bounds.right, asteroid.points[i].x),
+        Math.max(bounds.bottom, asteroid.points[i].y)
+      );
     }
   };
 
@@ -626,6 +675,7 @@ const createAsteroids = (filteredEvents, layerIndex) => {
   createShip();
   createShipMotionTrails();
   createPopout();
+  createReticle();
 
   addShipMovement();
 
