@@ -262,11 +262,12 @@ const addShipMovement = () => {
 
 const createShipMotionTrails = () => {
   const shipPositions = [];
-  const trailLength = 70;
-  const trailColor = 0xffffff;
+  const trailLength = 20;
+  const trailColor = 0xffa500;
+  const width = 15;
 
   trail = new Graphics();
-  //ship.parent.addChild(trail);
+  ship.parent.addChildAt(trail, ship.parent.getChildIndex(ship));
 
   app.ticker.add(() => {
     shipPositions.push({ x: ship.x, y: ship.y });
@@ -278,7 +279,7 @@ const createShipMotionTrails = () => {
     trail
       .clear()
       .moveTo(ship.x, ship.y)
-      .setStrokeStyle({ color: trailColor, width: 10, alpha: 1 });
+      .setStrokeStyle({ color: trailColor, width, alpha: 1 });
 
     for (let i = shipPositions.length - 1; i >= 0; i--) {
       const position = shipPositions[i];
@@ -287,7 +288,7 @@ const createShipMotionTrails = () => {
         .stroke()
         .setStrokeStyle({
           color: trailColor,
-          width: 10,
+          width,
           alpha: i / trailLength,
         });
     }
@@ -894,6 +895,78 @@ const createAsteroids = (filteredEvents, layerIndex) => {
       mainContainer.scale.y += (1 - mainContainer.scale.y) * 0.05;
     }
   });
+
+  // add social links
+  const size = 30;
+  const padding = 10;
+  const socialPanel = new Container();
+  const bg = new Graphics()
+    .setFillStyle({ color: "#000000" })
+    .roundRect(0, 0, size * 3 + padding * 4, size + padding * 2, 4)
+    .fill();
+  socialPanel.addChild(bg);
+
+  // medium
+  const [mediumTex, gitHubTex, linkedInTex] = await Promise.all([
+    Assets.load("tex/Medium-Icon-White.png"),
+    Assets.load("tex/github-mark-white.png"),
+    Assets.load("tex/In-White-40.png"),
+  ]);
+
+  // github
+  const gitHubSprite = new Sprite(gitHubTex);
+  const gitHubAspect = gitHubSprite.width / gitHubSprite.height;
+  gitHubSprite.width = size;
+  gitHubSprite.height = gitHubSprite.width / gitHubAspect;
+  gitHubSprite.interactive = true;
+  gitHubSprite.buttonMode = true;
+  gitHubSprite.cursor = "pointer";
+  gitHubSprite.on("mousedown", () =>
+    window.open("https://github.com/thegoldenmule/", "_blank")
+  );
+  gitHubSprite.on("touchstart", () =>
+    window.open("https://github.com/thegoldenmule/", "_blank")
+  );
+  gitHubSprite.x = padding;
+  gitHubSprite.y = padding;
+  socialPanel.addChild(gitHubSprite);
+
+  // linkedin
+  const linkedInSprite = new Sprite(linkedInTex);
+  const linkedInAspect = linkedInSprite.width / linkedInSprite.height;
+  linkedInSprite.width = size;
+  linkedInSprite.height = linkedInSprite.width / linkedInAspect;
+  linkedInSprite.interactive = true;
+  linkedInSprite.buttonMode = true;
+  linkedInSprite.cursor = "pointer";
+  linkedInSprite.on("mousedown", () =>
+    window.open("https://www.linkedin.com/in/benjaminmicahj/", "_blank")
+  );
+  linkedInSprite.on("touchstart", () =>
+    window.open("https://www.linkedin.com/in/benjaminmicahj/", "_blank")
+  );
+  linkedInSprite.x = gitHubSprite.x + gitHubSprite.width + padding;
+  linkedInSprite.y = padding;
+  socialPanel.addChild(linkedInSprite);
+
+  const mediumSprite = new Sprite(mediumTex);
+  const mediumAspect = mediumSprite.width / mediumSprite.height;
+  mediumSprite.width = size;
+  mediumSprite.height = mediumSprite.width / mediumAspect;
+  mediumSprite.interactive = true;
+  mediumSprite.buttonMode = true;
+  mediumSprite.cursor = "pointer";
+  mediumSprite.on("mousedown", () =>
+    window.open("https://thegoldenmule.medium.com/", "_blank")
+  );
+  mediumSprite.on("touchstart", () =>
+    window.open("https://thegoldenmule.medium.com/", "_blank")
+  );
+  mediumSprite.x = linkedInSprite.x + linkedInSprite.width + padding;
+  mediumSprite.y = padding;
+  socialPanel.addChild(mediumSprite);
+
+  app.stage.addChild(socialPanel);
 })();
 
 const calculateBounds = () => {
