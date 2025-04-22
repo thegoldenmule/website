@@ -230,8 +230,8 @@ const addShipMovement = () => {
   app.stage.on("globaltouchmove", updateTargetPosition);
 
   const velocity = { x: 0, y: 0 };
-  const acceleration = 0.2;
-  const friction = 0.9;
+  const acceleration = 0.11;
+  const friction = 0.8;
   const rotationSpeed = 0.05;
 
   app.ticker.add(() => {
@@ -941,15 +941,16 @@ const createAsteroids = (filteredEvents, layerIndex) => {
   const socialPanel = new Container();
   const bg = new Graphics()
     .setFillStyle({ color: "#000000" })
-    .roundRect(0, 0, size * 3 + padding * 4, size + padding * 2, 4)
+    .roundRect(0, 0, size * 4 + padding * 5, size + padding * 2, 4)
     .fill();
   socialPanel.addChild(bg);
 
   // medium
-  const [mediumTex, gitHubTex, linkedInTex] = await Promise.all([
+  const [mediumTex, gitHubTex, linkedInTex, ytTex] = await Promise.all([
     Assets.load("tex/Medium-Icon-White.png"),
     Assets.load("tex/github-mark-white.png"),
     Assets.load("tex/In-White-40.png"),
+    Assets.load("tex/yt.svg"),
   ]);
 
   // github
@@ -988,6 +989,7 @@ const createAsteroids = (filteredEvents, layerIndex) => {
   linkedInSprite.y = padding;
   socialPanel.addChild(linkedInSprite);
 
+  // medium
   const mediumSprite = new Sprite(mediumTex);
   const mediumAspect = mediumSprite.width / mediumSprite.height;
   mediumSprite.width = size;
@@ -1004,6 +1006,24 @@ const createAsteroids = (filteredEvents, layerIndex) => {
   mediumSprite.x = linkedInSprite.x + linkedInSprite.width + padding;
   mediumSprite.y = padding;
   socialPanel.addChild(mediumSprite);
+
+  // youtube
+  const ytSprite = new Sprite(ytTex);
+  const ytAspect = ytSprite.width / ytSprite.height;
+  ytSprite.width = size * 1.5;
+  ytSprite.height = ytSprite.width / ytAspect;
+  ytSprite.interactive = true;
+  ytSprite.buttonMode = true;
+  ytSprite.cursor = "pointer";
+  ytSprite.on("mousedown", () =>
+    window.open("https://www.youtube.com/@benjamins-beats/shorts", "_blank")
+  );
+  ytSprite.on("touchstart", () =>
+    window.open("https://www.youtube.com/@benjamins-beats/shorts", "_blank")
+  );
+  ytSprite.x = mediumSprite.x + mediumSprite.width + padding - 8;
+  ytSprite.y = 4;
+  socialPanel.addChild(ytSprite);
 
   app.stage.addChild(socialPanel);
 })();
