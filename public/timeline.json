@@ -14,6 +14,28 @@
       "children": [
         {
           "category": "publications",
+          "title": "On AI and Understanding",
+          "type": "writing",
+          "date": "Jan 2025",
+          "subtitle": "Do we have anything to lose?",
+          "description": "Knowledge without sweat is NOT understanding.",
+          "url": "https://thegoldenmule.medium.com/on-ai-and-understanding-8627d2bbe51e",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*nKGHOECq5CK5hcJCzDk6rA.jpeg",
+          "tech": []
+        },
+        {
+          "category": "publications",
+          "title": "Nakame Deep Dive: Leaderboards",
+          "type": "writing",
+          "date": "Jan 2025",
+          "subtitle": "An in-depth study of bucketed leaderboards with Nakama.",
+          "description": "Look, it's more complicated than it sounds, okay?? An embarrassing story and a full walkthrough of how I implemented bucketed leaderboards in Nakama.",
+          "url": "https://medium.com/spyre-io/nakama-deep-dive-leaderboards-e8d41688d53e",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:2000/format:webp/1*a40QxPUkXsUfK5Y-YiYOng.jpeg",
+          "tech": []
+        },
+        {
+          "category": "publications",
           "title": "Why I'm leaving programming behind for a cheese blog",
           "type": "writing",
           "date": "Sept 2024",
@@ -21,6 +43,39 @@
           "description": "I guess programming is over now? And other thoughts on AI.",
           "url": "https://medium.com/swlh/why-im-leaving-programming-behind-for-a-cheese-blog-8efeb2edb601",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*My7yndGVvEqEllFFPrZchA.jpeg",
+          "tech": []
+        },
+        {
+          "category": "publications",
+          "title": "Fair Matches in Web3",
+          "type": "writing",
+          "date": "Oct 2024",
+          "subtitle": "The devil is in the details.",
+          "description": "There's no denying that the Web3 ecosystem is a Dark Forest. It is particularly necessary to provide a robust security model. Here we explain how we implemented a fair match system for our casual-competitive game.",
+          "url": "https://medium.com/spyre-io/fair-matches-in-web3-6d32fe508e5e",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:2000/format:webp/1*U0T6Bmt1ulPEkDe_bUpBKA.jpeg",
+          "tech": []
+        },
+        {
+          "category": "publications",
+          "title": "What Belongs on a Blockchain?",
+          "type": "writing",
+          "date": "Oct 2024",
+          "subtitle": "How we are NOT using Web3 technology.",
+          "description": "Web3 is a hot mess of 'builders' building for other 'builders'. Where are the actual products and what problems are they actually solving?",
+          "url": "https://medium.com/spyre-io/what-belongs-on-a-blockchain-57ed37bde544",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*3MFleJbGRwsQL7d0maS7Ew.png",
+          "tech": []
+        },
+        {
+          "category": "publications",
+          "title": "A Tale of Two Game Engines",
+          "type": "writing",
+          "date": "Sept 2024",
+          "subtitle": "We're big fans of Unity — so why aren't we using it?",
+          "description": "Unity is a great engine, but it has its weak spots. In this article, I defend our decision to use a web-native engine instead.",
+          "url": "https://medium.com/spyre-io/a-tale-of-two-engines-dc80250e397a",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*sghqgWIHhDLlyIzxs_lTqw.jpeg",
           "tech": []
         },
         {
@@ -45,18 +100,6 @@
           "imageUrl": "https://miro.medium.com/max/720/0*c9YjL7ReG6E2NgT_.webp",
           "tech": []
         },
-        {
-          "category": "publications",
-          "title": "How many bugs should your product have?",
-          "type": "writing",
-          "date": "January 2022",
-          "subtitle": "Published in CodeX.",
-          "description": "It's a tough question, but it's one we should be asking ourselves: how many bugs should our product have before we show it to someone?",
-          "url": "https://medium.com/codex/how-many-bugs-should-your-product-have-fd7edd1c61d",
-          "imageUrl": "https://miro.medium.com/max/720/1*7qXL7JrTggt2Akx7gRXMYg.webp",
-          "tech": []
-        },
-
         {
           "category": "publications",
           "title": "What you can't know about being a startup CTO",
@@ -911,6 +954,17 @@
           "description": "Now that I'm officially a highly professional academic, I realize I have no clue what I should be doing.",
           "url": "https://medium.com/codex/what-is-the-point-of-higher-education-in-computer-science-b8a29b63ebdc",
           "imageUrl": "https://miro.medium.com/max/720/0*uj51YZ0qr_A5wFeQ.webp",
+          "tech": []
+        },
+        {
+          "category": "publications",
+          "title": "My Computer Graphics Course",
+          "type": "writing",
+          "date": "2023",
+          "subtitle": "All my slide decks.",
+          "description": "Yes yes, I could have used what the last professor had prepped -- but what's the fun in that? Here are all my under-appreciated slide decks to walk students through the construction of a 3D graphics engine from scratch.",
+          "url": "https://drive.google.com/drive/u/2/folders/1jWaDK59EUUIbPWz3FdeVNZOX2VgYKoUc",
+          "imageUrl": "tex/slu-graphics.png",
           "tech": []
         }
       ]
